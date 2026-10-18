@@ -6,6 +6,12 @@ The ZIP has 32 regular files under `bundle/`, 780,023,143 bytes compressed, SHA2
 
 Hugging Face's current large-file backend is Xet, with its Git/LFS-compatible object tracking. Browser upload uses the logged-in owner's official web uploader and the Hub's large-file storage. No browser cookies or tokens are exported to a command-line client. See the [official repository guide](https://huggingface.co/docs/hub/repositories-getting-started). A host-side upload is only complete when its committed object identity matches the recorded artifact; creating an empty repository is not a complete model release.
 
+## Verified public release
+
+The initial complete source release is commit `0835c57e49e9a44fb3414064ed0f2e93ec864434` ([immutable source](https://github.com/ydhhhh/english-ai-detector/tree/0835c57e49e9a44fb3414064ed0f2e93ec864434)): 154 reviewed files, 3,342,643 bytes. Public recursive-tree metadata matched every expected file size and Git blob identity, with no missing or extra files. [Source verification receipt](reports/GITHUB_CORE_PUBLICATION_VERIFICATION.json). Its runtime is the dependency pinned by the separate Space candidate. Later source commits add deployment files and publication records without changing the frozen inference modules.
+
+The Model Hub release is commit `4a98aa247f3cf227c81eec54596b9c0f8d7c358e` ([immutable model](https://huggingface.co/ydh0822/english-ai-detector/tree/4a98aa247f3cf227c81eec54596b9c0f8d7c358e)). Public unauthenticated Hub metadata confirms the archive size and SHA256 stated above; pinned raw model-card/license bytes also match the reviewed local artifacts. [Verification receipt](reports/HF_PUBLICATION_VERIFICATION.json). The English root model card and research-use notice were uploaded in the same commit. No authentication token is required to download these public artifacts.
+
 ## Actual checks before upload
 
 - A separately built wheel was installed without dependencies into an isolated target and tested from the existing clean Python 3.12 environment. Public API/CLI/HTML resources and all 13 original numeric/serialization modules match their declared identities. Original-source serialization class paths are deliberately preserved. No pretrained or corpus directory fallback is required.
@@ -18,7 +24,7 @@ The original frozen release also has CPU/MPS and independently relocated CLI/HTT
 
 ## Separate Space status
 
-Target: `ydh0822/english-ai-detector` as an independent Hugging Face Space repository, separate from the Model Hub repository of the same name. English Gradio/ZeroGPU code is prepared. The actual owner's creation UI currently disables Gradio and Docker, labels them paid, and requests PRO; no ZeroGPU option was available. No Space deployment, NVIDIA parity or hosted inference success is claimed. No subscription, credits, paid GPU or paid endpoint was purchased or enabled. Do not create a Static Space and label it a working ZeroGPU detector.
+Target: `ydh0822/english-ai-detector` as an independent Hugging Face Space repository, separate from the Model Hub repository of the same name. English Gradio/ZeroGPU code is prepared in [deployment/space](../deployment/space/README.md), with both actual immutable publication commits pinned. The actual owner's creation UI currently disables Gradio and Docker, labels them paid, and requests PRO; no ZeroGPU option was available. No Space deployment, NVIDIA parity or hosted inference success is claimed. No subscription, credits, paid GPU or paid endpoint was purchased or enabled. Do not create a Static Space and label it a working ZeroGPU detector.
 
 HF currently documents account-dependent free ZeroGPU eligibility and per-visitor quotas. It separately documents subscriber prepaid-credit use after quota. The platform determines eligibility; the application does not upgrade accounts or promise unconditional free hosting. See [ZeroGPU documentation](https://huggingface.co/docs/hub/spaces-zerogpu). Deployment requires a qualified account, explicit ZeroGPU hardware and the actual immutable source/model commits; test the Linux environment and document parsing before declaring it ready.
 

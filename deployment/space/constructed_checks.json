@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "constructed_only": true,
+  "passed": true,
+  "tests_run": 16,
+  "failures": 0,
+  "errors": 0,
+  "actual_model_loaded": false,
+  "network_used": false,
+  "login_attempted": false,
+  "gpu_used": false,
+  "server_started": false,
+  "publication_pins": {
+    "model_revision": "4a98aa247f3cf227c81eec54596b9c0f8d7c358e",
+    "bundle_archive_sha256": "da04e4314bdc4571e1dfff8414d203865ac03ad6d14aeff2a182ac070b5be164",
+    "bundle_manifest_sha256": "f588dc69355cc96105ea627e0aa20bdcd9bed78709038884466abf008a4271cc",
+    "runtime_github_commit": "0835c57e49e9a44fb3414064ed0f2e93ec864434"
+  },
+  "code_sha256": {
+    "checks.py": "0272b81659754499f1608bf63dde38e02e29adca21970f35e3fe797794c3cb58",
+    "space_core.py": "71e69ecc8dbea8f66466615f532170b764dd84b824570a016d80c6f69cedac75",
+    "app.py": "a2e47627e35109268363cf8f68265b3541be089fca43dd8edc74251a43e2c028",
+    "bundle_archive.py": "026ad5458f279b8c5dffe4bd888b730429720b12586493f4fee1a481a56b2dd2"
+  },
+  "scope": "Adapter integrity, transport, fixed policy display and mocked UI/runtime wiring only; not hosted inference or CUDA parity."
+}

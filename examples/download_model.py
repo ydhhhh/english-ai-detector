@@ -12,7 +12,7 @@ MANIFEST_SHA256 = "f588dc69355cc96105ea627e0aa20bdcd9bed78709038884466abf008a427
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--revision", default="main", help="Pin a reviewed full Model Hub commit for reproducible downloads")
+    parser.add_argument("--revision", default="4a98aa247f3cf227c81eec54596b9c0f8d7c358e", help="Immutable Model Hub commit (defaults to the verified v2 release)")
     parser.add_argument("--cache-dir", type=Path, default=Path("models/english_detector_v2"))
     parser.add_argument("--archive", type=Path, help="Verify/extract this already downloaded approved archive without a network call")
     args = parser.parse_args()

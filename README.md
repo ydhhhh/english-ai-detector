@@ -23,10 +23,10 @@ pip install .
 The Model Hub distributes one complete `english_ai_detector_v2_bundle.zip`, containing all four components under `bundle/`. The download example verifies the ZIP SHA256 before parsing, bounds and validates the exact inventory, checks every extracted file, and prints the verified local directory. It downloads publicly without a token. No `bundle/*` tree is assumed to exist separately on the Hub.
 
 ```bash
-BUNDLE_PATH="$(python examples/download_model.py --revision main)"
+BUNDLE_PATH="$(python examples/download_model.py --revision 4a98aa247f3cf227c81eec54596b9c0f8d7c358e)"
 ```
 
-Replace `main` with a reviewed full Model Hub commit for a fixed deployment. The example additionally pins the approved archive bytes, so a different archive fails closed even on a moving branch. Only load the trusted project bundle: Python joblib serialization can execute code when loading untrusted files. The model card and `LICENSE-MODEL.md` define the separate model-use scope.
+The command and example default pin the verified immutable Model Hub release. The example additionally pins the approved archive bytes, so a different archive fails closed. Only load the trusted project bundle: Python joblib serialization can execute code when loading untrusted files. The model card and `LICENSE-MODEL.md` define the separate model-use scope.
 
 ## Use the browser tool
 
@@ -36,7 +36,7 @@ english-ai-detector serve --bundle "$BUNDLE_PATH" --device cpu
 
 Open <http://127.0.0.1:8765>. Paste English text or upload DOCX, DOC, or TXT. The included HTML can also be opened directly and connected to your local server. On compatible Apple Silicon, `--device mps` is available. HTTP defaults are 200,000 characters, 8 MiB, one simultaneous detection and six requests per minute; oversized requests fail explicitly rather than silently truncating the document. Legacy DOC needs `antiword` on Linux or `textutil` on macOS.
 
-The separate Hugging Face Space target is `ydh0822/english-ai-detector`. Its English ZeroGPU code is prepared for an independent Space repository, but this publication account currently has compute-Space creation disabled in the actual HF UI. No live Space, subscription purchase, paid fallback or CUDA equivalence is claimed. See [publication status](docs/publication.md).
+The separate Hugging Face Space target is `ydh0822/english-ai-detector`. Its English ZeroGPU code is prepared for an independent Space repository, but this publication account currently has compute-Space creation disabled in the actual HF UI. No live Space, subscription purchase, paid fallback or CUDA equivalence is claimed. Deployment files with fixed source/model revisions are available in [deployment/space](deployment/space/README.md). See [publication status](docs/publication.md).
 
 ## Python and command line
 

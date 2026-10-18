@@ -1,0 +1,11 @@
+English AI Detector Space
+Copyright (c) 2026 English AI Detector contributors
+
+This new Space adapter is licensed under Apache License 2.0.
+The separately installed english-ai-detector runtime retains compatibility
+modules and the full historical MIT copyright/permission notice in its
+third_party/LICENSE-MIT-legacy.txt; prior MIT grants are not revoked.
+
+The application license does not relicense model weights, pretrained models,
+or source texts. The Model Hub Research-Use Model Notice and third-party
+conditions remain separate. This Space distributes no training corpus.
