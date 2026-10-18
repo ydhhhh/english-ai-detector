@@ -1,0 +1,1269 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-17T23:48:04.567589+00:00",
+  "purpose": "English, aggregate-only model-card statistics extracted from four already-frozen final reports; no model, thresholds, predictions or metrics refitted/recomputed.",
+  "model_id": "english-ai-detector-v2-practical",
+  "probability_and_decision_policy": {
+    "AI_posterior_cutoff": 0.7233173320180257,
+    "human_posterior_cutoff": 0.9049688379295407,
+    "minimum_original_word_like_units": 128,
+    "English_guard_required": true,
+    "exclusive_directional_decisions": true,
+    "exact_p_AI_half_is_inconclusive": true,
+    "source_mode": "rankings_only",
+    "family_assertions_enabled": false,
+    "model_assertions_enabled": false
+  },
+  "provenance": {
+    "protocol_sha256": "276c4757774c0f1867470a040c0a303209a6a2444e8481d4402e4693ce221da4",
+    "blend_sha256": "df0a837b1ce7016d56373d06f822fa48d36a9e969bd525051fd1ae83ceef4628",
+    "calibration_sha256": "31330e39f471587ad50156c041717b326b1cbfcd6e0230ef6ff32887c653d50c",
+    "count_storage_amendment_sha256": "48a2e062c168dc115341796078032362a5a5f554196ab04421666ae43ed353d5"
+  },
+  "cohorts": {
+    "fresh_main": {
+      "source_report": "results/english_v2/release_v1/evaluation/fresh_main/report.json",
+      "source_report_sha256": "0ec013143edbd4cc2b332dee607618f9e40fe824342958faff63a2394d51d209",
+      "population": {
+        "n": 3000,
+        "human_n": 1500,
+        "AI_n": 1500,
+        "connected_groups": 3000,
+        "language_supported_n": 3000,
+        "language_unsupported_n": 0,
+        "all_exported_rows_are_core": true
+      },
+      "AUROC": {
+        "point": 0.9978288888888889,
+        "whole_group_percentile_95_CI": {
+          "point": 0.9978288888888889,
+          "low": 0.9964275258594966,
+          "high": 0.9987880456258801,
+          "valid_replicates": 500,
+          "requested_replicates": 500
+        }
+      },
+      "forced_binary_at_probability_half": {
+        "threshold": 0.5,
+        "abstention": false,
+        "accuracy": {
+          "point": 0.9813333333333333,
+          "whole_group_percentile_95_CI": null
+        },
+        "balanced_accuracy": {
+          "point": 0.9813333333333333,
+          "whole_group_percentile_95_CI": null
+        },
+        "CI_note": "Original reports do not bootstrap these separate p=0.5 point metrics. Do not reuse the frozen-AI-cutoff accuracy CI.",
+        "confusion": {
+          "tp": 1472,
+          "fp": 28,
+          "tn": 1472,
+          "fn": 28
+        }
+      },
+      "forced_binary_at_frozen_AI_cutoff": {
+        "AI_cutoff": 0.7233173320180257,
+        "abstention": false,
+        "accuracy": {
+          "point": 0.981,
+          "whole_group_percentile_95_CI": {
+            "point": 0.981,
+            "low": 0.9766666666666667,
+            "high": 0.9855083333333333,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "balanced_accuracy": {
+          "point": 0.981,
+          "whole_group_percentile_95_CI": {
+            "point": 0.981,
+            "low": 0.9766117509463578,
+            "high": 0.9854891892252009,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "human_false_positive_rate": {
+          "point": 0.014,
+          "whole_group_percentile_95_CI": {
+            "point": 0.014,
+            "low": 0.008804589723250484,
+            "high": 0.020156267348370165,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "AI_recall": {
+          "point": 0.976,
+          "whole_group_percentile_95_CI": {
+            "point": 0.976,
+            "low": 0.9687902269647697,
+            "high": 0.9824335873513282,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "confusion": {
+          "tp": 1464,
+          "fp": 21,
+          "tn": 1479,
+          "fn": 36
+        },
+        "scope": "Forced score threshold on all core rows; unlike shipping, this table does not abstain on language or the gap between directional thresholds."
+      },
+      "shipping_with_abstentions": {
+        "denominator_rule": "Every eligible true-class member remains in error/recall denominators; all core rows remain in coverage.",
+        "accuracy_conditional_on_decided": {
+          "point": 0.9887487214456189,
+          "whole_group_percentile_95_CI": {
+            "point": 0.9887487214456189,
+            "low": 0.9850109432806168,
+            "high": 0.992187631783744,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "AI_decision_coverage": {
+          "point": 0.495,
+          "whole_group_percentile_95_CI": {
+            "point": 0.495,
+            "low": 0.47664999999999996,
+            "high": 0.5128583333333333,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "human_decision_coverage": {
+          "point": 0.4826666666666667,
+          "whole_group_percentile_95_CI": {
+            "point": 0.4826666666666667,
+            "low": 0.4646666666666667,
+            "high": 0.5006833333333333,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "inconclusive_coverage": {
+          "point": 0.022333333333333334,
+          "whole_group_percentile_95_CI": {
+            "point": 0.022333333333333334,
+            "low": 0.016666666666666666,
+            "high": 0.02768333333333332,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "decided_coverage": {
+          "point": 0.9776666666666667,
+          "whole_group_percentile_95_CI": {
+            "point": 0.9776666666666667,
+            "low": 0.9723166666666666,
+            "high": 0.9833333333333333,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "human_misclassified_as_AI_rate": {
+          "point": 0.014,
+          "whole_group_percentile_95_CI": {
+            "point": 0.014,
+            "low": 0.008804589723250484,
+            "high": 0.020156267348370165,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "AI_misclassified_as_human_rate": {
+          "point": 0.008,
+          "whole_group_percentile_95_CI": {
+            "point": 0.008,
+            "low": 0.003930248785939037,
+            "high": 0.012966772036425765,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "correct_AI_recall": {
+          "point": 0.976,
+          "whole_group_percentile_95_CI": {
+            "point": 0.976,
+            "low": 0.9687902269647697,
+            "high": 0.9824335873513282,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "correct_human_recall": {
+          "point": 0.9573333333333334,
+          "whole_group_percentile_95_CI": {
+            "point": 0.9573333333333334,
+            "low": 0.9460703143047736,
+            "high": 0.967633596467638,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "counts": {
+          "predicted_AI_n": 1485,
+          "predicted_human_n": 1448,
+          "inconclusive_n": 67,
+          "human_misclassified_as_AI_n": 21,
+          "AI_misclassified_as_human_n": 12,
+          "correct_AI_n": 1464,
+          "correct_human_n": 1436,
+          "inconclusive_human_n": 43,
+          "inconclusive_AI_n": 24
+        }
+      },
+      "bootstrap": {
+        "n_boot": 500,
+        "seed": 42,
+        "n_groups": 3000,
+        "core_groups": 3000,
+        "method": "percentile whole-group bootstrap; same resampling weights across tasks; fixed thresholds",
+        "scope": "conditional on fitted predictions/calibration and sampled evaluation groups; excludes retraining/calibration/model-selection uncertainty; zero observed FP may produce a degenerate interval"
+      }
+    },
+    "fresh_source_domain": {
+      "source_report": "results/english_v2/release_v1/evaluation/fresh_source_domain/report.json",
+      "source_report_sha256": "e14eb073bf1edcd06840e1a8fd0f3bdf4dde8f7bfe647ded3941c3273cb45229",
+      "population": {
+        "n": 800,
+        "human_n": 400,
+        "AI_n": 400,
+        "connected_groups": 400,
+        "language_supported_n": 798,
+        "language_unsupported_n": 2,
+        "all_exported_rows_are_core": true
+      },
+      "AUROC": {
+        "point": 0.9993875,
+        "whole_group_percentile_95_CI": {
+          "point": 0.9993875,
+          "low": 0.99842875,
+          "high": 0.99995953125,
+          "valid_replicates": 500,
+          "requested_replicates": 500
+        }
+      },
+      "forced_binary_at_probability_half": {
+        "threshold": 0.5,
+        "abstention": false,
+        "accuracy": {
+          "point": 0.97375,
+          "whole_group_percentile_95_CI": null
+        },
+        "balanced_accuracy": {
+          "point": 0.97375,
+          "whole_group_percentile_95_CI": null
+        },
+        "CI_note": "Original reports do not bootstrap these separate p=0.5 point metrics. Do not reuse the frozen-AI-cutoff accuracy CI.",
+        "confusion": {
+          "tp": 399,
+          "fp": 20,
+          "tn": 380,
+          "fn": 1
+        }
+      },
+      "forced_binary_at_frozen_AI_cutoff": {
+        "AI_cutoff": 0.7233173320180257,
+        "abstention": false,
+        "accuracy": {
+          "point": 0.98,
+          "whole_group_percentile_95_CI": {
+            "point": 0.98,
+            "low": 0.96875,
+            "high": 0.98875,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "balanced_accuracy": {
+          "point": 0.9800000000000001,
+          "whole_group_percentile_95_CI": {
+            "point": 0.9800000000000001,
+            "low": 0.96875,
+            "high": 0.98875,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "human_false_positive_rate": {
+          "point": 0.035,
+          "whole_group_percentile_95_CI": {
+            "point": 0.035,
+            "low": 0.0175,
+            "high": 0.053812499999999944,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "AI_recall": {
+          "point": 0.995,
+          "whole_group_percentile_95_CI": {
+            "point": 0.995,
+            "low": 0.9875,
+            "high": 1.0,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "confusion": {
+          "tp": 398,
+          "fp": 14,
+          "tn": 386,
+          "fn": 2
+        },
+        "scope": "Forced score threshold on all core rows; unlike shipping, this table does not abstain on language or the gap between directional thresholds."
+      },
+      "shipping_with_abstentions": {
+        "denominator_rule": "Every eligible true-class member remains in error/recall denominators; all core rows remain in coverage.",
+        "accuracy_conditional_on_decided": {
+          "point": 0.981651376146789,
+          "whole_group_percentile_95_CI": {
+            "point": 0.981651376146789,
+            "low": 0.9718462942179348,
+            "high": 0.9907055555555555,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "AI_decision_coverage": {
+          "point": 0.515,
+          "whole_group_percentile_95_CI": {
+            "point": 0.515,
+            "low": 0.50625,
+            "high": 0.52375,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "human_decision_coverage": {
+          "point": 0.43875,
+          "whole_group_percentile_95_CI": {
+            "point": 0.43875,
+            "low": 0.42125,
+            "high": 0.45375,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "inconclusive_coverage": {
+          "point": 0.04625,
+          "whole_group_percentile_95_CI": {
+            "point": 0.04625,
+            "low": 0.03375,
+            "high": 0.0625,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "decided_coverage": {
+          "point": 0.95375,
+          "whole_group_percentile_95_CI": {
+            "point": 0.95375,
+            "low": 0.9375,
+            "high": 0.96625,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "human_misclassified_as_AI_rate": {
+          "point": 0.035,
+          "whole_group_percentile_95_CI": {
+            "point": 0.035,
+            "low": 0.0175,
+            "high": 0.053812499999999944,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "AI_misclassified_as_human_rate": {
+          "point": 0.0,
+          "whole_group_percentile_95_CI": {
+            "point": 0.0,
+            "low": 0.0,
+            "high": 0.0,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "correct_AI_recall": {
+          "point": 0.995,
+          "whole_group_percentile_95_CI": {
+            "point": 0.995,
+            "low": 0.9875,
+            "high": 1.0,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "correct_human_recall": {
+          "point": 0.8775,
+          "whole_group_percentile_95_CI": {
+            "point": 0.8775,
+            "low": 0.8425,
+            "high": 0.9075,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "counts": {
+          "predicted_AI_n": 412,
+          "predicted_human_n": 351,
+          "inconclusive_n": 37,
+          "human_misclassified_as_AI_n": 14,
+          "AI_misclassified_as_human_n": 0,
+          "correct_AI_n": 398,
+          "correct_human_n": 351,
+          "inconclusive_human_n": 35,
+          "inconclusive_AI_n": 2
+        }
+      },
+      "bootstrap": {
+        "n_boot": 500,
+        "seed": 42,
+        "n_groups": 400,
+        "core_groups": 400,
+        "method": "percentile whole-group bootstrap; same resampling weights across tasks; fixed thresholds",
+        "scope": "conditional on fitted predictions/calibration and sampled evaluation groups; excludes retraining/calibration/model-selection uncertainty; zero observed FP may produce a degenerate interval"
+      }
+    },
+    "fresh_modern_with_human_controls": {
+      "source_report": "results/english_v2/release_v1/evaluation/fresh_modern_with_human_controls/report.json",
+      "source_report_sha256": "5377f9c64b05d2614486ab4e606b8edc70febe45e18a05c074f313fc5a8e78cd",
+      "population": {
+        "n": 2000,
+        "human_n": 1000,
+        "AI_n": 1000,
+        "connected_groups": 1000,
+        "language_supported_n": 1995,
+        "language_unsupported_n": 5,
+        "all_exported_rows_are_core": true
+      },
+      "AUROC": {
+        "point": 0.997897,
+        "whole_group_percentile_95_CI": {
+          "point": 0.997897,
+          "low": 0.9958594000000001,
+          "high": 0.999439375,
+          "valid_replicates": 500,
+          "requested_replicates": 500
+        }
+      },
+      "forced_binary_at_probability_half": {
+        "threshold": 0.5,
+        "abstention": false,
+        "accuracy": {
+          "point": 0.9875,
+          "whole_group_percentile_95_CI": null
+        },
+        "balanced_accuracy": {
+          "point": 0.9875,
+          "whole_group_percentile_95_CI": null
+        },
+        "CI_note": "Original reports do not bootstrap these separate p=0.5 point metrics. Do not reuse the frozen-AI-cutoff accuracy CI.",
+        "confusion": {
+          "tp": 987,
+          "fp": 12,
+          "tn": 988,
+          "fn": 13
+        }
+      },
+      "forced_binary_at_frozen_AI_cutoff": {
+        "AI_cutoff": 0.7233173320180257,
+        "abstention": false,
+        "accuracy": {
+          "point": 0.9865,
+          "whole_group_percentile_95_CI": {
+            "point": 0.9865,
+            "low": 0.9815,
+            "high": 0.9915,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "balanced_accuracy": {
+          "point": 0.9865,
+          "whole_group_percentile_95_CI": {
+            "point": 0.9865,
+            "low": 0.9815,
+            "high": 0.9915,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "human_false_positive_rate": {
+          "point": 0.007,
+          "whole_group_percentile_95_CI": {
+            "point": 0.007,
+            "low": 0.002,
+            "high": 0.013,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "AI_recall": {
+          "point": 0.98,
+          "whole_group_percentile_95_CI": {
+            "point": 0.98,
+            "low": 0.971,
+            "high": 0.988525,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "confusion": {
+          "tp": 980,
+          "fp": 7,
+          "tn": 993,
+          "fn": 20
+        },
+        "scope": "Forced score threshold on all core rows; unlike shipping, this table does not abstain on language or the gap between directional thresholds."
+      },
+      "shipping_with_abstentions": {
+        "denominator_rule": "Every eligible true-class member remains in error/recall denominators; all core rows remain in coverage.",
+        "accuracy_conditional_on_decided": {
+          "point": 0.9917906618778861,
+          "whole_group_percentile_95_CI": {
+            "point": 0.9917906618778861,
+            "low": 0.9877475496167591,
+            "high": 0.9953929432241084,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "AI_decision_coverage": {
+          "point": 0.4925,
+          "whole_group_percentile_95_CI": {
+            "point": 0.4925,
+            "low": 0.487,
+            "high": 0.498,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "human_decision_coverage": {
+          "point": 0.482,
+          "whole_group_percentile_95_CI": {
+            "point": 0.482,
+            "low": 0.4745,
+            "high": 0.489,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "inconclusive_coverage": {
+          "point": 0.0255,
+          "whole_group_percentile_95_CI": {
+            "point": 0.0255,
+            "low": 0.0185,
+            "high": 0.0325,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "decided_coverage": {
+          "point": 0.9745,
+          "whole_group_percentile_95_CI": {
+            "point": 0.9745,
+            "low": 0.9675,
+            "high": 0.9815,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "human_misclassified_as_AI_rate": {
+          "point": 0.007,
+          "whole_group_percentile_95_CI": {
+            "point": 0.007,
+            "low": 0.002,
+            "high": 0.013,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "AI_misclassified_as_human_rate": {
+          "point": 0.009,
+          "whole_group_percentile_95_CI": {
+            "point": 0.009,
+            "low": 0.004,
+            "high": 0.015,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "correct_AI_recall": {
+          "point": 0.978,
+          "whole_group_percentile_95_CI": {
+            "point": 0.978,
+            "low": 0.969,
+            "high": 0.987525,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "correct_human_recall": {
+          "point": 0.955,
+          "whole_group_percentile_95_CI": {
+            "point": 0.955,
+            "low": 0.941,
+            "high": 0.967,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "counts": {
+          "predicted_AI_n": 985,
+          "predicted_human_n": 964,
+          "inconclusive_n": 51,
+          "human_misclassified_as_AI_n": 7,
+          "AI_misclassified_as_human_n": 9,
+          "correct_AI_n": 978,
+          "correct_human_n": 955,
+          "inconclusive_human_n": 38,
+          "inconclusive_AI_n": 13
+        }
+      },
+      "bootstrap": {
+        "n_boot": 500,
+        "seed": 42,
+        "n_groups": 1000,
+        "core_groups": 1000,
+        "method": "percentile whole-group bootstrap; same resampling weights across tasks; fixed thresholds",
+        "scope": "conditional on fitted predictions/calibration and sampled evaluation groups; excludes retraining/calibration/model-selection uncertainty; zero observed FP may produce a degenerate interval"
+      }
+    },
+    "fresh_paraphrase_with_human_controls": {
+      "source_report": "results/english_v2/release_v1/evaluation/fresh_paraphrase_with_human_controls/report.json",
+      "source_report_sha256": "c05b57f6c783cdeb3847a469d06337313437c3d3e3acb55319f321b817900c84",
+      "population": {
+        "n": 1800,
+        "human_n": 600,
+        "AI_n": 1200,
+        "connected_groups": 600,
+        "language_supported_n": 1800,
+        "language_unsupported_n": 0,
+        "all_exported_rows_are_core": true
+      },
+      "AUROC": {
+        "point": 0.9958277777777778,
+        "whole_group_percentile_95_CI": {
+          "point": 0.9958277777777778,
+          "low": 0.9933463888888889,
+          "high": 0.9975619444444443,
+          "valid_replicates": 500,
+          "requested_replicates": 500
+        }
+      },
+      "forced_binary_at_probability_half": {
+        "threshold": 0.5,
+        "abstention": false,
+        "accuracy": {
+          "point": 0.9727777777777777,
+          "whole_group_percentile_95_CI": null
+        },
+        "balanced_accuracy": {
+          "point": 0.9783333333333334,
+          "whole_group_percentile_95_CI": null
+        },
+        "CI_note": "Original reports do not bootstrap these separate p=0.5 point metrics. Do not reuse the frozen-AI-cutoff accuracy CI.",
+        "confusion": {
+          "tp": 1154,
+          "fp": 3,
+          "tn": 597,
+          "fn": 46
+        }
+      },
+      "forced_binary_at_frozen_AI_cutoff": {
+        "AI_cutoff": 0.7233173320180257,
+        "abstention": false,
+        "accuracy": {
+          "point": 0.9672222222222222,
+          "whole_group_percentile_95_CI": {
+            "point": 0.9672222222222222,
+            "low": 0.9585972222222222,
+            "high": 0.9747361111111111,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "balanced_accuracy": {
+          "point": 0.975,
+          "whole_group_percentile_95_CI": {
+            "point": 0.975,
+            "low": 0.9681145833333334,
+            "high": 0.9808333333333333,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "human_false_positive_rate": {
+          "point": 0.0016666666666666668,
+          "whole_group_percentile_95_CI": {
+            "point": 0.0016666666666666668,
+            "low": 0.0,
+            "high": 0.005,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "AI_recall": {
+          "point": 0.9516666666666667,
+          "whole_group_percentile_95_CI": {
+            "point": 0.9516666666666667,
+            "low": 0.9387291666666667,
+            "high": 0.9625,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "confusion": {
+          "tp": 1142,
+          "fp": 1,
+          "tn": 599,
+          "fn": 58
+        },
+        "scope": "Forced score threshold on all core rows; unlike shipping, this table does not abstain on language or the gap between directional thresholds."
+      },
+      "shipping_with_abstentions": {
+        "denominator_rule": "Every eligible true-class member remains in error/recall denominators; all core rows remain in coverage.",
+        "accuracy_conditional_on_decided": {
+          "point": 0.9884526558891455,
+          "whole_group_percentile_95_CI": {
+            "point": 0.9884526558891455,
+            "low": 0.982623552319141,
+            "high": 0.992529357499081,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "AI_decision_coverage": {
+          "point": 0.635,
+          "whole_group_percentile_95_CI": {
+            "point": 0.635,
+            "low": 0.626375,
+            "high": 0.6427777777777778,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "human_decision_coverage": {
+          "point": 0.32722222222222225,
+          "whole_group_percentile_95_CI": {
+            "point": 0.32722222222222225,
+            "low": 0.3197083333333333,
+            "high": 0.335,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "inconclusive_coverage": {
+          "point": 0.03777777777777778,
+          "whole_group_percentile_95_CI": {
+            "point": 0.03777777777777778,
+            "low": 0.029444444444444443,
+            "high": 0.04722222222222222,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "decided_coverage": {
+          "point": 0.9622222222222222,
+          "whole_group_percentile_95_CI": {
+            "point": 0.9622222222222222,
+            "low": 0.9527777777777777,
+            "high": 0.9705555555555555,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "human_misclassified_as_AI_rate": {
+          "point": 0.0016666666666666668,
+          "whole_group_percentile_95_CI": {
+            "point": 0.0016666666666666668,
+            "low": 0.0,
+            "high": 0.005,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "AI_misclassified_as_human_rate": {
+          "point": 0.015833333333333335,
+          "whole_group_percentile_95_CI": {
+            "point": 0.015833333333333335,
+            "low": 0.009562500000000002,
+            "high": 0.023770833333333314,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "correct_AI_recall": {
+          "point": 0.9516666666666667,
+          "whole_group_percentile_95_CI": {
+            "point": 0.9516666666666667,
+            "low": 0.9387291666666667,
+            "high": 0.9625,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "correct_human_recall": {
+          "point": 0.95,
+          "whole_group_percentile_95_CI": {
+            "point": 0.95,
+            "low": 0.9316666666666666,
+            "high": 0.9666666666666667,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "counts": {
+          "predicted_AI_n": 1143,
+          "predicted_human_n": 589,
+          "inconclusive_n": 68,
+          "human_misclassified_as_AI_n": 1,
+          "AI_misclassified_as_human_n": 19,
+          "correct_AI_n": 1142,
+          "correct_human_n": 570,
+          "inconclusive_human_n": 29,
+          "inconclusive_AI_n": 39
+        }
+      },
+      "bootstrap": {
+        "n_boot": 500,
+        "seed": 42,
+        "n_groups": 600,
+        "core_groups": 600,
+        "method": "percentile whole-group bootstrap; same resampling weights across tasks; fixed thresholds",
+        "scope": "conditional on fitted predictions/calibration and sampled evaluation groups; excludes retraining/calibration/model-selection uncertainty; zero observed FP may produce a degenerate interval"
+      }
+    }
+  },
+  "registered_overlapping_views": {
+    "view_human_origin_rewrite": {
+      "parent_cohort": "fresh_paraphrase_with_human_controls",
+      "shares_original_human_controls": true,
+      "source_report_sha256": "c05b57f6c783cdeb3847a469d06337313437c3d3e3acb55319f321b817900c84",
+      "population": {
+        "n": 1200,
+        "human_n": 600,
+        "AI_n": 600,
+        "connected_groups": 600,
+        "language_supported_n": 1200,
+        "language_unsupported_n": 0,
+        "all_exported_rows_are_core": true
+      },
+      "AUROC": {
+        "point": 0.9922055555555556,
+        "whole_group_percentile_95_CI": {
+          "point": 0.9922055555555556,
+          "low": 0.9873578472222221,
+          "high": 0.9956926388888888,
+          "valid_replicates": 500,
+          "requested_replicates": 500
+        }
+      },
+      "forced_binary_at_probability_half": {
+        "threshold": 0.5,
+        "abstention": false,
+        "accuracy": {
+          "point": 0.9675,
+          "whole_group_percentile_95_CI": null
+        },
+        "balanced_accuracy": {
+          "point": 0.9675,
+          "whole_group_percentile_95_CI": null
+        },
+        "CI_note": "Original reports do not bootstrap these separate p=0.5 point metrics. Do not reuse the frozen-AI-cutoff accuracy CI.",
+        "confusion": {
+          "tp": 564,
+          "fp": 3,
+          "tn": 597,
+          "fn": 36
+        }
+      },
+      "forced_binary_at_frozen_AI_cutoff": {
+        "AI_cutoff": 0.7233173320180257,
+        "abstention": false,
+        "accuracy": {
+          "point": 0.9608333333333333,
+          "whole_group_percentile_95_CI": {
+            "point": 0.9608333333333333,
+            "low": 0.9491666666666667,
+            "high": 0.97,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "balanced_accuracy": {
+          "point": 0.9608333333333333,
+          "whole_group_percentile_95_CI": {
+            "point": 0.9608333333333333,
+            "low": 0.9491666666666667,
+            "high": 0.97,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "human_false_positive_rate": {
+          "point": 0.0016666666666666668,
+          "whole_group_percentile_95_CI": {
+            "point": 0.0016666666666666668,
+            "low": 0.0,
+            "high": 0.005,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "AI_recall": {
+          "point": 0.9233333333333333,
+          "whole_group_percentile_95_CI": {
+            "point": 0.9233333333333333,
+            "low": 0.9016666666666666,
+            "high": 0.9425416666666666,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "confusion": {
+          "tp": 554,
+          "fp": 1,
+          "tn": 599,
+          "fn": 46
+        },
+        "scope": "Forced score threshold on all core rows; unlike shipping, this table does not abstain on language or the gap between directional thresholds."
+      },
+      "shipping_with_abstentions": {
+        "denominator_rule": "Every eligible true-class member remains in error/recall denominators; all core rows remain in coverage.",
+        "accuracy_conditional_on_decided": {
+          "point": 0.9842381786339754,
+          "whole_group_percentile_95_CI": {
+            "point": 0.9842381786339754,
+            "low": 0.9763779527559056,
+            "high": 0.9903553169734151,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "AI_decision_coverage": {
+          "point": 0.4625,
+          "whole_group_percentile_95_CI": {
+            "point": 0.4625,
+            "low": 0.4520625,
+            "high": 0.47293749999999996,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "human_decision_coverage": {
+          "point": 0.4891666666666667,
+          "whole_group_percentile_95_CI": {
+            "point": 0.4891666666666667,
+            "low": 0.47833333333333333,
+            "high": 0.5,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "inconclusive_coverage": {
+          "point": 0.04833333333333333,
+          "whole_group_percentile_95_CI": {
+            "point": 0.04833333333333333,
+            "low": 0.03666666666666667,
+            "high": 0.060437499999999984,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "decided_coverage": {
+          "point": 0.9516666666666667,
+          "whole_group_percentile_95_CI": {
+            "point": 0.9516666666666667,
+            "low": 0.9395625,
+            "high": 0.9633333333333334,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "human_misclassified_as_AI_rate": {
+          "point": 0.0016666666666666668,
+          "whole_group_percentile_95_CI": {
+            "point": 0.0016666666666666668,
+            "low": 0.0,
+            "high": 0.005,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "AI_misclassified_as_human_rate": {
+          "point": 0.028333333333333332,
+          "whole_group_percentile_95_CI": {
+            "point": 0.028333333333333332,
+            "low": 0.016666666666666666,
+            "high": 0.041666666666666664,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "correct_AI_recall": {
+          "point": 0.9233333333333333,
+          "whole_group_percentile_95_CI": {
+            "point": 0.9233333333333333,
+            "low": 0.9016666666666666,
+            "high": 0.9425416666666666,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "correct_human_recall": {
+          "point": 0.95,
+          "whole_group_percentile_95_CI": {
+            "point": 0.95,
+            "low": 0.9316666666666666,
+            "high": 0.9666666666666667,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "counts": {
+          "predicted_AI_n": 555,
+          "predicted_human_n": 587,
+          "inconclusive_n": 58,
+          "human_misclassified_as_AI_n": 1,
+          "AI_misclassified_as_human_n": 17,
+          "correct_AI_n": 554,
+          "correct_human_n": 570,
+          "inconclusive_human_n": 29,
+          "inconclusive_AI_n": 29
+        }
+      },
+      "bootstrap": {
+        "n_boot": 500,
+        "seed": 42,
+        "n_groups": 600,
+        "core_groups": 600,
+        "method": "percentile whole-group bootstrap; same resampling weights across tasks; fixed thresholds",
+        "scope": "conditional on fitted predictions/calibration and sampled evaluation groups; excludes retraining/calibration/model-selection uncertainty; zero observed FP may produce a degenerate interval"
+      }
+    },
+    "view_AI_origin_rewrite": {
+      "parent_cohort": "fresh_paraphrase_with_human_controls",
+      "shares_original_human_controls": true,
+      "source_report_sha256": "c05b57f6c783cdeb3847a469d06337313437c3d3e3acb55319f321b817900c84",
+      "population": {
+        "n": 1200,
+        "human_n": 600,
+        "AI_n": 600,
+        "connected_groups": 600,
+        "language_supported_n": 1200,
+        "language_unsupported_n": 0,
+        "all_exported_rows_are_core": true
+      },
+      "AUROC": {
+        "point": 0.99945,
+        "whole_group_percentile_95_CI": {
+          "point": 0.99945,
+          "low": 0.9989245833333333,
+          "high": 0.9998071527777778,
+          "valid_replicates": 500,
+          "requested_replicates": 500
+        }
+      },
+      "forced_binary_at_probability_half": {
+        "threshold": 0.5,
+        "abstention": false,
+        "accuracy": {
+          "point": 0.9891666666666666,
+          "whole_group_percentile_95_CI": null
+        },
+        "balanced_accuracy": {
+          "point": 0.9891666666666667,
+          "whole_group_percentile_95_CI": null
+        },
+        "CI_note": "Original reports do not bootstrap these separate p=0.5 point metrics. Do not reuse the frozen-AI-cutoff accuracy CI.",
+        "confusion": {
+          "tp": 590,
+          "fp": 3,
+          "tn": 597,
+          "fn": 10
+        }
+      },
+      "forced_binary_at_frozen_AI_cutoff": {
+        "AI_cutoff": 0.7233173320180257,
+        "abstention": false,
+        "accuracy": {
+          "point": 0.9891666666666666,
+          "whole_group_percentile_95_CI": {
+            "point": 0.9891666666666666,
+            "low": 0.9825,
+            "high": 0.995,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "balanced_accuracy": {
+          "point": 0.9891666666666666,
+          "whole_group_percentile_95_CI": {
+            "point": 0.9891666666666666,
+            "low": 0.9825,
+            "high": 0.995,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "human_false_positive_rate": {
+          "point": 0.0016666666666666668,
+          "whole_group_percentile_95_CI": {
+            "point": 0.0016666666666666668,
+            "low": 0.0,
+            "high": 0.005,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "AI_recall": {
+          "point": 0.98,
+          "whole_group_percentile_95_CI": {
+            "point": 0.98,
+            "low": 0.9674583333333333,
+            "high": 0.9916666666666667,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "confusion": {
+          "tp": 588,
+          "fp": 1,
+          "tn": 599,
+          "fn": 12
+        },
+        "scope": "Forced score threshold on all core rows; unlike shipping, this table does not abstain on language or the gap between directional thresholds."
+      },
+      "shipping_with_abstentions": {
+        "denominator_rule": "Every eligible true-class member remains in error/recall denominators; all core rows remain in coverage.",
+        "accuracy_conditional_on_decided": {
+          "point": 0.9974160206718347,
+          "whole_group_percentile_95_CI": {
+            "point": 0.9974160206718347,
+            "low": 0.99395757241145,
+            "high": 1.0,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "AI_decision_coverage": {
+          "point": 0.49083333333333334,
+          "whole_group_percentile_95_CI": {
+            "point": 0.49083333333333334,
+            "low": 0.4845625,
+            "high": 0.49666666666666665,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "human_decision_coverage": {
+          "point": 0.4766666666666667,
+          "whole_group_percentile_95_CI": {
+            "point": 0.4766666666666667,
+            "low": 0.4670625,
+            "high": 0.48583333333333334,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "inconclusive_coverage": {
+          "point": 0.0325,
+          "whole_group_percentile_95_CI": {
+            "point": 0.0325,
+            "low": 0.0225,
+            "high": 0.04416666666666667,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "decided_coverage": {
+          "point": 0.9675,
+          "whole_group_percentile_95_CI": {
+            "point": 0.9675,
+            "low": 0.9558333333333333,
+            "high": 0.9775,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "human_misclassified_as_AI_rate": {
+          "point": 0.0016666666666666668,
+          "whole_group_percentile_95_CI": {
+            "point": 0.0016666666666666668,
+            "low": 0.0,
+            "high": 0.005,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "AI_misclassified_as_human_rate": {
+          "point": 0.0033333333333333335,
+          "whole_group_percentile_95_CI": {
+            "point": 0.0033333333333333335,
+            "low": 0.0,
+            "high": 0.008333333333333333,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "correct_AI_recall": {
+          "point": 0.98,
+          "whole_group_percentile_95_CI": {
+            "point": 0.98,
+            "low": 0.9674583333333333,
+            "high": 0.9916666666666667,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "correct_human_recall": {
+          "point": 0.95,
+          "whole_group_percentile_95_CI": {
+            "point": 0.95,
+            "low": 0.9316666666666666,
+            "high": 0.9666666666666667,
+            "valid_replicates": 500,
+            "requested_replicates": 500
+          }
+        },
+        "counts": {
+          "predicted_AI_n": 589,
+          "predicted_human_n": 572,
+          "inconclusive_n": 39,
+          "human_misclassified_as_AI_n": 1,
+          "AI_misclassified_as_human_n": 2,
+          "correct_AI_n": 588,
+          "correct_human_n": 570,
+          "inconclusive_human_n": 29,
+          "inconclusive_AI_n": 10
+        }
+      },
+      "bootstrap": {
+        "n_boot": 500,
+        "seed": 42,
+        "n_groups": 600,
+        "core_groups": 600,
+        "method": "percentile whole-group bootstrap; same resampling weights across tasks; fixed thresholds",
+        "scope": "conditional on fitted predictions/calibration and sampled evaluation groups; excludes retraining/calibration/model-selection uncertainty; zero observed FP may produce a degenerate interval"
+      }
+    }
+  },
+  "limitations": [
+    "The four cohorts are separate measured populations; no pooled universal accuracy is claimed.",
+    "Paired/triplet texts within a connected group are dependent. Bootstrap resamples whole groups, not independent rows.",
+    "The two rewrite views share the same 600 human controls and overlap their parent cohort; never add their counts or treat their intervals as independent.",
+    "Intervals use 500 replicates, seed42 and fixed selected predictions/calibration. They exclude training, model-selection and calibration uncertainty; zero observed errors can create degenerate intervals.",
+    "Acceptance is prespecified point-criterion passage, not CI endpoint passage or a population/per-domain 1% FPR guarantee.",
+    "All these final rows are >=128 word-like units; no short-text or non-English detection accuracy is established.",
+    "Binary success does not validate source-family/version authentication; rankings remain exploratory.",
+    "No Linux/CUDA/ZeroGPU deployment parity is implied by the original macOS CPU/MPS engineering checks."
+  ]
+}

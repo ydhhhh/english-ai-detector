@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "scope": "Actual CPU original-source/original-bundle vs separately installed public source/public documentation bundle; synthetic engineering only, not detection accuracy",
+  "original_manifest_sha256": "6194953ec27387b483c3c7d203d8a17eda84150c56a8480ae1f700293e7baa17",
+  "public_manifest_sha256": "f588dc69355cc96105ea627e0aa20bdcd9bed78709038884466abf008a4271cc",
+  "model_id": "english-ai-detector-v2-practical",
+  "case_count": 4,
+  "comparisons": [
+    {
+      "case": "core_English",
+      "text_sha256": "e58736498cced099ba1355cc1d52345fd6c67d116deabe12c7e304fb8c45e89d",
+      "max_absolute_probability_difference": 0.0,
+      "status": "AI-generated",
+      "full_encoder_coverage": true,
+      "word_like_tokens": 172,
+      "window_count": 1,
+      "probability_and_decision_pass": true
+    },
+    {
+      "case": "short_English",
+      "text_sha256": "7ae9a71595f21abcef66303dc1c9da48869783c77f3ac06835d12e2335f3d740",
+      "max_absolute_probability_difference": 0.0,
+      "status": "inconclusive",
+      "full_encoder_coverage": true,
+      "word_like_tokens": 5,
+      "window_count": 1,
+      "probability_and_decision_pass": true
+    },
+    {
+      "case": "unsupported_language",
+      "text_sha256": "d2a20b3e12cbef095de0c4b309909a80c70c7983b09dac2e29a380102294ce18",
+      "max_absolute_probability_difference": 0.0,
+      "status": "inconclusive",
+      "full_encoder_coverage": true,
+      "word_like_tokens": 160,
+      "window_count": 3,
+      "probability_and_decision_pass": true
+    },
+    {
+      "case": "long_full_tail",
+      "text_sha256": "d9f84174328ee9c72dd605da670602ff001a1cd3c357b4cb2407dbf17c169cac",
+      "max_absolute_probability_difference": 0.0,
+      "status": "AI-generated",
+      "full_encoder_coverage": true,
+      "word_like_tokens": 827,
+      "window_count": 2,
+      "probability_and_decision_pass": true
+    }
+  ],
+  "children": [
+    {
+      "mode": "old",
+      "returncode": 0,
+      "raw_engineering_output_sha256": "b9941084114a4176f8567821d8102346a43f0bc733de79043541661c277036aa",
+      "log_sha256": "351b70dda089c99a7316c3152406afceb25b8e7b7f89a98a125e5af987fdc5f1"
+    },
+    {
+      "mode": "public",
+      "returncode": 0,
+      "raw_engineering_output_sha256": "8bc0b2468702024ab481aef4329670958a40514e9e7197d484e59aac40fdd10d",
+      "log_sha256": "23f814a844bcded9e70a90225fc9f16aeea9a8c99696c8f66f2ded464e34c366"
+    }
+  ],
+  "source_origins": {
+    "original": "${PROJECT_ROOT}/experiments/english_v1/inference.py",
+    "public": "${PROJECT_ROOT}/publication/.qa/installed_core_v3/experiments/english_v1/inference.py"
+  },
+  "no_weights_or_threshold_changes": true,
+  "input_bodies_or_raw_predictions_in_report": false,
+  "CUDA_or_ZeroGPU_tested": false,
+  "public_export_original_sha256": "08c173a07d6b01176c5665e13e9766de974952b9fec9b9c328c8688bbcadbadb",
+  "public_export_path_redactions_only": true
+}

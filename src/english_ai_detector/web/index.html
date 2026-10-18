@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>English AI Text Detector</title>
+<style>
+:root{color-scheme:light;--ink:#172b45;--muted:#64748b;--line:#dce5ec;--accent:#176b63;--paper:#fff}*{box-sizing:border-box}body{margin:0;background:#f3f7f7;color:var(--ink);font:16px/1.55 system-ui,sans-serif}main{max-width:1080px;margin:48px auto;padding:0 24px}h1{font-size:clamp(28px,5vw,42px);line-height:1.15;letter-spacing:-1.3px}h2{font-size:20px;margin:0 0 14px}h3{font-size:16px}p{margin:8px 0 18px}.muted,small{color:var(--muted)}.eyebrow{color:var(--accent);font-size:12px;letter-spacing:2px;font-weight:800;text-transform:uppercase}.grid{display:grid;grid-template-columns:1.1fr 1fr;gap:22px}.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:26px;margin-bottom:20px;box-shadow:0 6px 20px #1b344506}label{display:block;font-weight:650;margin-bottom:6px}textarea,input{width:100%;font:inherit;border:1px solid #b8c8d4;border-radius:8px;padding:10px;background:#fff;color:inherit}textarea{resize:vertical;min-height:260px}button{font:inherit;font-weight:650;cursor:pointer;background:var(--accent);color:white;border:0;padding:11px 18px;border-radius:8px}button:disabled{cursor:default;opacity:.45}.row{display:flex;gap:10px;align-items:center}.row input{flex:1;min-width:0}.row button{white-space:nowrap}.status{font-size:13px;margin-top:8px;overflow-wrap:anywhere}.notice{background:#eef6f4;border-left:3px solid var(--accent);padding:12px;font-size:14px}.prob{display:flex;justify-content:space-between;font-variant-numeric:tabular-nums}.track{height:7px;background:#eaf0f4;border-radius:8px;overflow:hidden;margin:4px 0 12px}.fill{height:100%;background:var(--accent)}.headline{font-size:23px;font-weight:750;margin:12px 0}.badge{display:inline-block;font-size:12px;padding:3px 9px;background:#edf3f7;border-radius:20px}.error{color:#b42318}.hidden{display:none}details{border-top:1px solid var(--line);margin-top:20px;padding-top:14px}summary{cursor:pointer;font-weight:650}ul{padding-left:20px}footer{font-size:13px;color:var(--muted);padding-bottom:24px}@media(max-width:760px){main{margin-top:25px}.grid{grid-template-columns:1fr}.card{padding:20px}.row{flex-wrap:wrap}}
+</style>
+</head>
+<body><main>
+<div class="eyebrow">Local analysis · English text</div>
+<h1>English AI Text Detector</h1>
+<p class="muted">Human or AI probabilities, with exploratory source rankings. Your text stays with the local service.</p>
+<section class="card" aria-label="Local service connection">
+<label for="endpoint">Local service address</label><div class="row"><input id="endpoint" value="http://127.0.0.1:8765" spellcheck="false"><button id="connect">Connect</button></div>
+<div id="connection" class="status" role="status">Not connected. Start the Python service first.</div>
+</section>
+<div class="grid"><section class="card">
+<h2>1. Add your text</h2><label for="text">English body text</label><textarea id="text" placeholder="Paste a passage with at least 128 words for a supported decision."></textarea>
+<div class="row"><small id="count">0 characters</small></div>
+<p><label for="file">Or upload a document</label><input id="file" type="file" accept=".txt,.docx,.doc"><small>TXT, DOCX, or DOC with a system converter. Images require OCR.</small></p>
+<button id="detect" disabled>Detect text</button><div id="activity" class="status" role="status"></div>
+</section><section class="card" aria-live="polite">
+<h2>2. Read the result</h2><div id="empty" class="muted">Connect the service and submit a passage to begin.</div>
+<div id="result" class="hidden"><span class="badge" id="model"></span><div class="headline" id="decision"></div><p id="conclusion"></p><div id="binary"></div>
+<p class="notice">A probability is not proof of authorship or the fraction of AI-written words. Fewer than 128 word-like tokens receive an inconclusive decision.</p>
+<details><summary>Source candidates · rankings only</summary><p class="muted">Conditional on AI generation. Publisher model names are nominal labels, not authenticated model identities.</p><h3>Model families</h3><div id="families"></div><h3>Version candidates</h3><div id="versions"></div></details>
+<details><summary>Scope and warnings</summary><div id="quality" class="muted"></div><ul id="warnings"></ul></details>
+</div></section></div>
+<footer>Core support: English natural-language passages with at least 128 original word-like tokens. Language checks cannot identify every mixed-language span. Source assertions are disabled for the published v2 model.</footer>
+</main>
+<script>
+'use strict';
+const el=id=>document.getElementById(id);
+let connected=null,busy=false;
+const controls=['endpoint','connect','text','file'];
+function resetResult(){el('result').classList.add('hidden');el('empty').classList.remove('hidden');el('activity').textContent='';}
+function update(){el('count').textContent=el('text').value.length.toLocaleString()+' characters';el('detect').disabled=busy||!connected||(!el('text').value.trim()&&!el('file').files.length);}
+function lock(value){busy=value;controls.forEach(id=>el(id).disabled=value);update();}
+function endpoint(){const u=new URL(el('endpoint').value);if(!['http:','https:'].includes(u.protocol)||!['localhost','127.0.0.1','[::1]'].includes(u.hostname)||u.username||u.password)throw Error('Use a local HTTP service address.');return u.origin;}
+function bars(container,items){container.replaceChildren();for(const item of items){const value=Number(item.probability);if(!Number.isFinite(value)||value<0||value>1)throw Error('Service returned an invalid probability.');const row=document.createElement('div');row.className='prob';const label=document.createElement('span');label.textContent=item.label;const amount=document.createElement('span');amount.textContent=(100*value).toFixed(2)+'%';row.append(label,amount);const track=document.createElement('div');track.className='track';const fill=document.createElement('div');fill.className='fill';fill.style.width=(100*value)+'%';track.append(fill);container.append(row,track);}}
+async function connect(){resetResult();connected=null;lock(true);el('connection').textContent='Connecting…';el('connection').classList.remove('error');try{const base=endpoint();const response=await fetch(base+'/health',{cache:'no-store'});const health=await response.json();if(!response.ok||!health.ready)throw Error(health.error||'Service is not ready.');connected=base;el('connection').textContent='Connected · '+(health.model_id||'model ID available after detection')+' · max '+Number(health.limits.max_characters).toLocaleString()+' characters';}catch(error){el('connection').textContent=error.message;el('connection').classList.add('error');}finally{lock(false);}}
+el('connect').addEventListener('click',connect);
+el('endpoint').addEventListener('input',()=>{connected=null;resetResult();el('connection').textContent='Address changed. Connect again.';update();});
+el('text').addEventListener('input',()=>{if(el('text').value)el('file').value='';resetResult();update();});
+el('file').addEventListener('change',()=>{if(el('file').files.length)el('text').value='';resetResult();update();});
+el('detect').addEventListener('click',async()=>{if(busy||!connected)return;const base=connected,file=el('file').files[0],text=el('text').value;resetResult();lock(true);el('activity').classList.remove('error');el('activity').textContent='Processing full text…';try{const options=file?{method:'POST',headers:{'Content-Type':'application/octet-stream','X-Filename':encodeURIComponent(file.name)},body:file}:{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text})};const response=await fetch(base+(file?'/detect-file':'/detect'),options);const result=await response.json();if(!response.ok)throw Error(result.error||'Detection failed.');const decisions={'AI-generated':'Likely AI-generated','likely human':'Likely human-written','inconclusive':'Inconclusive'};el('decision').textContent=decisions[result.status]||'Inconclusive';el('conclusion').textContent=result.conclusion;el('model').textContent=result.model_id;bars(el('binary'),[{label:'Human',probability:result.probabilities.human},{label:'AI generated or rewritten',probability:result.probabilities.AI}]);bars(el('families'),result.family_probabilities);bars(el('versions'),result.model_probabilities.slice(0,10));el('quality').textContent=result.quality.word_like_tokens+' original word-like tokens · '+result.quality.window_counts+' windows · '+(100*result.quality.encoder_coverage).toFixed(0)+'% token coverage';el('warnings').replaceChildren(...result.warnings.map(text=>{const li=document.createElement('li');li.textContent=text;return li;}));el('empty').classList.add('hidden');el('result').classList.remove('hidden');el('activity').textContent='Complete.';}catch(error){el('activity').textContent=error.message;el('activity').classList.add('error');}finally{lock(false);}});
+if(location.protocol==='http:'||location.protocol==='https:')el('endpoint').value=location.origin;
+update();
+</script></body></html>

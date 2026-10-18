@@ -1,0 +1,105 @@
+{
+  "reference_only": true,
+  "status": "SANITIZED_HISTORICAL_REFERENCE_NOT_AN_EXECUTABLE_PROTOCOL_OR_NEW_RUN_SEAL",
+  "source_relative_path": "research/english_v2_training_registered_v1/Mini4_launch.json",
+  "original_sha256": "adb86eceafb98acc2f2ad0ecd13e4e425d8f369b981a4448e0b347a6a566f38e",
+  "original_bytes": 3729,
+  "placeholder_policy": "${PROJECT_ROOT} and external-path placeholders replace host absolute paths; this wrapper is not byte-identical to the source JSON.",
+  "payload": {
+    "pid": 32499,
+    "coordinator_pid": 32497,
+    "started_at_utc": "2026-10-17T17:14:23.076042+00:00",
+    "argv": [
+      "${PROJECT_ROOT}/.venv/bin/python",
+      "-B",
+      "-m",
+      "experiments.english_v1.neural",
+      "train",
+      "--train",
+      "${PROJECT_ROOT}/data/english_v2/train_registered.parquet",
+      "--validation",
+      "${PROJECT_ROOT}/data/english_v2/validation_general.parquet",
+      "--dev-challenge",
+      "${PROJECT_ROOT}/data/english_v2/dev_challenge_stress.parquet",
+      "--init-checkpoint",
+      "${PROJECT_ROOT}/models/initializers/english_v2_minilm4_binary",
+      "--output",
+      "${PROJECT_ROOT}/experiments/english_v2/runs/minilm4",
+      "--epochs",
+      "2",
+      "--batch-size",
+      "32",
+      "--precision",
+      "fp32",
+      "--lr",
+      "5e-06",
+      "--weight-mode",
+      "class_domain_v3",
+      "--family-loss-weight",
+      "0",
+      "--version-loss-weight",
+      "0",
+      "--max-length",
+      "512",
+      "--stride",
+      "448",
+      "--attention",
+      "sdpa",
+      "--seed",
+      "20261018",
+      "--weight-decay",
+      "0.01",
+      "--warmup-ratio",
+      "0.06",
+      "--clip-grad",
+      "1",
+      "--cpu-threads",
+      "6",
+      "--save-every",
+      "1000",
+      "--device",
+      "mps"
+    ],
+    "protocol_sha256": "276c4757774c0f1867470a040c0a303209a6a2444e8481d4402e4693ce221da4",
+    "initializer": {
+      "manifest_sha256": "aad5c178fd3a235432f877117a97a08742398a919418dcbd0a129d0e314ae00c",
+      "files_sha256": {
+        "detector.json": "3288fb21715d04df2b81ac835042ffe8428a7bff9f77a7c362309eebb5020dc9",
+        "detector.safetensors": "9d2ca9d251aeb2f2067478c12c564be863c478b91c579e4ea312f5170c04aabb",
+        "encoder_config/config.json": "69a2d4427d31477f4e570c96959839faa9294298a7d4d04c7c274c24b99f87fe",
+        "manifest.json": "aad5c178fd3a235432f877117a97a08742398a919418dcbd0a129d0e314ae00c",
+        "tokenizer/tokenizer.json": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66",
+        "tokenizer/tokenizer_config.json": "1128dd50ff3f913671a9405619c1bd8f9e9ddc28f62257cb94ed70683590b715"
+      },
+      "weights_sha256": "9d2ca9d251aeb2f2067478c12c564be863c478b91c579e4ea312f5170c04aabb",
+      "detector_metadata_sha256": "3288fb21715d04df2b81ac835042ffe8428a7bff9f77a7c362309eebb5020dc9"
+    },
+    "data_qa_sha256": "e753dda2a1fcd84db3eec01a4f7b5e4f06b2e4db3502eaac8477b96d1d6ec2b6",
+    "data": {
+      "train": {
+        "path": "data/english_v2/train_registered.parquet",
+        "bytes": 57231994,
+        "sha256": "f7d194d69b0059e836ef0564c6fe9757624a2554fd92eb43ae537c54f3856183",
+        "rows": 60000
+      },
+      "validation": {
+        "path": "data/english_v2/validation_general.parquet",
+        "bytes": 1739107,
+        "sha256": "7d2e25aa5bec7de203c3a5e7f972b2f5d8bcaf868e26c1cca7913b6341b31396",
+        "rows": 2000
+      },
+      "dev_challenge": {
+        "path": "data/english_v2/dev_challenge_stress.parquet",
+        "bytes": 3078610,
+        "sha256": "876eb73cce8eccdca74451be29ea98f0d3d4b5f57d7e6f09f03d537bafa397a2",
+        "rows": 3300
+      }
+    },
+    "code_sha256": {
+      "experiments/english_v1/neural.py": "fb4e96a42374e1c06bbf86d565bafee649ced067a40c8dea3d7899937687a384",
+      "experiments/english_v1/catalog.py": "1ff36c07194936feaadd04d6194e64e846c8257ed65d9eee743f33ac44c92344",
+      "experiments/english_v2/prepare_binary_init.py": "680fff328c62033d99c21a84eb3ac95aa13eae39c2ac4dc213a5be52cf5bdb55",
+      "experiments/english_v2/train_registered.py": "65269f5f759b89ce4bc46a5fba6a57a4cfe114b89270b0de823403e776047084"
+    }
+  }
+}

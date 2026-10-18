@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "scope": "Closed aggregate reports; home/workspace paths redacted without changing metrics; original report SHA retained. No corpus bodies, row IDs or per-row predictions are included.",
+  "files": [
+    {
+      "path": "docs/reports/METRICS_FOR_MODEL_CARD.json",
+      "original_path": "publication_review/METRICS_FOR_MODEL_CARD.json",
+      "original_sha256": "1c7afbacdceb9796472a010bc4bb64a3251cf06da3084db9b695a59d041a38e1",
+      "public_sha256": "1c7afbacdceb9796472a010bc4bb64a3251cf06da3084db9b695a59d041a38e1"
+    },
+    {
+      "path": "docs/reports/acceptance.json",
+      "original_path": "results/english_v2/release_v1/acceptance.json",
+      "original_sha256": "51c8264e7cf57354f29d5f094d3061a4dd6f50e87238139ffb446d8c784a5215",
+      "public_sha256": "a29006cddeb833ef2595f03a3c9bdd5b3b92193b00ad1fd0454300d460bdae61"
+    },
+    {
+      "path": "docs/reports/fresh_main.json",
+      "original_path": "results/english_v2/release_v1/evaluation/fresh_main/report.json",
+      "original_sha256": "0ec013143edbd4cc2b332dee607618f9e40fe824342958faff63a2394d51d209",
+      "public_sha256": "42cd27574432db3104ca195687b1172b3b37f3a1c4d11aebe8009a54cb9e69d6"
+    },
+    {
+      "path": "docs/reports/fresh_source_domain.json",
+      "original_path": "results/english_v2/release_v1/evaluation/fresh_source_domain/report.json",
+      "original_sha256": "e14eb073bf1edcd06840e1a8fd0f3bdf4dde8f7bfe647ded3941c3273cb45229",
+      "public_sha256": "b509b979bc343edf0068abd45e8dde039c2c8c99e43391c029b11a8eeb6346d5"
+    },
+    {
+      "path": "docs/reports/fresh_modern_with_human_controls.json",
+      "original_path": "results/english_v2/release_v1/evaluation/fresh_modern_with_human_controls/report.json",
+      "original_sha256": "5377f9c64b05d2614486ab4e606b8edc70febe45e18a05c074f313fc5a8e78cd",
+      "public_sha256": "77f4d86b78606d9dc362e569349f748d49e4900911cbbde36cf9940f29012e24"
+    },
+    {
+      "path": "docs/reports/fresh_paraphrase_with_human_controls.json",
+      "original_path": "results/english_v2/release_v1/evaluation/fresh_paraphrase_with_human_controls/report.json",
+      "original_sha256": "c05b57f6c783cdeb3847a469d06337313437c3d3e3acb55319f321b817900c84",
+      "public_sha256": "0c7112695df4c2f5a44814da22c1fbf658fcea1349368944cb1f67ebc7318289"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+English AI Detector
+Copyright (c) 2026 Name the LLM project contributors
+
+Original project source and documentation were previously provided under MIT.
+The public source distribution is licensed under Apache License 2.0, while
+the full original MIT copyright and permission notice is retained in
+third_party/LICENSE-MIT-legacy.txt. Prior MIT grants are not revoked.
+
+This source-code license does not relicense training data, pretrained weights,
+or mixed-source trained artifacts. See docs/licensing.md and the Model Hub
+LICENSE-MODEL.md for the separate research model notice and data-source terms.

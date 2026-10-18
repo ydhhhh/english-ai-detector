@@ -1,0 +1,105 @@
+{
+  "reference_only": true,
+  "status": "SANITIZED_HISTORICAL_REFERENCE_NOT_AN_EXECUTABLE_PROTOCOL_OR_NEW_RUN_SEAL",
+  "source_relative_path": "research/english_v2_training_registered_v1/Modern3_launch.json",
+  "original_sha256": "c4cbfb676a11ffbedac6d91c71c684a45c36f6b814de33efa9bec94d09cfd0eb",
+  "original_bytes": 3733,
+  "placeholder_policy": "${PROJECT_ROOT} and external-path placeholders replace host absolute paths; this wrapper is not byte-identical to the source JSON.",
+  "payload": {
+    "pid": 32903,
+    "coordinator_pid": 32497,
+    "started_at_utc": "2026-10-17T17:34:14.889604+00:00",
+    "argv": [
+      "${PROJECT_ROOT}/.venv/bin/python",
+      "-B",
+      "-m",
+      "experiments.english_v1.neural",
+      "train",
+      "--train",
+      "${PROJECT_ROOT}/data/english_v2/train_registered.parquet",
+      "--validation",
+      "${PROJECT_ROOT}/data/english_v2/validation_general.parquet",
+      "--dev-challenge",
+      "${PROJECT_ROOT}/data/english_v2/dev_challenge_stress.parquet",
+      "--init-checkpoint",
+      "${PROJECT_ROOT}/models/initializers/english_v2_modern3_binary",
+      "--output",
+      "${PROJECT_ROOT}/experiments/english_v2/runs/modern3",
+      "--epochs",
+      "2",
+      "--batch-size",
+      "16",
+      "--precision",
+      "bf16",
+      "--lr",
+      "1e-05",
+      "--weight-mode",
+      "class_normalized_v2",
+      "--family-loss-weight",
+      "0",
+      "--version-loss-weight",
+      "0",
+      "--max-length",
+      "512",
+      "--stride",
+      "448",
+      "--attention",
+      "sdpa",
+      "--seed",
+      "20261018",
+      "--weight-decay",
+      "0.01",
+      "--warmup-ratio",
+      "0.06",
+      "--clip-grad",
+      "1",
+      "--cpu-threads",
+      "6",
+      "--save-every",
+      "1000",
+      "--device",
+      "mps"
+    ],
+    "protocol_sha256": "276c4757774c0f1867470a040c0a303209a6a2444e8481d4402e4693ce221da4",
+    "initializer": {
+      "manifest_sha256": "01d51c916c266607f95cc298401a01a6304a445d29425c85c5938907eec25378",
+      "files_sha256": {
+        "detector.json": "5354515861a9952c14976f887256498de53561bf3c234428cd82e69fac1cf881",
+        "detector.safetensors": "8c884a1c0172e6fe218292190f5792353fa0b4ebd27d0dba90b99928f1d4b4c8",
+        "encoder_config/config.json": "8a991341efc1b6443b8d0c46061a9e8db2b577d92117e3bab19585a73eecb4bc",
+        "manifest.json": "01d51c916c266607f95cc298401a01a6304a445d29425c85c5938907eec25378",
+        "tokenizer/tokenizer.json": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+        "tokenizer/tokenizer_config.json": "68acf857b869285d8c3ac2757ddd26e6f8030fb275d6800131521eb736084608"
+      },
+      "weights_sha256": "8c884a1c0172e6fe218292190f5792353fa0b4ebd27d0dba90b99928f1d4b4c8",
+      "detector_metadata_sha256": "5354515861a9952c14976f887256498de53561bf3c234428cd82e69fac1cf881"
+    },
+    "data_qa_sha256": "e753dda2a1fcd84db3eec01a4f7b5e4f06b2e4db3502eaac8477b96d1d6ec2b6",
+    "data": {
+      "train": {
+        "path": "data/english_v2/train_registered.parquet",
+        "bytes": 57231994,
+        "sha256": "f7d194d69b0059e836ef0564c6fe9757624a2554fd92eb43ae537c54f3856183",
+        "rows": 60000
+      },
+      "validation": {
+        "path": "data/english_v2/validation_general.parquet",
+        "bytes": 1739107,
+        "sha256": "7d2e25aa5bec7de203c3a5e7f972b2f5d8bcaf868e26c1cca7913b6341b31396",
+        "rows": 2000
+      },
+      "dev_challenge": {
+        "path": "data/english_v2/dev_challenge_stress.parquet",
+        "bytes": 3078610,
+        "sha256": "876eb73cce8eccdca74451be29ea98f0d3d4b5f57d7e6f09f03d537bafa397a2",
+        "rows": 3300
+      }
+    },
+    "code_sha256": {
+      "experiments/english_v1/neural.py": "fb4e96a42374e1c06bbf86d565bafee649ced067a40c8dea3d7899937687a384",
+      "experiments/english_v1/catalog.py": "1ff36c07194936feaadd04d6194e64e846c8257ed65d9eee743f33ac44c92344",
+      "experiments/english_v2/prepare_binary_init.py": "680fff328c62033d99c21a84eb3ac95aa13eae39c2ac4dc213a5be52cf5bdb55",
+      "experiments/english_v2/train_registered.py": "65269f5f759b89ce4bc46a5fba6a57a4cfe114b89270b0de823403e776047084"
+    }
+  }
+}

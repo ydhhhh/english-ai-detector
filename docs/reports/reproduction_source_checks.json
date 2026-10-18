@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "scope": "Supersedes original79-file reproduction inventory after trustworthy joblib module-name inspection found an extra serialized class dependency. No model deserialization/data/training/GPU.",
+  "original_PY_count": 80,
+  "exact_original_count": 76,
+  "adapted_dual_hash_files": 4,
+  "generated_package_markers": 4,
+  "read_only_check_source_count": 84,
+  "new_serialized_dependency": "experiments/english_v1/stat_style_refine.py",
+  "source_manifest_sha256": "49d25888c085ec3188b9030c47d273356470f041af33f28ff7ed28adb188a469",
+  "guide_sha256": "a99cbc4a38a45a02dd569b8aac895a3a48e3c8df50583778c978e613c72005c7",
+  "prior_help10_and_guards4_unchanged": "Their entrypoint code has not changed; source inventory was read-only checked again with all84 paths.",
+  "new_actual_model_check": "Root performs actual trusted-bundle roundtrip separately.",
+  "public_export_original_sha256": "093312838242d00b031a200c965bf26d27954061e4e3cd4be2fef34d7630f221",
+  "public_export_path_redactions_only": true
+}

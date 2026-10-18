@@ -1,0 +1,398 @@
+{
+  "verified_at_utc": "2026-10-17T23:47:35.782304+00:00",
+  "passed": true,
+  "status": "passed",
+  "planned_cases": 43,
+  "executed_cases": 43,
+  "case_counts": {
+    "passed": 43,
+    "failed": 0,
+    "skipped": 0
+  },
+  "all43_passed": true,
+  "constructed_only": true,
+  "scope": "Only self-authored nonsensitive synthetic English fixtures; no real final text, corpus, detector or prediction used.",
+  "platform": {
+    "system": "Darwin",
+    "macos": "26.6.2",
+    "python": "3.12.14"
+  },
+  "extractor": "experiments.english_v1.documents.extract_text (alias of extract_document)",
+  "extractor_sha256": "2225b1e9b02b634f8674cc4be63c532afcb4eb662e3745ad220ffb84e9a7fab1",
+  "legacy_doc": {
+    "attempted": true,
+    "converter": "/usr/bin/textutil",
+    "additional_parser_installed": false,
+    "conversion_returncode": 0,
+    "bytes": 19456,
+    "signature_hex": "d0cf11e0a1b11ae1",
+    "ole_compound_signature": true,
+    "different_from_source_bytes": true
+  },
+  "cases": [
+    {
+      "name": "utf8",
+      "passed": true,
+      "characters": 461,
+      "exact_body_equal": true,
+      "whitespace_normalized_equal": true,
+      "elapsed_seconds": 1.6e-05,
+      "status": "passed"
+    },
+    {
+      "name": "utf8_bom",
+      "passed": true,
+      "characters": 461,
+      "exact_body_equal": true,
+      "whitespace_normalized_equal": true,
+      "elapsed_seconds": 1.5e-05,
+      "status": "passed"
+    },
+    {
+      "name": "utf16_le_bom",
+      "passed": true,
+      "characters": 461,
+      "exact_body_equal": true,
+      "whitespace_normalized_equal": true,
+      "elapsed_seconds": 7e-06,
+      "status": "passed"
+    },
+    {
+      "name": "utf16_be_bom",
+      "passed": true,
+      "characters": 461,
+      "exact_body_equal": true,
+      "whitespace_normalized_equal": true,
+      "elapsed_seconds": 6e-06,
+      "status": "passed"
+    },
+    {
+      "name": "uppercase_txt_suffix",
+      "passed": true,
+      "characters": 461,
+      "exact_body_equal": true,
+      "whitespace_normalized_equal": true,
+      "elapsed_seconds": 6e-06,
+      "status": "passed"
+    },
+    {
+      "name": "docx_body_table_row_major_tabs_breaks",
+      "passed": true,
+      "characters": 300,
+      "exact_body_equal": true,
+      "whitespace_normalized_equal": true,
+      "elapsed_seconds": 0.000251,
+      "status": "passed"
+    },
+    {
+      "name": "uppercase_docx_suffix",
+      "passed": true,
+      "characters": 300,
+      "exact_body_equal": true,
+      "whitespace_normalized_equal": true,
+      "elapsed_seconds": 7.3e-05,
+      "status": "passed"
+    },
+    {
+      "name": "genuine_ole_legacy_doc_roundtrip",
+      "passed": true,
+      "characters": 461,
+      "exact_body_equal": true,
+      "whitespace_normalized_equal": true,
+      "elapsed_seconds": 0.077247,
+      "status": "passed"
+    },
+    {
+      "name": "doc_output_byte_limit",
+      "passed": true,
+      "error_type": "DocumentError",
+      "message": "DOC extraction exceeds the resource limit.",
+      "elapsed_seconds": 0.080525,
+      "status": "passed"
+    },
+    {
+      "name": "doc_timeout_error_branch_simulated_clock",
+      "passed": true,
+      "error_type": "DocumentError",
+      "message": "DOC conversion timed out; save as DOCX or TXT and retry.",
+      "elapsed_seconds": 0.001792,
+      "status": "passed"
+    },
+    {
+      "name": "empty_input",
+      "passed": true,
+      "error_type": "DocumentError",
+      "message": "The uploaded file is empty.",
+      "elapsed_seconds": 2e-06,
+      "status": "passed"
+    },
+    {
+      "name": "unsupported_suffix",
+      "passed": true,
+      "error_type": "DocumentError",
+      "message": "Supported formats are TXT, DOCX, and DOC when a system converter is available.",
+      "elapsed_seconds": 1.4e-05,
+      "status": "passed"
+    },
+    {
+      "name": "invalid_utf8",
+      "passed": true,
+      "error_type": "DocumentError",
+      "message": "Unsupported TXT encoding; use UTF-8 or BOM-marked UTF-16.",
+      "elapsed_seconds": 1.6e-05,
+      "status": "passed"
+    },
+    {
+      "name": "utf16_without_bom",
+      "passed": true,
+      "error_type": "DocumentError",
+      "message": "TXT contains binary data; save it as UTF-8 text.",
+      "elapsed_seconds": 5e-06,
+      "status": "passed"
+    },
+    {
+      "name": "utf8_binary_nul",
+      "passed": true,
+      "error_type": "DocumentError",
+      "message": "TXT contains binary data; save it as UTF-8 text.",
+      "elapsed_seconds": 3e-06,
+      "status": "passed"
+    },
+    {
+      "name": "input_byte_limit",
+      "passed": true,
+      "error_type": "DocumentError",
+      "message": "Upload exceeds the 0 MiB limit.",
+      "elapsed_seconds": 7e-06,
+      "status": "passed"
+    },
+    {
+      "name": "extracted_character_limit",
+      "passed": true,
+      "error_type": "DocumentError",
+      "message": "Text exceeds the 20-character limit; no truncation or detection was performed.",
+      "elapsed_seconds": 8e-06,
+      "status": "passed"
+    },
+    {
+      "name": "not_a_docx_zip",
+      "passed": true,
+      "error_type": "DocumentError",
+      "message": "Cannot read DOCX; check that the file is complete and not encrypted.",
+      "elapsed_seconds": 2.9e-05,
+      "status": "passed"
+    },
+    {
+      "name": "docx_uncompressed_limit",
+      "passed": true,
+      "error_type": "DocumentError",
+      "message": "DOCX exceeds the uncompressed resource limit.",
+      "elapsed_seconds": 3.4e-05,
+      "status": "passed"
+    },
+    {
+      "name": "docx_entry_count_limit",
+      "passed": true,
+      "error_type": "DocumentError",
+      "message": "DOCX exceeds the uncompressed resource limit.",
+      "elapsed_seconds": 0.001978,
+      "status": "passed"
+    },
+    {
+      "name": "docx_duplicate_main_body",
+      "passed": true,
+      "error_type": "DocumentError",
+      "message": "The file must contain exactly one DOCX document body.",
+      "elapsed_seconds": 3.9e-05,
+      "status": "passed"
+    },
+    {
+      "name": "docx_xml_malformed",
+      "passed": true,
+      "error_type": "DocumentError",
+      "message": "DOCX body XML is malformed or uses an unsupported encoding.",
+      "elapsed_seconds": 7.7e-05,
+      "status": "passed"
+    },
+    {
+      "name": "docx_body_missing",
+      "passed": true,
+      "error_type": "DocumentError",
+      "message": "DOCX has no document body.",
+      "elapsed_seconds": 6.2e-05,
+      "status": "passed"
+    },
+    {
+      "name": "docx_empty_body_no_ocr",
+      "passed": true,
+      "error_type": "DocumentError",
+      "message": "No body text was extracted; scanned images require OCR.",
+      "elapsed_seconds": 5.3e-05,
+      "status": "passed"
+    },
+    {
+      "name": "docx_custom_xml_entities",
+      "passed": true,
+      "error_type": "DocumentError",
+      "message": "Documents with custom XML entities are unsupported.",
+      "elapsed_seconds": 3.4e-05,
+      "status": "passed"
+    },
+    {
+      "name": "docx_declared_zip_encrypted_flag",
+      "passed": true,
+      "error_type": "DocumentError",
+      "message": "Encrypted DOCX is unsupported; remove password protection first.",
+      "elapsed_seconds": 1.7e-05,
+      "status": "passed"
+    },
+    {
+      "name": "doc_converter_unavailable",
+      "passed": true,
+      "error_type": "DocumentError",
+      "message": "No DOC converter is installed; save the file as DOCX or UTF-8 TXT.",
+      "elapsed_seconds": 1.9e-05,
+      "status": "passed"
+    },
+    {
+      "name": "doc_converter_launch_failure",
+      "passed": true,
+      "error_type": "DocumentError",
+      "message": "DOC converter is unavailable; save as DOCX or UTF-8 TXT.",
+      "elapsed_seconds": 0.00043,
+      "status": "passed"
+    },
+    {
+      "name": "corrupt_ole_doc",
+      "passed": true,
+      "error_type": "DocumentError",
+      "message": "No body text was extracted; scanned images require OCR.",
+      "elapsed_seconds": 0.073964,
+      "status": "passed"
+    },
+    {
+      "name": "nested textbox once",
+      "passed": true,
+      "status": "passed"
+    },
+    {
+      "name": "table paragraph order",
+      "passed": true,
+      "status": "passed"
+    },
+    {
+      "name": "tabs CR breaks",
+      "passed": true,
+      "status": "passed"
+    },
+    {
+      "name": "delText/instrText omitted",
+      "passed": true,
+      "status": "passed"
+    },
+    {
+      "name": "normal XML utf-16",
+      "passed": true,
+      "status": "passed"
+    },
+    {
+      "name": "entity rejection utf-16",
+      "passed": true,
+      "status": "passed"
+    },
+    {
+      "name": "normal XML utf-16-le",
+      "passed": true,
+      "status": "passed"
+    },
+    {
+      "name": "entity rejection utf-16-le",
+      "passed": true,
+      "status": "passed"
+    },
+    {
+      "name": "normal XML utf-16-be",
+      "passed": true,
+      "status": "passed"
+    },
+    {
+      "name": "entity rejection utf-16-be",
+      "passed": true,
+      "status": "passed"
+    },
+    {
+      "name": "unsupported XML encoding UTF-16-LE",
+      "passed": true,
+      "status": "passed"
+    },
+    {
+      "name": "unsupported XML encoding unknown-invalid-encoding",
+      "passed": true,
+      "status": "passed"
+    },
+    {
+      "name": "damaged deflate mapped to DocumentError",
+      "passed": true,
+      "status": "passed"
+    },
+    {
+      "name": "Strict OOXML body and table",
+      "passed": true,
+      "status": "passed"
+    }
+  ],
+  "format_semantics": {
+    "txt": "UTF8/UTF8BOM and BOM-marked UTF16LE/BE preserve internal original characters and paragraphs. Leading/trailing whitespace is stripped by the API.",
+    "docx": "Body, nested textbox and table-cell paragraph order follow logical document XML, row-major in this fixture; each text node is visited once, tabs and explicit linebreaks retained. Table grid formatting is flattened to text paragraphs. Header/footer excluded; logical order does not certify Word visual layout.",
+    "doc": "Real native OLE binary roundtrip required for success; conversion semantics depend on installed textutil. No extension-only file used for the success case."
+  },
+  "resource_limits": {
+    "upload_bytes_default": 8388608,
+    "extracted_characters_default": 200000,
+    "docx_declared_uncompressed_bytes_default": 33554432,
+    "docx_zip_entries_maximum": 2048,
+    "doc_output_bytes_default": 33554432,
+    "doc_conversion_deadline_seconds": 15,
+    "tests": "Small fixtures lower configured limits to exercise guards; timeout branch uses a simulated elapsed clock, not a deliberately hung converter."
+  },
+  "limits": [
+    "Synthetic roundtrips do not certify every historical Word variant, corrupt/encrypted file or complex layout.",
+    "No OCR; fields/headers/footers/layout are not a full Word rendering. DOC parsing delegates to the installed converter's format recognition.",
+    "XML/ZIP checks and time/output bounds were checked as implemented; this is not a security audit of macOS textutil internals."
+  ],
+  "model_modules_loaded": false,
+  "fixtures": [
+    {
+      "path": "fixtures/body_and_table.docx",
+      "bytes": 1909,
+      "sha256": "469d284f282e3ddeafe86bdcbc47bbefe6639bf29feb1713b4a1d8371077a7dc"
+    },
+    {
+      "path": "fixtures/genuine_legacy.doc",
+      "bytes": 19456,
+      "sha256": "4540c66853de8787281ece5f519a042a583cb07a67b1daf15802879a5fbc93fd"
+    },
+    {
+      "path": "fixtures/utf16_be_bom.txt",
+      "bytes": 924,
+      "sha256": "4e5f063242e199cbe50178e3b41d4fdbe7d719864236aa9ada6f545f1088c92b"
+    },
+    {
+      "path": "fixtures/utf16_le_bom.txt",
+      "bytes": 924,
+      "sha256": "0b8bf20c73ad824a0e2db60fcffd238a7e631709dc35fe09ee52432406254148"
+    },
+    {
+      "path": "fixtures/utf8.txt",
+      "bytes": 465,
+      "sha256": "5d0e9fe8fa4f5879ecc3ed309857cfb9311c4d84a49251a1b5cd73c3fc0c7ac1"
+    },
+    {
+      "path": "fixtures/utf8_bom.txt",
+      "bytes": 468,
+      "sha256": "795fe54e75c5fbd939c3f2d1cd4f6d6dd5f002e02f173a528a4e8040b90a99ca"
+    }
+  ],
+  "public_export_original_sha256": "fb1de0ce64389911dc24c8f4b84a45da53f5708417cd7ce2f77ae02c37db79d0",
+  "public_export_path_redactions_only": true
+}

@@ -1,0 +1,108 @@
+{
+  "scope": "Exact numeric/integrity code retained for frozen artifact compatibility; not a claim of model or data quality.",
+  "source_model_id_unchanged": "english-ai-detector-v2-practical",
+  "exact_files": [
+    {
+      "upstream_path": "experiments/english_v1/inference.py",
+      "public_path": "src/experiments/english_v1/inference.py",
+      "sha256": "c13a75461671d7e30dcef76f00f78e96a7d1eeef9109f7430af8df99afc4debf",
+      "bytes": 15108,
+      "byte_identical_numeric_or_integrity_core": true
+    },
+    {
+      "upstream_path": "experiments/english_v1/neural.py",
+      "public_path": "src/experiments/english_v1/neural.py",
+      "sha256": "fb4e96a42374e1c06bbf86d565bafee649ced067a40c8dea3d7899937687a384",
+      "bytes": 57401,
+      "byte_identical_numeric_or_integrity_core": true
+    },
+    {
+      "upstream_path": "experiments/english_v1/statistical.py",
+      "public_path": "src/experiments/english_v1/statistical.py",
+      "sha256": "1d8a0ec47b0fd39406e619dc2695fa6b6535c99ef7ba11d4786add58efff2314",
+      "bytes": 39596,
+      "byte_identical_numeric_or_integrity_core": true
+    },
+    {
+      "upstream_path": "experiments/english_v1/calibration.py",
+      "public_path": "src/experiments/english_v1/calibration.py",
+      "sha256": "ebc4a655351523ad2bd762270ec7ffa13493fc2eb4c888e46fc4cab75c6ee7cc",
+      "bytes": 11867,
+      "byte_identical_numeric_or_integrity_core": true
+    },
+    {
+      "upstream_path": "experiments/english_v1/catalog.py",
+      "public_path": "src/experiments/english_v1/catalog.py",
+      "sha256": "1ff36c07194936feaadd04d6194e64e846c8257ed65d9eee743f33ac44c92344",
+      "bytes": 1488,
+      "byte_identical_numeric_or_integrity_core": true
+    },
+    {
+      "upstream_path": "experiments/english_v1/select_binary.py",
+      "public_path": "src/experiments/english_v1/select_binary.py",
+      "sha256": "fccee0b10d27b68c5f2b577c9f1a5f860ee9219b77020c3b66671d8005a6dfae",
+      "bytes": 8668,
+      "byte_identical_numeric_or_integrity_core": true
+    },
+    {
+      "upstream_path": "experiments/english_v1/language_guard.py",
+      "public_path": "src/experiments/english_v1/language_guard.py",
+      "sha256": "a42f3c3b912f7babdf90ff7101f5caf0e617aa4991fb0ce64c45a175c5855950",
+      "bytes": 5267,
+      "byte_identical_numeric_or_integrity_core": true
+    },
+    {
+      "upstream_path": "experiments/english_v1/version_refinement.py",
+      "public_path": "src/experiments/english_v1/version_refinement.py",
+      "sha256": "e749cc3c9aaa95584bec5827311575377edcd4e2e833fcfd09d2b889eda9e56f",
+      "bytes": 53638,
+      "byte_identical_numeric_or_integrity_core": true
+    },
+    {
+      "upstream_path": "experiments/english_v1/source_release_gate.py",
+      "public_path": "src/experiments/english_v1/source_release_gate.py",
+      "sha256": "39563a52c6df56507e6c84f2fe283441528c35da0f1cd03dd6719674a1b196c3",
+      "bytes": 23870,
+      "byte_identical_numeric_or_integrity_core": true
+    },
+    {
+      "upstream_path": "experiments/english_v1/release_acceptance.py",
+      "public_path": "src/experiments/english_v1/release_acceptance.py",
+      "sha256": "740c8ce78e0e4d47ca874984faf318c184599efb8cdc63e250c1f8661d120924",
+      "bytes": 24524,
+      "byte_identical_numeric_or_integrity_core": true
+    },
+    {
+      "upstream_path": "experiments/ntl_v1/baseline.py",
+      "public_path": "src/experiments/ntl_v1/baseline.py",
+      "sha256": "7598cbfb6e000a71d8871b8d12f297da680e0bf5ed0cf81043bdb43e95358f7d",
+      "bytes": 8251,
+      "byte_identical_numeric_or_integrity_core": true
+    },
+    {
+      "upstream_path": "experiments/english_v1/stat_style_refine.py",
+      "public_path": "src/experiments/english_v1/stat_style_refine.py",
+      "sha256": "479c9784a8d7df20615e9b84daf8562a733268b996362956e4a9fefc2d4b6fe2",
+      "bytes": 9974,
+      "byte_identical_numeric_or_integrity_core": true
+    },
+    {
+      "upstream_path": "experiments/english_v1/stat_train.py",
+      "public_path": "src/experiments/english_v1/stat_train.py",
+      "sha256": "e7559d587cda105d4d6b2ab3992f2e6bfc4747cc3cec96a23a96dd3e7fd0b85f",
+      "bytes": 9050,
+      "byte_identical_numeric_or_integrity_core": true
+    }
+  ],
+  "modified_non_numeric_files": [
+    "src/experiments/english_v1/runtime.py",
+    "src/experiments/english_v1/documents.py",
+    "src/english_ai_detector/serve.py"
+  ],
+  "no_corpus_weights_or_vendor_copied": true,
+  "serialized_project_module_dependencies": [
+    "experiments.english_v1.stat_style_refine",
+    "experiments.english_v1.statistical"
+  ],
+  "serialized_dependency_import_closure_included": true
+}

@@ -1,0 +1,58 @@
+{
+  "reference_only": true,
+  "status": "SANITIZED_HISTORICAL_REFERENCE_NOT_AN_EXECUTABLE_PROTOCOL_OR_NEW_RUN_SEAL",
+  "source_relative_path": "research/english_v2_release_data_plan_v1.json",
+  "original_sha256": "ed353a0ef9b2052c15b9c72dc3a26ed090b9c97efb1e0d668cbbf5c52d9d9de9",
+  "original_bytes": 2063,
+  "placeholder_policy": "${PROJECT_ROOT} and external-path placeholders replace host absolute paths; this wrapper is not byte-identical to the source JSON.",
+  "payload": {
+    "schema_version": 1,
+    "status": "FROZEN_BEFORE_V2_TRAINING_AND_SCORES",
+    "calibration": {
+      "input": "data/english_v2/calibration.parquet",
+      "input_sha256": "7e1b5fb9f27855a0083b341708107d3720d823b5b62cc97f8d9a2ed570128f17",
+      "manifest": "data/english_v2/manifest.json",
+      "manifest_sha256": "941f568be18d361c9c3a32116ba35c0acba3d35b275e07a68c8ab4dae90665d9",
+      "rows": 8000,
+      "expected_export_rows": 8000
+    },
+    "final_datasets": [
+      {
+        "name": "fresh_main",
+        "input": "data/english_v2/final_main.parquet",
+        "input_sha256": "94e6988404218dd963abba8a50040b724e27b8307d933a894232b33a7797909c",
+        "manifest": "data/english_v2/manifest.json",
+        "manifest_sha256": "941f568be18d361c9c3a32116ba35c0acba3d35b275e07a68c8ab4dae90665d9",
+        "rows": 3000,
+        "expected_export_rows": 3000
+      },
+      {
+        "name": "fresh_source_domain",
+        "input": "data/english_v2/final_source_domain.parquet",
+        "input_sha256": "413f8e075eaa39cefbb38bc49108bb138533eafe13128b22501f0d77b5b07b40",
+        "manifest": "data/english_v2/manifest.json",
+        "manifest_sha256": "941f568be18d361c9c3a32116ba35c0acba3d35b275e07a68c8ab4dae90665d9",
+        "rows": 800,
+        "expected_export_rows": 800
+      },
+      {
+        "name": "fresh_modern_with_human_controls",
+        "input": "data/english_v2/final_modern.parquet",
+        "input_sha256": "eb9b9f7e02dc98d7ab94a372ce8a65f4585ab8f5e1e51137a689e42757fe7e07",
+        "manifest": "data/english_v2/manifest.json",
+        "manifest_sha256": "941f568be18d361c9c3a32116ba35c0acba3d35b275e07a68c8ab4dae90665d9",
+        "rows": 2000,
+        "expected_export_rows": 2000
+      },
+      {
+        "name": "fresh_paraphrase_with_human_controls",
+        "input": "data/english_v2/final_paraphrase.parquet",
+        "input_sha256": "d23312b4b5bb0f6327caf03dfe566a1810ec48448e612ea9042f6df5e2100ff2",
+        "manifest": "data/english_v2/manifest.json",
+        "manifest_sha256": "941f568be18d361c9c3a32116ba35c0acba3d35b275e07a68c8ab4dae90665d9",
+        "rows": 1800,
+        "expected_export_rows": 1800
+      }
+    ]
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "scope": "English documentation and publication provenance packaging only; no training/calibration or numerical configuration change",
+  "original_manifest_sha256": "6194953ec27387b483c3c7d203d8a17eda84150c56a8480ae1f700293e7baa17",
+  "public_manifest_sha256": "f588dc69355cc96105ea627e0aa20bdcd9bed78709038884466abf008a4271cc",
+  "public_bundle": "publication/model/bundle",
+  "model_id": "english-ai-detector-v2-practical",
+  "unchanged_numeric_members": [
+    {
+      "path": "binary_blend.json",
+      "bytes": 108701,
+      "sha256": "df0a837b1ce7016d56373d06f822fa48d36a9e969bd525051fd1ae83ceef4628"
+    },
+    {
+      "path": "calibration.json",
+      "bytes": 3282426,
+      "sha256": "31330e39f471587ad50156c041717b326b1cbfcd6e0230ef6ff32887c653d50c"
+    },
+    {
+      "path": "components/minilm4_epoch1/detector.json",
+      "bytes": 5783,
+      "sha256": "359897236e9516b3375d962d2fb4970f4aad46ab998da0d9b4a6e981086d2e54"
+    },
+    {
+      "path": "components/minilm4_epoch1/detector.safetensors",
+      "bytes": 91695488,
+      "sha256": "e1877e1665c31a6070cfe0f0f6a5b2cea051df9382c04ebe9fb98b2dddb465e0"
+    },
+    {
+      "path": "components/minilm4_epoch1/encoder_config/config.json",
+      "bytes": 745,
+      "sha256": "69a2d4427d31477f4e570c96959839faa9294298a7d4d04c7c274c24b99f87fe"
+    },
+    {
+      "path": "components/minilm4_epoch1/tokenizer/tokenizer.json",
+      "bytes": 711396,
+      "sha256": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66"
+    },
+    {
+      "path": "components/minilm4_epoch1/tokenizer/tokenizer_config.json",
+      "bytes": 592,
+      "sha256": "1128dd50ff3f913671a9405619c1bd8f9e9ddc28f62257cb94ed70683590b715"
+    },
+    {
+      "path": "components/minilm_v3_epoch2/detector.json",
+      "bytes": 5576,
+      "sha256": "39469e6d3dd4d61dd488129f6c15297faad5534768e6017a7af4f929c0d15242"
+    },
+    {
+      "path": "components/minilm_v3_epoch2/detector.safetensors",
+      "bytes": 91695488,
+      "sha256": "9d2ca9d251aeb2f2067478c12c564be863c478b91c579e4ea312f5170c04aabb"
+    },
+    {
+      "path": "components/minilm_v3_epoch2/encoder_config/config.json",
+      "bytes": 745,
+      "sha256": "69a2d4427d31477f4e570c96959839faa9294298a7d4d04c7c274c24b99f87fe"
+    },
+    {
+      "path": "components/minilm_v3_epoch2/tokenizer/tokenizer.json",
+      "bytes": 711396,
+      "sha256": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66"
+    },
+    {
+      "path": "components/minilm_v3_epoch2/tokenizer/tokenizer_config.json",
+      "bytes": 592,
+      "sha256": "1128dd50ff3f913671a9405619c1bd8f9e9ddc28f62257cb94ed70683590b715"
+    },
+    {
+      "path": "components/modern3_epoch2/detector.json",
+      "bytes": 5787,
+      "sha256": "6ebf0efe1ecac71b65b67a66f298e89bcc215577fc559734c927ca305a16a090"
+    },
+    {
+      "path": "components/modern3_epoch2/detector.safetensors",
+      "bytes": 597694304,
+      "sha256": "84bbb9e8efe59cbdc050940fa7f63bf4d5b493d27cea84fd7d6f68dbb7649f25"
+    },
+    {
+      "path": "components/modern3_epoch2/encoder_config/config.json",
+      "bytes": 1904,
+      "sha256": "8a991341efc1b6443b8d0c46061a9e8db2b577d92117e3bab19585a73eecb4bc"
+    },
+    {
+      "path": "components/modern3_epoch2/tokenizer/tokenizer.json",
+      "bytes": 3583228,
+      "sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30"
+    },
+    {
+      "path": "components/modern3_epoch2/tokenizer/tokenizer_config.json",
+      "bytes": 378,
+      "sha256": "68acf857b869285d8c3ac2757ddd26e6f8030fb275d6800131521eb736084608"
+    },
+    {
+      "path": "components/statistical_v2/model.joblib",
+      "bytes": 51198043,
+      "sha256": "32a35bcfa2fc09a49d841bf2f2ad67f3d0d5fa926590c282f4dd14363c41fc45"
+    },
+    {
+      "path": "decision_protocol.json",
+      "bytes": 2235,
+      "sha256": "0e335238cb5b66c77ef633cc9c09494357e23c4cb986651f10887df2bfdaa0fb"
+    }
+  ],
+  "integrity_members": 30,
+  "payload_bytes": 842587157,
+  "original_bundle_unchanged": true,
+  "public_model_license": "research-use-model-notice",
+  "source_license": "Apache-2.0 with legacy MIT notice",
+  "runtime_equivalence_QA": "pending",
+  "public_export_original_sha256": "db049eb1a7d3b2c0cd4215422a1c750ebdf22b4b883ad254d62a76fc37fcc662",
+  "public_export_path_redactions_only": true
+}

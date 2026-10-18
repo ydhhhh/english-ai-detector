@@ -1,0 +1,636 @@
+{
+  "reference_only": true,
+  "status": "SANITIZED_HISTORICAL_REFERENCE_NOT_AN_EXECUTABLE_PROTOCOL_OR_NEW_RUN_SEAL",
+  "source_relative_path": "research/english_v2_protocol_v1.json",
+  "original_sha256": "276c4757774c0f1867470a040c0a303209a6a2444e8481d4402e4693ce221da4",
+  "original_bytes": 26596,
+  "placeholder_policy": "${PROJECT_ROOT} and external-path placeholders replace host absolute paths; this wrapper is not byte-identical to the source JSON.",
+  "payload": {
+    "schema_version": 1,
+    "status": "FROZEN_BEFORE_V2_TRAINING_AND_SCORES",
+    "numeric_policy": {
+      "path": "research/english_v2_data/acceptance_targets_v1.json",
+      "sha256": "ebb755a65df48344ba9d26a7855e8fdf45ec2df841ad46e6bc7205e81e53b4bd"
+    },
+    "candidate_names": [
+      "minilm4_epoch1",
+      "minilm4_epoch2",
+      "modern3_epoch1",
+      "modern3_epoch2"
+    ],
+    "binary_selector": {
+      "algorithm": "v2_maximin_binary_v1",
+      "cohorts": [
+        "general",
+        "source_domain",
+        "modern",
+        "paraphrase",
+        "legacy_main",
+        "legacy_creative"
+      ],
+      "legacy_retention_disclosure": "legacy_main and legacy_creative are observed v1 development, never fresh final evidence",
+      "core_min_words": 128,
+      "fit_selection_group_salt": "english-v2-binary-development:",
+      "empirical_human_FPR": 0.02,
+      "quality": "0.5*AUROC+0.5*AI_recall_at_empirical_2pct_human_FPR",
+      "ordering": [
+        "minimum_cohort_quality",
+        "mean_cohort_quality",
+        "negative_mean_cohort_NLL",
+        "negative_nonzero_components"
+      ],
+      "fit_weighting": "equal cohort mass; equal human/AI mass within each cohort",
+      "candidates": "each single; each pair at 0.25/0.5/0.75; equal-all; nonnegative logistic if optimizer converges",
+      "standardization": "all core fitting halves only; unweighted mean/std; scale floor 1e-6",
+      "logistic": {
+        "l2": 0.001,
+        "weight_bounds": [
+          0,
+          20
+        ],
+        "intercept_bounds": [
+          -20,
+          20
+        ],
+        "solver": "L-BFGS-B"
+      },
+      "minimum_core_each_class_each_half": 50
+    },
+    "source_mode": "rankings_only",
+    "source_calibration_sha256": "1b3cac20a654f1b0cb27f2784be172b9e59fa21b4858f1e5d2cd253337521ff4",
+    "language_rule_sha256": "a42f3c3b912f7babdf90ff7101f5caf0e617aa4991fb0ce64c45a175c5855950",
+    "deployment_decision_protocol_sha256": "0e335238cb5b66c77ef633cc9c09494357e23c4cb986651f10887df2bfdaa0fb",
+    "training": {
+      "work_dir": "research/english_v2_training_registered_v1",
+      "python": ".venv/bin/python",
+      "data": {
+        "train": {
+          "path": "data/english_v2/train_registered.parquet",
+          "bytes": 57231994,
+          "sha256": "f7d194d69b0059e836ef0564c6fe9757624a2554fd92eb43ae537c54f3856183",
+          "rows": 60000
+        },
+        "validation": {
+          "path": "data/english_v2/validation_general.parquet",
+          "bytes": 1739107,
+          "sha256": "7d2e25aa5bec7de203c3a5e7f972b2f5d8bcaf868e26c1cca7913b6341b31396",
+          "rows": 2000
+        },
+        "dev_challenge": {
+          "path": "data/english_v2/dev_challenge_stress.parquet",
+          "bytes": 3078610,
+          "sha256": "876eb73cce8eccdca74451be29ea98f0d3d4b5f57d7e6f09f03d537bafa397a2",
+          "rows": 3300
+        }
+      },
+      "data_qa": {
+        "path": "research/english_v2_data/audit/independent_prepared_data_qa.json",
+        "bytes": 31283,
+        "sha256": "e753dda2a1fcd84db3eec01a4f7b5e4f06b2e4db3502eaac8477b96d1d6ec2b6"
+      },
+      "code_sha256": {
+        "experiments/english_v1/neural.py": "fb4e96a42374e1c06bbf86d565bafee649ced067a40c8dea3d7899937687a384",
+        "experiments/english_v1/catalog.py": "1ff36c07194936feaadd04d6194e64e846c8257ed65d9eee743f33ac44c92344",
+        "experiments/english_v2/prepare_binary_init.py": "680fff328c62033d99c21a84eb3ac95aa13eae39c2ac4dc213a5be52cf5bdb55",
+        "experiments/english_v2/train_registered.py": "65269f5f759b89ce4bc46a5fba6a57a4cfe114b89270b0de823403e776047084"
+      },
+      "jobs": [
+        {
+          "name": "Mini4",
+          "parent": {
+            "path": "models/candidates/minilm_v3_epoch2",
+            "weights_sha256": "9d2ca9d251aeb2f2067478c12c564be863c478b91c579e4ea312f5170c04aabb",
+            "detector_metadata_sha256": "39469e6d3dd4d61dd488129f6c15297faad5534768e6017a7af4f929c0d15242"
+          },
+          "initializer": "models/initializers/english_v2_minilm4_binary",
+          "run_dir": "experiments/english_v2/runs/minilm4",
+          "snapshots": {
+            "1": "models/candidates/minilm4_epoch1",
+            "2": "models/candidates/minilm4_epoch2"
+          },
+          "hyperparameters": {
+            "epochs": 2,
+            "batch_size": 32,
+            "precision": "fp32",
+            "lr": 5e-06,
+            "weight_mode": "class_domain_v3",
+            "family_loss_weight": 0,
+            "version_loss_weight": 0,
+            "max_length": 512,
+            "stride": 448,
+            "attention": "sdpa",
+            "seed": 20261018,
+            "weight_decay": 0.01,
+            "warmup_ratio": 0.06,
+            "clip_grad": 1,
+            "cpu_threads": 6,
+            "save_every": 1000
+          }
+        },
+        {
+          "name": "Modern3",
+          "parent": {
+            "path": "models/candidates/modernbert_epoch2",
+            "weights_sha256": "8c884a1c0172e6fe218292190f5792353fa0b4ebd27d0dba90b99928f1d4b4c8",
+            "detector_metadata_sha256": "c3a7d3d67590038633e64d6db4e168021d2415c914dbd06296112588ad47764f"
+          },
+          "initializer": "models/initializers/english_v2_modern3_binary",
+          "run_dir": "experiments/english_v2/runs/modern3",
+          "snapshots": {
+            "1": "models/candidates/modern3_epoch1",
+            "2": "models/candidates/modern3_epoch2"
+          },
+          "hyperparameters": {
+            "epochs": 2,
+            "batch_size": 16,
+            "precision": "bf16",
+            "lr": 1e-05,
+            "weight_mode": "class_normalized_v2",
+            "family_loss_weight": 0,
+            "version_loss_weight": 0,
+            "max_length": 512,
+            "stride": 448,
+            "attention": "sdpa",
+            "seed": 20261018,
+            "weight_decay": 0.01,
+            "warmup_ratio": 0.06,
+            "clip_grad": 1,
+            "cpu_threads": 6,
+            "save_every": 1000
+          }
+        }
+      ]
+    },
+    "development": {
+      "output_dir": "results/english_v2/development_selection_v1",
+      "cohorts": {
+        "general": {
+          "path": "data/english_v2/validation_general.parquet",
+          "bytes": 1739107,
+          "sha256": "7d2e25aa5bec7de203c3a5e7f972b2f5d8bcaf868e26c1cca7913b6341b31396",
+          "rows": 2000
+        },
+        "source_domain": {
+          "path": "data/english_v2/dev_source_domain.parquet",
+          "bytes": 485273,
+          "sha256": "d59d729b1e5619441f8cec35f9dd8fd1bb6d75ce0d58b304490abb2c2806a072",
+          "rows": 800
+        },
+        "modern": {
+          "path": "data/english_v2/dev_modern.parquet",
+          "bytes": 1776468,
+          "sha256": "59c67b09147cc8fda8b36e0be0cd607f1af15bdac9a453c1818617978059dc9e",
+          "rows": 1600
+        },
+        "paraphrase": {
+          "path": "data/english_v2/dev_paraphrase.parquet",
+          "bytes": 842785,
+          "sha256": "20fb62daa7ea64d896c778334c5369d66fd0fc7a6bf844b53eff73bb80d3179e",
+          "rows": 900
+        },
+        "legacy_main": {
+          "path": "data/english_v2/dev_legacy_main.parquet",
+          "bytes": 2412267,
+          "sha256": "33a42b99a478e01effb815502789415452366cd1b4af271b77883be6acde2604",
+          "rows": 2000
+        },
+        "legacy_creative": {
+          "path": "data/english_v2/dev_legacy_creative.parquet",
+          "bytes": 2325374,
+          "sha256": "9ec77b7c5e68d7ab399ca6155003b65d3ac06c92f73ffaa1e00156b90a80e6fa",
+          "rows": 2000
+        }
+      },
+      "candidate_checkpoints": {
+        "minilm4_epoch1": {
+          "job": "Mini4",
+          "epoch": 1,
+          "path": "models/candidates/minilm4_epoch1"
+        },
+        "minilm4_epoch2": {
+          "job": "Mini4",
+          "epoch": 2,
+          "path": "models/candidates/minilm4_epoch2"
+        },
+        "modern3_epoch1": {
+          "job": "Modern3",
+          "epoch": 1,
+          "path": "models/candidates/modern3_epoch1"
+        },
+        "modern3_epoch2": {
+          "job": "Modern3",
+          "epoch": 2,
+          "path": "models/candidates/modern3_epoch2"
+        }
+      },
+      "fixed_source_components": {
+        "minilm_v3_epoch2": {
+          "type": "neural",
+          "checkpoint": "models/candidates/minilm_v3_epoch2",
+          "weights_sha256": "9d2ca9d251aeb2f2067478c12c564be863c478b91c579e4ea312f5170c04aabb",
+          "metadata_sha256": "faf5e11c756318e83288717ad0f69267038d5a73c8ded2f1c9b85266d263372e"
+        },
+        "statistical_v2": {
+          "type": "statistical",
+          "checkpoint": "results/english_v1/statistics/v2_official_nominal/model.joblib",
+          "weights_sha256": "32a35bcfa2fc09a49d841bf2f2ad67f3d0d5fa926590c282f4dd14363c41fc45",
+          "metadata_sha256": "32a35bcfa2fc09a49d841bf2f2ad67f3d0d5fa926590c282f4dd14363c41fc45"
+        }
+      },
+      "inherited_version_selection": {
+        "path": "results/english_v1/selection_frozen_v1/version_selection.json",
+        "sha256": "0041739974668eeb7b7b8a4f6c08c2be7f11559d05a2be3b14792da4f16ed7c3"
+      },
+      "code_sha256": {
+        "experiments/english_v1/export_component.py": "72127ad6a13116865d72c87f156e7b906036b42f708a92131766ce57bcc591af",
+        "experiments/english_v1/neural.py": "fb4e96a42374e1c06bbf86d565bafee649ced067a40c8dea3d7899937687a384",
+        "experiments/english_v1/statistical.py": "1d8a0ec47b0fd39406e619dc2695fa6b6535c99ef7ba11d4786add58efff2314",
+        "experiments/english_v1/catalog.py": "1ff36c07194936feaadd04d6194e64e846c8257ed65d9eee743f33ac44c92344",
+        "experiments/english_v1/language_guard.py": "a42f3c3b912f7babdf90ff7101f5caf0e617aa4991fb0ce64c45a175c5855950",
+        "experiments/english_v1/fingerprints.py": "ed004611e0a331c01995ccf824096eb70411a54c8c2bc3bb9855bc03c78cc0d2",
+        "experiments/english_v1/runtime.py": "48b61518bdf24037ddd7db92392df1571288f463c4d0b590a09d283688072b50",
+        "experiments/english_v2/run_development.py": "947713a2807212c3d151b5ad1a97ece61e17e97b11ee7e82d7bd35cfdc66a29b",
+        "experiments/english_v2/select_binary.py": "8e976c32e2b07c0e06bb64477d073400210a944733db605bf6818a9ea9f47f0f"
+      }
+    },
+    "calibration_input_sha256": "7e1b5fb9f27855a0083b341708107d3720d823b5b62cc97f8d9a2ed570128f17",
+    "calibration_input": {
+      "path": "data/english_v2/calibration.parquet",
+      "bytes": 8358065,
+      "sha256": "7e1b5fb9f27855a0083b341708107d3720d823b5b62cc97f8d9a2ed570128f17",
+      "rows": 8000
+    },
+    "calibration_mixture": {
+      "input_rows": 8000,
+      "human_rows": 3800,
+      "AI_rows": 4200,
+      "buckets": [
+        {
+          "name": "general",
+          "input": {
+            "path": "data/english_v2/cal_general.parquet",
+            "bytes": 1773012,
+            "sha256": "62431b5960358a35c57a16abbd0b0c5b4060483cf4cfa1cf005583081c07f59f",
+            "rows": 2000
+          },
+          "selected_rows": 2000,
+          "selected_human_rows": 1000,
+          "selected_AI_rows": 1000,
+          "role": "calibration",
+          "history": "fresh source CAL reservation"
+        },
+        {
+          "name": "source_domain",
+          "input": {
+            "path": "data/english_v2/cal_source_domain.parquet",
+            "bytes": 482960,
+            "sha256": "c8717b4d7e63079eeb3677fbcc53250ec92310af93c2af7df48f52244bd03ee4",
+            "rows": 800
+          },
+          "selected_rows": 800,
+          "selected_human_rows": 400,
+          "selected_AI_rows": 400,
+          "role": "calibration",
+          "history": "fresh source CAL reservation"
+        },
+        {
+          "name": "modern",
+          "input": {
+            "path": "data/english_v2/cal_modern.parquet",
+            "bytes": 2233803,
+            "sha256": "a4ff36f5453c295a638f5ae34b68552dfb9250537cffa824336c3215a87fc606",
+            "rows": 2000
+          },
+          "selected_rows": 2000,
+          "selected_human_rows": 1000,
+          "selected_AI_rows": 1000,
+          "role": "calibration",
+          "history": "fresh source CAL reservation"
+        },
+        {
+          "name": "paraphrase",
+          "input": {
+            "path": "data/english_v2/cal_paraphrase.parquet",
+            "bytes": 1197266,
+            "sha256": "18c1566b3e21dc940998aee227197aadc4f2ce171e18937e632cfb88ba9cff42",
+            "rows": 1200
+          },
+          "selected_rows": 1200,
+          "selected_human_rows": 400,
+          "selected_AI_rows": 800,
+          "role": "calibration",
+          "history": "fresh source CAL reservation"
+        },
+        {
+          "name": "historical_WP_CAL_replay",
+          "input": {
+            "path": "data/english_v2/cal_historical_WP.parquet",
+            "bytes": 2434362,
+            "sha256": "bb7a1ae165cc52ecf17bc4a09a0346a0b00a783620215f6224d4e4de4d7db534",
+            "rows": 2000
+          },
+          "selected_rows": 2000,
+          "selected_human_rows": 1000,
+          "selected_AI_rows": 1000,
+          "role": "calibration",
+          "history": "observed historical v1 CAL replay; continuing CAL only"
+        }
+      ],
+      "scope": "Registered mixed calibration including fresh source reservations and observed historical WP CAL replay; empirical mixture/prior only, no per-domain FPR guarantee."
+    },
+    "calibration_role_history": {
+      "fresh_source_CAL": {
+        "inputs": [
+          {
+            "path": "data/english_v2/cal_general.parquet",
+            "bytes": 1773012,
+            "sha256": "62431b5960358a35c57a16abbd0b0c5b4060483cf4cfa1cf005583081c07f59f",
+            "rows": 2000
+          },
+          {
+            "path": "data/english_v2/cal_source_domain.parquet",
+            "bytes": 482960,
+            "sha256": "c8717b4d7e63079eeb3677fbcc53250ec92310af93c2af7df48f52244bd03ee4",
+            "rows": 800
+          },
+          {
+            "path": "data/english_v2/cal_modern.parquet",
+            "bytes": 2233803,
+            "sha256": "a4ff36f5453c295a638f5ae34b68552dfb9250537cffa824336c3215a87fc606",
+            "rows": 2000
+          },
+          {
+            "path": "data/english_v2/cal_paraphrase.parquet",
+            "bytes": 1197266,
+            "sha256": "18c1566b3e21dc940998aee227197aadc4f2ce171e18937e632cfb88ba9cff42",
+            "rows": 1200
+          }
+        ],
+        "selection_manifest_sha256": "941f568be18d361c9c3a32116ba35c0acba3d35b275e07a68c8ab4dae90665d9",
+        "selected_rows": 6000,
+        "previous_model_development_use": false
+      },
+      "historical_WP_CAL_replay": {
+        "source_path": "data/english_calibration_v2/wp_calibration.parquet",
+        "source_sha256": "8a1211c1bb521765ece80893d0da963852e02f2f5d131ddc69d79cce0ffd4915",
+        "original_rows_reported_by_prior_manifest": 4000,
+        "selected_view": {
+          "path": "data/english_v2/cal_historical_WP.parquet",
+          "bytes": 2434362,
+          "sha256": "bb7a1ae165cc52ecf17bc4a09a0346a0b00a783620215f6224d4e4de4d7db534",
+          "rows": 2000
+        },
+        "selected_rows": 2000,
+        "selected_human_rows": 1000,
+        "selected_AI_rows": 1000,
+        "selection_manifest_sha256": "941f568be18d361c9c3a32116ba35c0acba3d35b275e07a68c8ab4dae90665d9",
+        "previous_role": "calibration",
+        "current_role": "calibration",
+        "observed_in_v1_calibration": true,
+        "unselected_siblings_remain_CAL_protected": true,
+        "not_fresh_final_evidence": true
+      },
+      "inherited_source_heads": {
+        "calibration_path": "results/english_v1/release_v1/calibration.json",
+        "calibration_sha256": "1b3cac20a654f1b0cb27f2784be172b9e59fa21b4858f1e5d2cd253337521ff4",
+        "hierarchy_and_refinement_refitted_on_v2": false,
+        "historical_source_cutoffs_active": false,
+        "source_assertions_enabled": false
+      }
+    },
+    "binary_calibration": {
+      "probability_fit_subset": "supported_core",
+      "threshold_subset": "supported_core",
+      "minimum_word_like_tokens": 128,
+      "AI_target_fpr": 0.01,
+      "human_target_fpr": 0.01,
+      "empirical_mixture_not_population_or_per_domain_guarantee": true,
+      "probability_half": "Constant default 0.5, never fitted",
+      "language_rejections": "Retain every eligible publisher-English row in all true-class denominators; runtime guard rejects receive no correct online decision."
+    },
+    "final_input_sha256s": [
+      "94e6988404218dd963abba8a50040b724e27b8307d933a894232b33a7797909c",
+      "413f8e075eaa39cefbb38bc49108bb138533eafe13128b22501f0d77b5b07b40",
+      "eb9b9f7e02dc98d7ab94a372ce8a65f4585ab8f5e1e51137a689e42757fe7e07",
+      "d23312b4b5bb0f6327caf03dfe566a1810ec48448e612ea9042f6df5e2100ff2"
+    ],
+    "necessary_final_suites": {
+      "fresh_main": {
+        "required_for_practical_acceptance": true,
+        "input_sha256": "94e6988404218dd963abba8a50040b724e27b8307d933a894232b33a7797909c",
+        "rows": 3000,
+        "groups": 3000,
+        "core_counts": {
+          "n": 3000,
+          "human_n": 1500,
+          "AI_n": 1500,
+          "groups": 3000
+        },
+        "targets": {
+          "core_AUROC_min": 0.97,
+          "core_balanced_accuracy_at_probability_half_min": 0.9,
+          "fixed_AI_human_FPR_max": 0.02,
+          "fixed_AI_recall_min": 0.8,
+          "online_human_as_AI_rate_max": 0.02,
+          "online_AI_as_human_rate_max": 0.1,
+          "online_correct_AI_recall_min": 0.8,
+          "online_correct_human_recall_min": 0.8,
+          "online_decided_coverage_min": 0.8
+        }
+      },
+      "fresh_source_domain": {
+        "required_for_practical_acceptance": true,
+        "input_sha256": "413f8e075eaa39cefbb38bc49108bb138533eafe13128b22501f0d77b5b07b40",
+        "rows": 800,
+        "groups": 400,
+        "core_counts": {
+          "n": 800,
+          "human_n": 400,
+          "AI_n": 400,
+          "groups": 400
+        },
+        "targets": {
+          "core_AUROC_min": 0.9,
+          "core_balanced_accuracy_at_probability_half_min": 0.85,
+          "fixed_AI_human_FPR_max": 0.05,
+          "fixed_AI_recall_min": 0.8,
+          "online_human_as_AI_rate_max": 0.05,
+          "online_AI_as_human_rate_max": 0.1,
+          "online_correct_AI_recall_min": 0.8,
+          "online_correct_human_recall_min": 0.8,
+          "online_decided_coverage_min": 0.8
+        }
+      },
+      "fresh_modern_with_human_controls": {
+        "required_for_practical_acceptance": true,
+        "input_sha256": "eb9b9f7e02dc98d7ab94a372ce8a65f4585ab8f5e1e51137a689e42757fe7e07",
+        "rows": 2000,
+        "groups": 1000,
+        "core_counts": {
+          "n": 2000,
+          "human_n": 1000,
+          "AI_n": 1000,
+          "groups": 1000
+        },
+        "targets": {
+          "core_AUROC_min": 0.9,
+          "core_balanced_accuracy_at_probability_half_min": 0.85,
+          "fixed_AI_human_FPR_max": 0.05,
+          "fixed_AI_recall_min": 0.8,
+          "online_human_as_AI_rate_max": 0.05,
+          "online_AI_as_human_rate_max": 0.1,
+          "online_correct_AI_recall_min": 0.8,
+          "online_correct_human_recall_min": 0.8,
+          "online_decided_coverage_min": 0.8
+        }
+      },
+      "fresh_paraphrase_with_human_controls": {
+        "required_for_practical_acceptance": true,
+        "input_sha256": "d23312b4b5bb0f6327caf03dfe566a1810ec48448e612ea9042f6df5e2100ff2",
+        "rows": 1800,
+        "groups": 600,
+        "core_counts": {
+          "n": 1800,
+          "human_n": 600,
+          "AI_n": 1200,
+          "groups": 600
+        },
+        "targets": {
+          "core_AUROC_min": 0.9,
+          "core_balanced_accuracy_at_probability_half_min": 0.85,
+          "fixed_AI_human_FPR_max": 0.05,
+          "fixed_AI_recall_min": 0.8,
+          "online_human_as_AI_rate_max": 0.05,
+          "online_AI_as_human_rate_max": 0.1,
+          "online_correct_AI_recall_min": 0.8,
+          "online_correct_human_recall_min": 0.8,
+          "online_decided_coverage_min": 0.8
+        },
+        "required_views": {
+          "view_human_origin_rewrite": {
+            "column": "view_human_origin_rewrite",
+            "rows": 1200,
+            "groups": 600,
+            "core_counts": {
+              "n": 1200,
+              "human_n": 600,
+              "AI_n": 600,
+              "groups": 600
+            },
+            "targets": {
+              "core_AUROC_min": 0.9,
+              "core_balanced_accuracy_at_probability_half_min": 0.85,
+              "fixed_AI_human_FPR_max": 0.05,
+              "fixed_AI_recall_min": 0.8,
+              "online_human_as_AI_rate_max": 0.05,
+              "online_AI_as_human_rate_max": 0.1,
+              "online_correct_AI_recall_min": 0.8,
+              "online_correct_human_recall_min": 0.8,
+              "online_decided_coverage_min": 0.8
+            }
+          },
+          "view_AI_origin_rewrite": {
+            "column": "view_AI_origin_rewrite",
+            "rows": 1200,
+            "groups": 600,
+            "core_counts": {
+              "n": 1200,
+              "human_n": 600,
+              "AI_n": 600,
+              "groups": 600
+            },
+            "targets": {
+              "core_AUROC_min": 0.9,
+              "core_balanced_accuracy_at_probability_half_min": 0.85,
+              "fixed_AI_human_FPR_max": 0.05,
+              "fixed_AI_recall_min": 0.8,
+              "online_human_as_AI_rate_max": 0.05,
+              "online_AI_as_human_rate_max": 0.1,
+              "online_correct_AI_recall_min": 0.8,
+              "online_correct_human_recall_min": 0.8,
+              "online_decided_coverage_min": 0.8
+            }
+          }
+        }
+      }
+    },
+    "acceptance": {
+      "criterion": "point_estimates_all_checks_with_group_CI_disclosed",
+      "bootstrap": {
+        "n_boot": 500,
+        "seed": 42,
+        "method": "percentile whole-group bootstrap; same resampling weights across tasks; fixed thresholds",
+        "minimum_valid_fraction": 0.95
+      }
+    },
+    "release_data_plan": {
+      "path": "research/english_v2_release_data_plan_v1.json",
+      "bytes": 2063,
+      "sha256": "ed353a0ef9b2052c15b9c72dc3a26ed090b9c97efb1e0d668cbbf5c52d9d9de9"
+    },
+    "code_registry": {
+      "experiments/english_v1/calibration.py": "ebc4a655351523ad2bd762270ec7ffa13493fc2eb4c888e46fc4cab75c6ee7cc",
+      "experiments/english_v1/catalog.py": "1ff36c07194936feaadd04d6194e64e846c8257ed65d9eee743f33ac44c92344",
+      "experiments/english_v1/evaluate.py": "ed60c04f3bf4d2da538030b7370f9b7aef25fb45ccbf6185428b4286358bf913",
+      "experiments/english_v1/export_component.py": "72127ad6a13116865d72c87f156e7b906036b42f708a92131766ce57bcc591af",
+      "experiments/english_v1/finalize.py": "2795392190604c1f519c5a0718e2dba7c1fb7a747403aa949d6ddb5cce15f8d9",
+      "experiments/english_v1/fingerprints.py": "ed004611e0a331c01995ccf824096eb70411a54c8c2bc3bb9855bc03c78cc0d2",
+      "experiments/english_v1/inference.py": "c13a75461671d7e30dcef76f00f78e96a7d1eeef9109f7430af8df99afc4debf",
+      "experiments/english_v1/language_guard.py": "a42f3c3b912f7babdf90ff7101f5caf0e617aa4991fb0ce64c45a175c5855950",
+      "experiments/english_v1/neural.py": "fb4e96a42374e1c06bbf86d565bafee649ced067a40c8dea3d7899937687a384",
+      "experiments/english_v1/run_release_exports.py": "ef59c538caa00b638bbf0a9a038fceb440def2a6af47e0e51c13d1328830b42a",
+      "experiments/english_v1/runtime.py": "48b61518bdf24037ddd7db92392df1571288f463c4d0b590a09d283688072b50",
+      "experiments/english_v1/select_binary.py": "fccee0b10d27b68c5f2b577c9f1a5f860ee9219b77020c3b66671d8005a6dfae",
+      "experiments/english_v1/stat_official_refine.py": "3490392e03f6f92289fc4c72e970f356bc1e925d35b10aeacff4006e8791efea",
+      "experiments/english_v1/statistical.py": "1d8a0ec47b0fd39406e619dc2695fa6b6535c99ef7ba11d4786add58efff2314",
+      "experiments/english_v1/version_refinement.py": "e749cc3c9aaa95584bec5827311575377edcd4e2e833fcfd09d2b889eda9e56f",
+      "experiments/english_v2/acceptance.py": "27e02998fd121e098423d82a9e1b36599a0aabb4a984860480adca3a915667df",
+      "experiments/english_v2/binary_finalize.py": "182f82e85c71f59de997b13da89bda7193c179b748c5f6185f312bbaad67e83c",
+      "experiments/english_v2/prepare_binary_init.py": "680fff328c62033d99c21a84eb3ac95aa13eae39c2ac4dc213a5be52cf5bdb55",
+      "experiments/english_v2/run_development.py": "947713a2807212c3d151b5ad1a97ece61e17e97b11ee7e82d7bd35cfdc66a29b",
+      "experiments/english_v2/select_binary.py": "8e976c32e2b07c0e06bb64477d073400210a944733db605bf6818a9ea9f47f0f",
+      "experiments/english_v2/train_registered.py": "65269f5f759b89ce4bc46a5fba6a57a4cfe114b89270b0de823403e776047084"
+    },
+    "data_role_policy": {
+      "old_final": "All ten v1 final cohorts remain observed diagnostics only. No old final row or connected relative enters training, selection or calibration, or counts as new final evidence.",
+      "unit": "Complete observable connected component, retaining native parent/prompt/source/adv edges and all loaded original/variant/title/hash/lexical bridges. Unselected siblings of any reserved component keep its reservation.",
+      "English_population": "Publisher English configurations and original English sources plus frozen structural/natural-text eligibility. Runtime language-supported flags are diagnostic and deployment masks, not a reason to pre-delete otherwise eligible English final rows. Rejections remain in class denominators.",
+      "provenance_limits": [
+        "MAGA generator identities are author-reported aliases; aligned open weights are not certified stock versions.",
+        "Gemini is withheld from v2 adaptation under the MAGA generator identifier; absence from all v1 ancestors or pretrained data cannot be certified.",
+        "NQ is a source-pipeline holdout, not a previously unseen semantic QA domain.",
+        "This round excludes WikiHow raw/replay; warm-start checkpoints retain their historical v1 training ancestry. No clean-room or unlearning claim.",
+        "Graph isolation covers observable relations and approximate lexical candidates, not unavailable hidden parents or all semantic/pretraining overlap."
+      ],
+      "withheld_new_source": "All MAGA Natural Questions components are prohibited from train, development and calibration; eligible final source-pipeline view only, or remain unused/protected.",
+      "withheld_new_generator": "All MAGA Gemini-2.0-flash parent components are prohibited from train, development and calibration; final-only reservations or unused/protected. This is a nominal MAGA v2 adaptation holdout, not authenticated universal unseen-generator status.",
+      "capacity_failure": "Revise and disclose this draft using metadata only, before any real v2 training or development scores. No automatic post-score quota relaxation, target downgrade or role reassignment."
+    },
+    "created_at_utc": "2026-10-17T17:10:48.671838+00:00",
+    "data_allocation_protocol": {
+      "path": "research/english_v2_data/allocation_protocol_v2.json",
+      "bytes": 8080,
+      "sha256": "13217339612dd4344cbaca74baa0367a8a546a29f398486a3b688e693fb336f8"
+    },
+    "prepared_manifest": {
+      "path": "data/english_v2/manifest.json",
+      "bytes": 24347,
+      "sha256": "941f568be18d361c9c3a32116ba35c0acba3d35b275e07a68c8ab4dae90665d9"
+    },
+    "dataset_key_mapping": {
+      "path": "research/english_v2_data/protocol_dataset_mapping_v1.json",
+      "bytes": 885,
+      "sha256": "5472f9ef94aa9b58c2e8c97352efaa6fd4bb6d5f39360ecebbbed69f19e213a9"
+    },
+    "independent_data_qa": {
+      "path": "research/english_v2_data/audit/independent_prepared_data_qa.json",
+      "bytes": 31283,
+      "sha256": "e753dda2a1fcd84db3eec01a4f7b5e4f06b2e4db3502eaac8477b96d1d6ec2b6"
+    },
+    "protocol_constructor": {
+      "path": "research/english_v2_data/freeze_training_protocol.py",
+      "bytes": 13266,
+      "sha256": "d0a904050ca76fe34b6b1a31a6a74124ea64babe92a2ac787646ea493f5d4f53"
+    }
+  }
+}

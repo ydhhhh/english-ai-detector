@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "filename": "english_ai_detector_v2_bundle.zip",
+  "bytes": 780023143,
+  "sha256": "da04e4314bdc4571e1dfff8414d203865ac03ad6d14aeff2a182ac070b5be164",
+  "members": 32,
+  "uncompressed_root": "bundle/",
+  "bundle_manifest_sha256": "f588dc69355cc96105ea627e0aa20bdcd9bed78709038884466abf008a4271cc",
+  "corpus_or_checkpoints_included": false,
+  "complete_four_component_inference_package": true,
+  "storage": "Web upload handled by Hugging Face large-file Xet/LFS storage; no local git token extracted.",
+  "public_export_original_sha256": "92d9cdd136897239b8a02bcdd36279d07ee33ef610b058214edbd53fa957adf5",
+  "public_export_path_redactions_only": true
+}

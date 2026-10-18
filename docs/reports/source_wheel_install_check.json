@@ -1,0 +1,86 @@
+{
+  "schema_version": 3,
+  "passed": true,
+  "status": "SERIALIZED_DEPENDENCY_FIXED_WHEEL_INSTALL_ENGINEERING_PASS_REAL_MODEL_LOAD_PENDING_ROOT",
+  "previous_static_only_check_missed_pickled_style_wrapper": true,
+  "old_v1_v2_targets_reports_preserved": true,
+  "wheel": {
+    "path": "publication/.qa/wheels_v3/english_ai_detector-2.0.0-py3-none-any.whl",
+    "bytes": 106541,
+    "sha256": "75bdf4a6a4d478a32e92bd015a3a7fc281ff5edb4b0a018bcdc4b88237daf856"
+  },
+  "installed_target": "publication/.qa/installed_core_v3",
+  "module_origins": [
+    {
+      "module": "english_ai_detector",
+      "path": "publication/.qa/installed_core_v3/english_ai_detector/__init__.py"
+    },
+    {
+      "module": "english_ai_detector.cli",
+      "path": "publication/.qa/installed_core_v3/english_ai_detector/cli.py"
+    },
+    {
+      "module": "english_ai_detector.serve",
+      "path": "publication/.qa/installed_core_v3/english_ai_detector/serve.py"
+    },
+    {
+      "module": "english_ai_detector.documents",
+      "path": "publication/.qa/installed_core_v3/english_ai_detector/documents.py"
+    },
+    {
+      "module": "experiments.english_v1.inference",
+      "path": "publication/.qa/installed_core_v3/experiments/english_v1/inference.py"
+    },
+    {
+      "module": "experiments.english_v1.runtime",
+      "path": "publication/.qa/installed_core_v3/experiments/english_v1/runtime.py"
+    },
+    {
+      "module": "experiments.english_v1.neural",
+      "path": "publication/.qa/installed_core_v3/experiments/english_v1/neural.py"
+    },
+    {
+      "module": "experiments.english_v1.statistical",
+      "path": "publication/.qa/installed_core_v3/experiments/english_v1/statistical.py"
+    },
+    {
+      "module": "experiments.english_v1.version_refinement",
+      "path": "publication/.qa/installed_core_v3/experiments/english_v1/version_refinement.py"
+    },
+    {
+      "module": "experiments.english_v1.source_release_gate",
+      "path": "publication/.qa/installed_core_v3/experiments/english_v1/source_release_gate.py"
+    },
+    {
+      "module": "experiments.ntl_v1.baseline",
+      "path": "publication/.qa/installed_core_v3/experiments/ntl_v1/baseline.py"
+    },
+    {
+      "module": "experiments.english_v1.stat_style_refine",
+      "path": "publication/.qa/installed_core_v3/experiments/english_v1/stat_style_refine.py"
+    },
+    {
+      "module": "experiments.english_v1.stat_train",
+      "path": "publication/.qa/installed_core_v3/experiments/english_v1/stat_train.py"
+    }
+  ],
+  "exact_original_core_files": 13,
+  "previous_v2_package_members_unchanged_excluding_updated_compatibility_manifest": 22,
+  "new_original_byte_modules": [
+    "stat_style_refine.py",
+    "stat_train.py"
+  ],
+  "all_observed_serialized_project_modules_importable_from_target": true,
+  "serialized_module_inspection_report": "publication/serialized_dependency_inspection_v1.json",
+  "synthetic_self_constructed_wrapper_joblib_roundtrip_and_numeric_projection_passed": true,
+  "all13_original_source_sha_matches": true,
+  "CLI_help_and_actual_console_version_passed": true,
+  "English_HTML_resource_packaged": true,
+  "current_three_license_notices_exactly_packaged": true,
+  "real_model_unpickled": false,
+  "real_predictions_produced": false,
+  "data_or_GPU_accessed": false,
+  "scope_limitation": "This is not actual trusted-bundle loading or probability parity; root performs those next.",
+  "public_export_original_sha256": "d6525a9d1b715d791456450847fcc48db8954f0a1a6a9975ad9f6e361e3496f4",
+  "public_export_path_redactions_only": true
+}

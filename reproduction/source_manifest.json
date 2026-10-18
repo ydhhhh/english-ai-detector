@@ -1,0 +1,1501 @@
+{
+  "schema_version": 1,
+  "status": "REPRODUCTION_SOURCE_INVENTORY_NOT_DATA_OR_TRAINING_APPROVAL",
+  "original_seed_count": 51,
+  "additional_execution_roots": [
+    "experiments/english_v1/run_release_exports.py",
+    "experiments/english_v2/count_storage_compat.py",
+    "research/english_v2_count_storage_audit.py",
+    "research/english_v2_count_storage_checks.py"
+  ],
+  "dependency_discovery": "Explicit original source seeds, local AST imports, literal subprocess module names, local dynamic .py file references; includes index_maga_metadata.py at its original relative path.",
+  "files": [
+    {
+      "path": "experiments/english_v1/bundle_checks.py",
+      "original_sha256": "04861add6a61718a75efd559c4fbecb67b49174243c9a564cdb31acb73012d5f",
+      "original_bytes": 7001,
+      "shipped_sha256": "16560ecb9163df1fb3607196f2ccce39e430ad0e5ee0de308bd856957fcf8248",
+      "shipped_bytes": 7076,
+      "byte_identical": false,
+      "adaptation": "CJK synthetic self-test string represented by equivalent Unicode escapes; identical Python AST/runtime value.",
+      "AST_equivalent_when_applicable": true
+    },
+    {
+      "path": "experiments/english_v1/calibration.py",
+      "original_sha256": "ebc4a655351523ad2bd762270ec7ffa13493fc2eb4c888e46fc4cab75c6ee7cc",
+      "original_bytes": 11867,
+      "shipped_sha256": "ebc4a655351523ad2bd762270ec7ffa13493fc2eb4c888e46fc4cab75c6ee7cc",
+      "shipped_bytes": 11867,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v1/catalog.py",
+      "original_sha256": "1ff36c07194936feaadd04d6194e64e846c8257ed65d9eee743f33ac44c92344",
+      "original_bytes": 1488,
+      "shipped_sha256": "1ff36c07194936feaadd04d6194e64e846c8257ed65d9eee743f33ac44c92344",
+      "shipped_bytes": 1488,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v1/data_grouping.py",
+      "original_sha256": "2220ae351c7185c0f63e60850f35e064093946f884dee8cd4165725e04b4a5d3",
+      "original_bytes": 3770,
+      "shipped_sha256": "2220ae351c7185c0f63e60850f35e064093946f884dee8cd4165725e04b4a5d3",
+      "shipped_bytes": 3770,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v1/documents.py",
+      "original_sha256": "4c5d2fc7a322e66b9efdaad2899918ad41e2148112b8b92d0f33b87c9475b26e",
+      "original_bytes": 7508,
+      "shipped_sha256": "2225b1e9b02b634f8674cc4be63c532afcb4eb662e3745ad220ffb84e9a7fab1",
+      "shipped_bytes": 7583,
+      "byte_identical": false,
+      "adaptation": "English document-parser exception strings only; parsing and resource-limit logic unchanged.",
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v1/evaluate.py",
+      "original_sha256": "ed60c04f3bf4d2da538030b7370f9b7aef25fb45ccbf6185428b4286358bf913",
+      "original_bytes": 29644,
+      "shipped_sha256": "ed60c04f3bf4d2da538030b7370f9b7aef25fb45ccbf6185428b4286358bf913",
+      "shipped_bytes": 29644,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v1/export_component.py",
+      "original_sha256": "72127ad6a13116865d72c87f156e7b906036b42f708a92131766ce57bcc591af",
+      "original_bytes": 7667,
+      "shipped_sha256": "72127ad6a13116865d72c87f156e7b906036b42f708a92131766ce57bcc591af",
+      "shipped_bytes": 7667,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v1/finalize.py",
+      "original_sha256": "2795392190604c1f519c5a0718e2dba7c1fb7a747403aa949d6ddb5cce15f8d9",
+      "original_bytes": 25168,
+      "shipped_sha256": "2795392190604c1f519c5a0718e2dba7c1fb7a747403aa949d6ddb5cce15f8d9",
+      "shipped_bytes": 25168,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v1/fingerprints.py",
+      "original_sha256": "ed004611e0a331c01995ccf824096eb70411a54c8c2bc3bb9855bc03c78cc0d2",
+      "original_bytes": 970,
+      "shipped_sha256": "ed004611e0a331c01995ccf824096eb70411a54c8c2bc3bb9855bc03c78cc0d2",
+      "shipped_bytes": 970,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v1/http_bundle_checks.py",
+      "original_sha256": "51352a71206597e416a92ab2779df48246c288f9e46255b6461690c3d66c3fbe",
+      "original_bytes": 17903,
+      "shipped_sha256": "51352a71206597e416a92ab2779df48246c288f9e46255b6461690c3d66c3fbe",
+      "shipped_bytes": 17903,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v1/inference.py",
+      "original_sha256": "c13a75461671d7e30dcef76f00f78e96a7d1eeef9109f7430af8df99afc4debf",
+      "original_bytes": 15108,
+      "shipped_sha256": "c13a75461671d7e30dcef76f00f78e96a7d1eeef9109f7430af8df99afc4debf",
+      "shipped_bytes": 15108,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v1/language_guard.py",
+      "original_sha256": "a42f3c3b912f7babdf90ff7101f5caf0e617aa4991fb0ce64c45a175c5855950",
+      "original_bytes": 5267,
+      "shipped_sha256": "a42f3c3b912f7babdf90ff7101f5caf0e617aa4991fb0ce64c45a175c5855950",
+      "shipped_bytes": 5267,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v1/neural.py",
+      "original_sha256": "fb4e96a42374e1c06bbf86d565bafee649ced067a40c8dea3d7899937687a384",
+      "original_bytes": 57401,
+      "shipped_sha256": "fb4e96a42374e1c06bbf86d565bafee649ced067a40c8dea3d7899937687a384",
+      "shipped_bytes": 57401,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v1/release_acceptance.py",
+      "original_sha256": "740c8ce78e0e4d47ca874984faf318c184599efb8cdc63e250c1f8661d120924",
+      "original_bytes": 24524,
+      "shipped_sha256": "740c8ce78e0e4d47ca874984faf318c184599efb8cdc63e250c1f8661d120924",
+      "shipped_bytes": 24524,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v1/run_release_exports.py",
+      "original_sha256": "ef59c538caa00b638bbf0a9a038fceb440def2a6af47e0e51c13d1328830b42a",
+      "original_bytes": 10261,
+      "shipped_sha256": "ef59c538caa00b638bbf0a9a038fceb440def2a6af47e0e51c13d1328830b42a",
+      "shipped_bytes": 10261,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v1/runtime.py",
+      "original_sha256": "48b61518bdf24037ddd7db92392df1571288f463c4d0b590a09d283688072b50",
+      "original_bytes": 537,
+      "shipped_sha256": "48b61518bdf24037ddd7db92392df1571288f463c4d0b590a09d283688072b50",
+      "shipped_bytes": 537,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v1/select_binary.py",
+      "original_sha256": "fccee0b10d27b68c5f2b577c9f1a5f860ee9219b77020c3b66671d8005a6dfae",
+      "original_bytes": 8668,
+      "shipped_sha256": "fccee0b10d27b68c5f2b577c9f1a5f860ee9219b77020c3b66671d8005a6dfae",
+      "shipped_bytes": 8668,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v1/serve.py",
+      "original_sha256": "a361b6d46e2b63051a43a265a9736666676c3df8fa073515ea24c213d6dcea54",
+      "original_bytes": 9416,
+      "shipped_sha256": "a28968c4dcb461d8831f9d8dd211253eb93fceeed1a3ffd8b39877d0cb95cb37",
+      "shipped_bytes": 9447,
+      "byte_identical": false,
+      "adaptation": "English HTTP/CLI exception messages only; original module imports and serving logic retained.",
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v1/source_release_gate.py",
+      "original_sha256": "39563a52c6df56507e6c84f2fe283441528c35da0f1cd03dd6719674a1b196c3",
+      "original_bytes": 23870,
+      "shipped_sha256": "39563a52c6df56507e6c84f2fe283441528c35da0f1cd03dd6719674a1b196c3",
+      "shipped_bytes": 23870,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v1/stat_official_refine.py",
+      "original_sha256": "3490392e03f6f92289fc4c72e970f356bc1e925d35b10aeacff4006e8791efea",
+      "original_bytes": 19338,
+      "shipped_sha256": "3490392e03f6f92289fc4c72e970f356bc1e925d35b10aeacff4006e8791efea",
+      "shipped_bytes": 19338,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v1/stat_train.py",
+      "original_sha256": "e7559d587cda105d4d6b2ab3992f2e6bfc4747cc3cec96a23a96dd3e7fd0b85f",
+      "original_bytes": 9050,
+      "shipped_sha256": "e7559d587cda105d4d6b2ab3992f2e6bfc4747cc3cec96a23a96dd3e7fd0b85f",
+      "shipped_bytes": 9050,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v1/statistical.py",
+      "original_sha256": "1d8a0ec47b0fd39406e619dc2695fa6b6535c99ef7ba11d4786add58efff2314",
+      "original_bytes": 39596,
+      "shipped_sha256": "1d8a0ec47b0fd39406e619dc2695fa6b6535c99ef7ba11d4786add58efff2314",
+      "shipped_bytes": 39596,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v1/version_refinement.py",
+      "original_sha256": "e749cc3c9aaa95584bec5827311575377edcd4e2e833fcfd09d2b889eda9e56f",
+      "original_bytes": 53638,
+      "shipped_sha256": "e749cc3c9aaa95584bec5827311575377edcd4e2e833fcfd09d2b889eda9e56f",
+      "shipped_bytes": 53638,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v2/acceptance.py",
+      "original_sha256": "27e02998fd121e098423d82a9e1b36599a0aabb4a984860480adca3a915667df",
+      "original_bytes": 14831,
+      "shipped_sha256": "27e02998fd121e098423d82a9e1b36599a0aabb4a984860480adca3a915667df",
+      "shipped_bytes": 14831,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v2/acceptance_checks_independent.py",
+      "original_sha256": "b94ad9c719ac7bc2fc4de3e898d2653781b1fb3932b3f3b5efc5283d7c602b01",
+      "original_bytes": 10634,
+      "shipped_sha256": "b94ad9c719ac7bc2fc4de3e898d2653781b1fb3932b3f3b5efc5283d7c602b01",
+      "shipped_bytes": 10634,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v2/audit_training_weights.py",
+      "original_sha256": "ee92d6fc69ba55f9b824455b97b2d94efc8a3b14f92050ac877392b842cdf2ea",
+      "original_bytes": 10771,
+      "shipped_sha256": "ee92d6fc69ba55f9b824455b97b2d94efc8a3b14f92050ac877392b842cdf2ea",
+      "shipped_bytes": 10771,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v2/binary_finalize.py",
+      "original_sha256": "182f82e85c71f59de997b13da89bda7193c179b748c5f6185f312bbaad67e83c",
+      "original_bytes": 32481,
+      "shipped_sha256": "182f82e85c71f59de997b13da89bda7193c179b748c5f6185f312bbaad67e83c",
+      "shipped_bytes": 32481,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v2/binary_finalize_checks.py",
+      "original_sha256": "24d0a6f481e72401e4fc7379c0d31a491b9149239e25bf87afa6c6c56f198c15",
+      "original_bytes": 18984,
+      "shipped_sha256": "24d0a6f481e72401e4fc7379c0d31a491b9149239e25bf87afa6c6c56f198c15",
+      "shipped_bytes": 18984,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v2/count_storage_compat.py",
+      "original_sha256": "902fee6c7cb7f47015043a0120c91beef4c2e19fa10a1e11388889665e1f259a",
+      "original_bytes": 13165,
+      "shipped_sha256": "902fee6c7cb7f47015043a0120c91beef4c2e19fa10a1e11388889665e1f259a",
+      "shipped_bytes": 13165,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v2/package_source_archive.py",
+      "original_sha256": "7bcb0188f9c7ceebaae6693554538687b3d8388d2d5a7e514a18611dd33451a7",
+      "original_bytes": 16819,
+      "shipped_sha256": "7bcb0188f9c7ceebaae6693554538687b3d8388d2d5a7e514a18611dd33451a7",
+      "shipped_bytes": 16819,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v2/package_source_archive_checks.py",
+      "original_sha256": "b6df01abdc66d45b0a2d81ae82ee78f93e767310762ed6b0b320f96792d94156",
+      "original_bytes": 11124,
+      "shipped_sha256": "b6df01abdc66d45b0a2d81ae82ee78f93e767310762ed6b0b320f96792d94156",
+      "shipped_bytes": 11124,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v2/post_final_breakdown.py",
+      "original_sha256": "dbb6884f04f71193231f4f649bcb53a60bfaca27af2e080b8b257e023d368ede",
+      "original_bytes": 24100,
+      "shipped_sha256": "dbb6884f04f71193231f4f649bcb53a60bfaca27af2e080b8b257e023d368ede",
+      "shipped_bytes": 24100,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v2/prepare_binary_init.py",
+      "original_sha256": "680fff328c62033d99c21a84eb3ac95aa13eae39c2ac4dc213a5be52cf5bdb55",
+      "original_bytes": 8362,
+      "shipped_sha256": "680fff328c62033d99c21a84eb3ac95aa13eae39c2ac4dc213a5be52cf5bdb55",
+      "shipped_bytes": 8362,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v2/prepare_registered_data.py",
+      "original_sha256": "76042df17660d23d0f11b620c8c9d4e0d63eec1dfbca43933c3da3897aa0c6b6",
+      "original_bytes": 31205,
+      "shipped_sha256": "76042df17660d23d0f11b620c8c9d4e0d63eec1dfbca43933c3da3897aa0c6b6",
+      "shipped_bytes": 31205,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v2/registered_views_checks.py",
+      "original_sha256": "17ef0afee6ec801c42d79b260fca8bf46d67fac8daa1f4c7434d9615d120e7de",
+      "original_bytes": 10281,
+      "shipped_sha256": "17ef0afee6ec801c42d79b260fca8bf46d67fac8daa1f4c7434d9615d120e7de",
+      "shipped_bytes": 10281,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v2/run_development.py",
+      "original_sha256": "947713a2807212c3d151b5ad1a97ece61e17e97b11ee7e82d7bd35cfdc66a29b",
+      "original_bytes": 25554,
+      "shipped_sha256": "947713a2807212c3d151b5ad1a97ece61e17e97b11ee7e82d7bd35cfdc66a29b",
+      "shipped_bytes": 25554,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v2/run_development_checks.py",
+      "original_sha256": "1f1e2fed8415d2a4eeb3e3a6edae67b9406e319d4e39df202d6140772570fb0a",
+      "original_bytes": 13784,
+      "shipped_sha256": "1f1e2fed8415d2a4eeb3e3a6edae67b9406e319d4e39df202d6140772570fb0a",
+      "shipped_bytes": 13784,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v2/select_binary.py",
+      "original_sha256": "8e976c32e2b07c0e06bb64477d073400210a944733db605bf6818a9ea9f47f0f",
+      "original_bytes": 11988,
+      "shipped_sha256": "8e976c32e2b07c0e06bb64477d073400210a944733db605bf6818a9ea9f47f0f",
+      "shipped_bytes": 11988,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v2/select_binary_checks.py",
+      "original_sha256": "5f2726cfe35ef9a66cf6abc021aeb3e10388e995e2303de2ab71754cd490ea61",
+      "original_bytes": 15329,
+      "shipped_sha256": "5f2726cfe35ef9a66cf6abc021aeb3e10388e995e2303de2ab71754cd490ea61",
+      "shipped_bytes": 15329,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v2/train_registered.py",
+      "original_sha256": "65269f5f759b89ce4bc46a5fba6a57a4cfe114b89270b0de823403e776047084",
+      "original_bytes": 25428,
+      "shipped_sha256": "65269f5f759b89ce4bc46a5fba6a57a4cfe114b89270b0de823403e776047084",
+      "shipped_bytes": 25428,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v2/train_registered_checks.py",
+      "original_sha256": "ccceee4c15d78d3a7b36ec8b0e31616faf9bc5a91b9ed82688a63d091284da12",
+      "original_bytes": 11876,
+      "shipped_sha256": "ccceee4c15d78d3a7b36ec8b0e31616faf9bc5a91b9ed82688a63d091284da12",
+      "shipped_bytes": 11876,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/ntl_v1/baseline.py",
+      "original_sha256": "7598cbfb6e000a71d8871b8d12f297da680e0bf5ed0cf81043bdb43e95358f7d",
+      "original_bytes": 8251,
+      "shipped_sha256": "7598cbfb6e000a71d8871b8d12f297da680e0bf5ed0cf81043bdb43e95358f7d",
+      "shipped_bytes": 8251,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "research/english_v1_user_path_qa/offline_live_bundle_checks.py",
+      "original_sha256": "e3f02b313a5c1eb7732692f4f653d8a06bd41ef604ed5bd2c4fb5b873ecd05fa",
+      "original_bytes": 25619,
+      "shipped_sha256": "e3f02b313a5c1eb7732692f4f653d8a06bd41ef604ed5bd2c4fb5b873ecd05fa",
+      "shipped_bytes": 25619,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "research/english_v2_count_storage_audit.py",
+      "original_sha256": "5e1de2937d18f0518bc81d75e2c11db008fb9d5af0b3dfe9a133d81e16c3ad22",
+      "original_bytes": 3898,
+      "shipped_sha256": "5e1de2937d18f0518bc81d75e2c11db008fb9d5af0b3dfe9a133d81e16c3ad22",
+      "shipped_bytes": 3898,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "research/english_v2_count_storage_checks.py",
+      "original_sha256": "c0f2d0095364f0ca17b88942eed6bef4131b32443625eb2efb5e00906625bfa2",
+      "original_bytes": 5409,
+      "shipped_sha256": "c0f2d0095364f0ca17b88942eed6bef4131b32443625eb2efb5e00906625bfa2",
+      "shipped_bytes": 5409,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "research/english_v2_data/audit/acquire_beemo.py",
+      "original_sha256": "8955640311205be781c096e269139e316ad6430857d967e47272e58fe690eaf4",
+      "original_bytes": 1606,
+      "shipped_sha256": "8955640311205be781c096e269139e316ad6430857d967e47272e58fe690eaf4",
+      "shipped_bytes": 1606,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "research/english_v2_data/audit/acquire_maga.py",
+      "original_sha256": "6abb6373babc0c452f9070b3331142bb74c032a4d125c450b2d592c828813fca",
+      "original_bytes": 5186,
+      "shipped_sha256": "6abb6373babc0c452f9070b3331142bb74c032a4d125c450b2d592c828813fca",
+      "shipped_bytes": 5186,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "research/english_v2_data/audit/acquire_rights_evidence.py",
+      "original_sha256": "be7103be9b660a8a4642850cb8b70028bdbedeaab3ca0e4c19a372fc900db01c",
+      "original_bytes": 1491,
+      "shipped_sha256": "be7103be9b660a8a4642850cb8b70028bdbedeaab3ca0e4c19a372fc900db01c",
+      "shipped_bytes": 1491,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "research/english_v2_data/audit/acquire_s2orc_history.py",
+      "original_sha256": "d1aaae35bfac792312bec19ad993f5e844cae58fd60c41f25107a603cfe240a4",
+      "original_bytes": 1720,
+      "shipped_sha256": "d1aaae35bfac792312bec19ad993f5e844cae58fd60c41f25107a603cfe240a4",
+      "shipped_bytes": 1720,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "research/english_v2_data/audit/audit_existing_capacity.py",
+      "original_sha256": "6a759b36b6b33b31440a65c24f6ea29f58aae925d4edfe5644570b3f08a33ed9",
+      "original_bytes": 16263,
+      "shipped_sha256": "6a759b36b6b33b31440a65c24f6ea29f58aae925d4edfe5644570b3f08a33ed9",
+      "shipped_bytes": 16263,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "research/english_v2_data/audit/build_article_title_bridges.py",
+      "original_sha256": "938846ea7951e41657335ac701c30a80d553858440162b11a1626c7897b973b8",
+      "original_bytes": 5466,
+      "shipped_sha256": "938846ea7951e41657335ac701c30a80d553858440162b11a1626c7897b973b8",
+      "shipped_bytes": 5466,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "research/english_v2_data/audit/build_full_lexical_near.py",
+      "original_sha256": "da49b934267304746fa3da17d5e23e7820581d59786c295e8d36e96d32291037",
+      "original_bytes": 9985,
+      "shipped_sha256": "da49b934267304746fa3da17d5e23e7820581d59786c295e8d36e96d32291037",
+      "shipped_bytes": 9985,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "research/english_v2_data/audit/build_joint_near_graph.py",
+      "original_sha256": "f5a81683fbd93bbae875715c530c66c85dab5a44191e9edae5dcf10953a3ba33",
+      "original_bytes": 25039,
+      "shipped_sha256": "f5a81683fbd93bbae875715c530c66c85dab5a44191e9edae5dcf10953a3ba33",
+      "shipped_bytes": 25039,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "research/english_v2_data/audit/build_lexical_cache.py",
+      "original_sha256": "547abb38e9d17f26fa873aaeb0a19837b66503b38e0313bdd1ab13d2abe2a175",
+      "original_bytes": 14672,
+      "shipped_sha256": "547abb38e9d17f26fa873aaeb0a19837b66503b38e0313bdd1ab13d2abe2a175",
+      "shipped_bytes": 14672,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "research/english_v2_data/audit/build_old_component_role_memberships.py",
+      "original_sha256": "05525e8d1cd468a4dd983f9d4b4974717d036fcb31db0dbfd5b798ec2c883c82",
+      "original_bytes": 7880,
+      "shipped_sha256": "05525e8d1cd468a4dd983f9d4b4974717d036fcb31db0dbfd5b798ec2c883c82",
+      "shipped_bytes": 7880,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "research/english_v2_data/audit/clarify_old_role_history.py",
+      "original_sha256": "f46871417113cd41d6b86961f271695f065d94862258e31ac0a738c928405846",
+      "original_bytes": 6526,
+      "shipped_sha256": "f46871417113cd41d6b86961f271695f065d94862258e31ac0a738c928405846",
+      "shipped_bytes": 6526,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "research/english_v2_data/audit/guard_raid_observed_reference.py",
+      "original_sha256": "d0dd4457976e723a32684baf9fc6c6f447bbb397f2c16ebde6b868ec3b730b4a",
+      "original_bytes": 6702,
+      "shipped_sha256": "d0dd4457976e723a32684baf9fc6c6f447bbb397f2c16ebde6b868ec3b730b4a",
+      "shipped_bytes": 6702,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "research/english_v2_data/audit/independent_full_near_qa.py",
+      "original_sha256": "e1d0bf21b68ce97388cd5b572491c735885eda2c70d4bacf4dfad2063bafc1a2",
+      "original_bytes": 15483,
+      "shipped_sha256": "e1d0bf21b68ce97388cd5b572491c735885eda2c70d4bacf4dfad2063bafc1a2",
+      "shipped_bytes": 15483,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "research/english_v2_data/audit/independent_joint_graph_qa.py",
+      "original_sha256": "3caafb14bc37e3f8b95b9f3a6e535bad24ae46b24e13c0c0a1f6728520944e6c",
+      "original_bytes": 21262,
+      "shipped_sha256": "3caafb14bc37e3f8b95b9f3a6e535bad24ae46b24e13c0c0a1f6728520944e6c",
+      "shipped_bytes": 21262,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "research/english_v2_data/audit/independent_prepared_data_qa.py",
+      "original_sha256": "d829a01eddbf3b898612af78d8cef9f83f0d279c54fbaa6262773afaf6f74d19",
+      "original_bytes": 22111,
+      "shipped_sha256": "d829a01eddbf3b898612af78d8cef9f83f0d279c54fbaa6262773afaf6f74d19",
+      "shipped_bytes": 22111,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "research/english_v2_data/audit/index_beemo_metadata.py",
+      "original_sha256": "6ff87b7a83791cf863a0f14a155a35bbbee537e4e10afbdd289c232c44a5dd46",
+      "original_bytes": 13994,
+      "shipped_sha256": "6ff87b7a83791cf863a0f14a155a35bbbee537e4e10afbdd289c232c44a5dd46",
+      "shipped_bytes": 13994,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "research/english_v2_data/audit/index_maga_metadata.py",
+      "original_sha256": "8b7e0b382a3070b2fea3b497b6f99b12cd92b3212c8598304a9b304d7479d718",
+      "original_bytes": 13288,
+      "shipped_sha256": "8b7e0b382a3070b2fea3b497b6f99b12cd92b3212c8598304a9b304d7479d718",
+      "shipped_bytes": 13288,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "research/english_v2_data/audit/index_raid_metadata.py",
+      "original_sha256": "c011e5a255c675360f03f0b2c2aabea268605617780c0ffaac84a2cea558f7bb",
+      "original_bytes": 8996,
+      "shipped_sha256": "c011e5a255c675360f03f0b2c2aabea268605617780c0ffaac84a2cea558f7bb",
+      "shipped_bytes": 8996,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "research/english_v2_data/audit/lexical_signature.py",
+      "original_sha256": "965b91a7094f13eedaea0a8737d02a7ecab27d56a63c087879ff52df91d4c178",
+      "original_bytes": 7101,
+      "shipped_sha256": "84a1102cfa82201e03348dd735d44a62741194c4599685db8d412369b927d73d",
+      "shipped_bytes": 7122,
+      "byte_identical": false,
+      "adaptation": "CJK synthetic self-test string represented by equivalent Unicode escapes; identical Python AST/runtime value.",
+      "AST_equivalent_when_applicable": true
+    },
+    {
+      "path": "research/english_v2_data/audit/resume_maga_ranges.py",
+      "original_sha256": "73ac0c39c2d6cb749524318966879d954954d57c8bb8d019e150473400fbab54",
+      "original_bytes": 8671,
+      "shipped_sha256": "73ac0c39c2d6cb749524318966879d954954d57c8bb8d019e150473400fbab54",
+      "shipped_bytes": 8671,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "research/english_v2_data/audit/retry_maga_mgb_validation.py",
+      "original_sha256": "f9a69dee8aca7acd1b8abc9cf8ab18d0e73880bbb626c815151ec591a77fec31",
+      "original_bytes": 1531,
+      "shipped_sha256": "f9a69dee8aca7acd1b8abc9cf8ab18d0e73880bbb626c815151ec591a77fec31",
+      "shipped_bytes": 1531,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "research/english_v2_data/audit/summarize_public_metadata.py",
+      "original_sha256": "568d8d970452903e592e882df09d558e7a2a4973867f3ceae79fa591b10d4da2",
+      "original_bytes": 3480,
+      "shipped_sha256": "568d8d970452903e592e882df09d558e7a2a4973867f3ceae79fa591b10d4da2",
+      "shipped_bytes": 3480,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "research/english_v2_data/audit/summarize_rights.py",
+      "original_sha256": "ed82b54ed523224572ce1b62db5022e53888364384d7b2acc75f6b48ff6728a9",
+      "original_bytes": 6679,
+      "shipped_sha256": "ed82b54ed523224572ce1b62db5022e53888364384d7b2acc75f6b48ff6728a9",
+      "shipped_bytes": 6679,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "research/english_v2_data/freeze_training_protocol.py",
+      "original_sha256": "d0a904050ca76fe34b6b1a31a6a74124ea64babe92a2ac787646ea493f5d4f53",
+      "original_bytes": 13266,
+      "shipped_sha256": "d0a904050ca76fe34b6b1a31a6a74124ea64babe92a2ac787646ea493f5d4f53",
+      "shipped_bytes": 13266,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "research/english_v2_data/modern_candidates/raid_paraphrase/acquire_books_news_pairs.py",
+      "original_sha256": "b382356ed7c467bb42c6e873f13128caaf69b493e3de04b8cd8ef27efda84133",
+      "original_bytes": 12145,
+      "shipped_sha256": "b382356ed7c467bb42c6e873f13128caaf69b493e3de04b8cd8ef27efda84133",
+      "shipped_bytes": 12145,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "research/english_v2_data/modern_candidates/raid_paraphrase/acquire_parent_titles.py",
+      "original_sha256": "b9cf7414141a4d99c17e370c513216aa063cf26eb443e5af533e84a1a7634014",
+      "original_bytes": 8425,
+      "shipped_sha256": "b9cf7414141a4d99c17e370c513216aa063cf26eb443e5af533e84a1a7634014",
+      "shipped_bytes": 8425,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "research/english_v2_data/modern_candidates/raid_paraphrase/audit_acquired_lineage.py",
+      "original_sha256": "385909ae48dc9c32da9dd4118c53573c18d1e693422a7692b8307e8d3e43a434",
+      "original_bytes": 6673,
+      "shipped_sha256": "385909ae48dc9c32da9dd4118c53573c18d1e693422a7692b8307e8d3e43a434",
+      "shipped_bytes": 6673,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "research/english_v2_data/modern_candidates/raid_paraphrase/audit_parquet_footers.py",
+      "original_sha256": "39be625a5fbca303e5a89bc5688e31fa50b6ebe5c2f8f5a442a776e9a8e6c3d4",
+      "original_bytes": 5315,
+      "shipped_sha256": "39be625a5fbca303e5a89bc5688e31fa50b6ebe5c2f8f5a442a776e9a8e6c3d4",
+      "shipped_bytes": 5315,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "research/english_v2_data/modern_candidates/raid_paraphrase/project_rowgroup_metadata.py",
+      "original_sha256": "e440b8ce53dcf9211f513ad9b0b9eac6b7d559a29822d09d2f8f54e90c7267da",
+      "original_bytes": 6254,
+      "shipped_sha256": "e440b8ce53dcf9211f513ad9b0b9eac6b7d559a29822d09d2f8f54e90c7267da",
+      "shipped_bytes": 6254,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "research/english_v2_resources/probe_modern_batch.py",
+      "original_sha256": "8e15521abba8bd36cd603427d77fcd759f5e333b4a884377685e4a5b0a89a1cd",
+      "original_bytes": 13917,
+      "shipped_sha256": "8e15521abba8bd36cd603427d77fcd759f5e333b4a884377685e4a5b0a89a1cd",
+      "shipped_bytes": 13917,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "research/english_v2_user_path_qa/offline_live_bundle_checks.py",
+      "original_sha256": "177841c1fa61e3c8e3a8dfa356af75c2dccf4a77c000909004404be80b10eabb",
+      "original_bytes": 21441,
+      "shipped_sha256": "177841c1fa61e3c8e3a8dfa356af75c2dccf4a77c000909004404be80b10eabb",
+      "shipped_bytes": 21441,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "research/english_v2_user_path_qa/relocated_clean_synthetic_checks.py",
+      "original_sha256": "9243cbd051eb09bddbfc4f4b54c09402e44ff291796c57b3a64b5befafae3b56",
+      "original_bytes": 8262,
+      "shipped_sha256": "9243cbd051eb09bddbfc4f4b54c09402e44ff291796c57b3a64b5befafae3b56",
+      "shipped_bytes": 8262,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "research/english_v2_user_path_qa/run_relocated_clean.py",
+      "original_sha256": "a677a6eb61aa82409fc111622ca79749814eae1b89d2accf2cc72229ab49f431",
+      "original_bytes": 21354,
+      "shipped_sha256": "a677a6eb61aa82409fc111622ca79749814eae1b89d2accf2cc72229ab49f431",
+      "shipped_bytes": 21354,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "research/english_v2_user_path_qa/synthetic_checks.py",
+      "original_sha256": "b2d2d83b76047ea087e12df3113fd1f5bbbd59f4fe75da249242fff963c7238b",
+      "original_bytes": 7493,
+      "shipped_sha256": "b2d2d83b76047ea087e12df3113fd1f5bbbd59f4fe75da249242fff963c7238b",
+      "shipped_bytes": 7493,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    },
+    {
+      "path": "experiments/english_v1/stat_style_refine.py",
+      "original_sha256": "479c9784a8d7df20615e9b84daf8562a733268b996362956e4a9fefc2d4b6fe2",
+      "original_bytes": 9974,
+      "shipped_sha256": "479c9784a8d7df20615e9b84daf8562a733268b996362956e4a9fefc2d4b6fe2",
+      "shipped_bytes": 9974,
+      "byte_identical": true,
+      "adaptation": null,
+      "AST_equivalent_when_applicable": null
+    }
+  ],
+  "generated_namespace_files": [
+    {
+      "path": "experiments/__init__.py",
+      "sha256": "5ed8cfccd24a79895797c56c1110d6eaa059f8efdb70278fa3eab20b1f743035",
+      "bytes": 88,
+      "reason": "Local regular package prevents accidental import of installed public compatibility modules."
+    },
+    {
+      "path": "experiments/english_v1/__init__.py",
+      "sha256": "5ed8cfccd24a79895797c56c1110d6eaa059f8efdb70278fa3eab20b1f743035",
+      "bytes": 88,
+      "reason": "Local regular package prevents accidental import of installed public compatibility modules."
+    },
+    {
+      "path": "experiments/english_v2/__init__.py",
+      "sha256": "5ed8cfccd24a79895797c56c1110d6eaa059f8efdb70278fa3eab20b1f743035",
+      "bytes": 88,
+      "reason": "Local regular package prevents accidental import of installed public compatibility modules."
+    },
+    {
+      "path": "experiments/ntl_v1/__init__.py",
+      "sha256": "5ed8cfccd24a79895797c56c1110d6eaa059f8efdb70278fa3eab20b1f743035",
+      "bytes": 88,
+      "reason": "Local regular package prevents accidental import of installed public compatibility modules."
+    }
+  ],
+  "local_dependency_edges": [
+    {
+      "from": "experiments/english_v2/binary_finalize.py",
+      "to": "experiments/english_v1/finalize.py"
+    },
+    {
+      "from": "experiments/english_v2/binary_finalize.py",
+      "to": "experiments/english_v1/select_binary.py"
+    },
+    {
+      "from": "experiments/english_v2/binary_finalize.py",
+      "to": "experiments/english_v1/evaluate.py"
+    },
+    {
+      "from": "experiments/english_v2/binary_finalize.py",
+      "to": "experiments/english_v1/language_guard.py"
+    },
+    {
+      "from": "experiments/english_v2/binary_finalize.py",
+      "to": "experiments/english_v1/catalog.py"
+    },
+    {
+      "from": "experiments/english_v2/binary_finalize.py",
+      "to": "experiments/english_v1/runtime.py"
+    },
+    {
+      "from": "experiments/english_v2/binary_finalize.py",
+      "to": "experiments/english_v1/calibration.py"
+    },
+    {
+      "from": "experiments/english_v1/finalize.py",
+      "to": "experiments/english_v1/select_binary.py"
+    },
+    {
+      "from": "experiments/english_v1/finalize.py",
+      "to": "experiments/english_v1/evaluate.py"
+    },
+    {
+      "from": "experiments/english_v1/finalize.py",
+      "to": "experiments/english_v1/language_guard.py"
+    },
+    {
+      "from": "experiments/english_v1/finalize.py",
+      "to": "experiments/english_v1/catalog.py"
+    },
+    {
+      "from": "experiments/english_v1/finalize.py",
+      "to": "experiments/english_v1/source_release_gate.py"
+    },
+    {
+      "from": "experiments/english_v1/finalize.py",
+      "to": "experiments/english_v1/calibration.py"
+    },
+    {
+      "from": "experiments/english_v1/finalize.py",
+      "to": "experiments/english_v1/version_refinement.py"
+    },
+    {
+      "from": "experiments/english_v1/version_refinement.py",
+      "to": "experiments/english_v1/catalog.py"
+    },
+    {
+      "from": "experiments/english_v1/version_refinement.py",
+      "to": "experiments/english_v1/language_guard.py"
+    },
+    {
+      "from": "experiments/english_v1/version_refinement.py",
+      "to": "experiments/english_v1/finalize.py"
+    },
+    {
+      "from": "experiments/english_v1/version_refinement.py",
+      "to": "experiments/english_v1/calibration.py"
+    },
+    {
+      "from": "experiments/english_v1/source_release_gate.py",
+      "to": "experiments/english_v1/release_acceptance.py"
+    },
+    {
+      "from": "experiments/english_v1/source_release_gate.py",
+      "to": "experiments/english_v1/catalog.py"
+    },
+    {
+      "from": "experiments/english_v1/source_release_gate.py",
+      "to": "experiments/english_v1/source_release_gate.py"
+    },
+    {
+      "from": "experiments/english_v1/release_acceptance.py",
+      "to": "experiments/english_v1/catalog.py"
+    },
+    {
+      "from": "experiments/english_v2/acceptance_checks_independent.py",
+      "to": "experiments/english_v2/acceptance.py"
+    },
+    {
+      "from": "experiments/english_v2/acceptance.py",
+      "to": "experiments/english_v1/release_acceptance.py"
+    },
+    {
+      "from": "research/english_v2_count_storage_checks.py",
+      "to": "experiments/english_v2/count_storage_compat.py"
+    },
+    {
+      "from": "experiments/english_v2/count_storage_compat.py",
+      "to": "experiments/english_v2/post_final_breakdown.py"
+    },
+    {
+      "from": "experiments/english_v2/count_storage_compat.py",
+      "to": "experiments/english_v1/runtime.py"
+    },
+    {
+      "from": "experiments/english_v2/count_storage_compat.py",
+      "to": "experiments/english_v2/binary_finalize.py"
+    },
+    {
+      "from": "experiments/english_v2/post_final_breakdown.py",
+      "to": "experiments/english_v1/finalize.py"
+    },
+    {
+      "from": "experiments/english_v2/post_final_breakdown.py",
+      "to": "experiments/english_v1/runtime.py"
+    },
+    {
+      "from": "experiments/english_v2/post_final_breakdown.py",
+      "to": "experiments/english_v1/evaluate.py"
+    },
+    {
+      "from": "experiments/english_v2/post_final_breakdown.py",
+      "to": "experiments/english_v2/binary_finalize.py"
+    },
+    {
+      "from": "research/english_v2_count_storage_audit.py",
+      "to": "experiments/english_v1/runtime.py"
+    },
+    {
+      "from": "experiments/english_v2/run_development.py",
+      "to": "experiments/english_v1/fingerprints.py"
+    },
+    {
+      "from": "experiments/english_v2/run_development.py",
+      "to": "experiments/english_v1/language_guard.py"
+    },
+    {
+      "from": "experiments/english_v2/run_development.py",
+      "to": "experiments/english_v1/export_component.py"
+    },
+    {
+      "from": "experiments/english_v2/run_development.py",
+      "to": "experiments/english_v1/runtime.py"
+    },
+    {
+      "from": "experiments/english_v2/run_development.py",
+      "to": "experiments/english_v2/train_registered.py"
+    },
+    {
+      "from": "experiments/english_v2/run_development.py",
+      "to": "experiments/english_v2/run_development.py"
+    },
+    {
+      "from": "experiments/english_v2/run_development.py",
+      "to": "experiments/english_v2/select_binary.py"
+    },
+    {
+      "from": "experiments/english_v2/run_development.py",
+      "to": "experiments/english_v2/binary_finalize.py"
+    },
+    {
+      "from": "experiments/english_v2/select_binary.py",
+      "to": "experiments/english_v1/runtime.py"
+    },
+    {
+      "from": "experiments/english_v2/train_registered.py",
+      "to": "experiments/english_v2/prepare_binary_init.py"
+    },
+    {
+      "from": "experiments/english_v2/train_registered.py",
+      "to": "experiments/english_v1/neural.py"
+    },
+    {
+      "from": "experiments/english_v2/train_registered.py",
+      "to": "experiments/english_v1/runtime.py"
+    },
+    {
+      "from": "experiments/english_v2/train_registered.py",
+      "to": "experiments/english_v2/train_registered.py"
+    },
+    {
+      "from": "experiments/english_v2/train_registered.py",
+      "to": "experiments/english_v1/catalog.py"
+    },
+    {
+      "from": "experiments/english_v1/neural.py",
+      "to": "experiments/english_v1/catalog.py"
+    },
+    {
+      "from": "experiments/english_v1/neural.py",
+      "to": "experiments/english_v1/runtime.py"
+    },
+    {
+      "from": "experiments/english_v2/prepare_binary_init.py",
+      "to": "experiments/english_v1/catalog.py"
+    },
+    {
+      "from": "experiments/english_v1/export_component.py",
+      "to": "experiments/english_v1/fingerprints.py"
+    },
+    {
+      "from": "experiments/english_v1/export_component.py",
+      "to": "experiments/english_v1/stat_official_refine.py"
+    },
+    {
+      "from": "experiments/english_v1/export_component.py",
+      "to": "experiments/english_v1/language_guard.py"
+    },
+    {
+      "from": "experiments/english_v1/export_component.py",
+      "to": "experiments/english_v1/export_component.py"
+    },
+    {
+      "from": "experiments/english_v1/export_component.py",
+      "to": "experiments/english_v1/neural.py"
+    },
+    {
+      "from": "experiments/english_v1/export_component.py",
+      "to": "experiments/english_v1/runtime.py"
+    },
+    {
+      "from": "experiments/english_v1/export_component.py",
+      "to": "experiments/english_v1/catalog.py"
+    },
+    {
+      "from": "experiments/english_v1/export_component.py",
+      "to": "experiments/english_v1/statistical.py"
+    },
+    {
+      "from": "experiments/english_v1/statistical.py",
+      "to": "experiments/ntl_v1/baseline.py"
+    },
+    {
+      "from": "experiments/english_v1/stat_official_refine.py",
+      "to": "experiments/english_v1/catalog.py"
+    },
+    {
+      "from": "experiments/english_v1/stat_official_refine.py",
+      "to": "experiments/english_v1/stat_train.py"
+    },
+    {
+      "from": "experiments/english_v1/stat_official_refine.py",
+      "to": "experiments/english_v1/statistical.py"
+    },
+    {
+      "from": "experiments/english_v1/stat_train.py",
+      "to": "experiments/english_v1/statistical.py"
+    },
+    {
+      "from": "experiments/english_v1/stat_train.py",
+      "to": "experiments/ntl_v1/baseline.py"
+    },
+    {
+      "from": "research/english_v2_user_path_qa/run_relocated_clean.py",
+      "to": "experiments/english_v1/inference.py"
+    },
+    {
+      "from": "research/english_v2_user_path_qa/run_relocated_clean.py",
+      "to": "experiments/english_v1/bundle_checks.py"
+    },
+    {
+      "from": "research/english_v2_user_path_qa/run_relocated_clean.py",
+      "to": "experiments/english_v1/http_bundle_checks.py"
+    },
+    {
+      "from": "research/english_v2_user_path_qa/run_relocated_clean.py",
+      "to": "experiments/english_v1/runtime.py"
+    },
+    {
+      "from": "experiments/english_v1/http_bundle_checks.py",
+      "to": "experiments/english_v1/documents.py"
+    },
+    {
+      "from": "experiments/english_v1/http_bundle_checks.py",
+      "to": "experiments/english_v1/inference.py"
+    },
+    {
+      "from": "experiments/english_v1/http_bundle_checks.py",
+      "to": "experiments/english_v1/serve.py"
+    },
+    {
+      "from": "experiments/english_v1/serve.py",
+      "to": "experiments/english_v1/documents.py"
+    },
+    {
+      "from": "experiments/english_v1/serve.py",
+      "to": "experiments/english_v1/inference.py"
+    },
+    {
+      "from": "experiments/english_v1/inference.py",
+      "to": "experiments/english_v1/documents.py"
+    },
+    {
+      "from": "experiments/english_v1/inference.py",
+      "to": "experiments/english_v1/select_binary.py"
+    },
+    {
+      "from": "experiments/english_v1/inference.py",
+      "to": "experiments/english_v1/language_guard.py"
+    },
+    {
+      "from": "experiments/english_v1/inference.py",
+      "to": "experiments/english_v1/catalog.py"
+    },
+    {
+      "from": "experiments/english_v1/inference.py",
+      "to": "experiments/english_v1/source_release_gate.py"
+    },
+    {
+      "from": "experiments/english_v1/inference.py",
+      "to": "experiments/english_v1/runtime.py"
+    },
+    {
+      "from": "experiments/english_v1/inference.py",
+      "to": "experiments/english_v1/neural.py"
+    },
+    {
+      "from": "experiments/english_v1/inference.py",
+      "to": "experiments/english_v1/calibration.py"
+    },
+    {
+      "from": "experiments/english_v1/inference.py",
+      "to": "experiments/english_v1/version_refinement.py"
+    },
+    {
+      "from": "experiments/english_v1/inference.py",
+      "to": "experiments/english_v1/statistical.py"
+    },
+    {
+      "from": "experiments/english_v1/bundle_checks.py",
+      "to": "experiments/english_v1/inference.py"
+    },
+    {
+      "from": "experiments/english_v2/package_source_archive_checks.py",
+      "to": "experiments/english_v2/package_source_archive.py"
+    },
+    {
+      "from": "research/english_v2_user_path_qa/offline_live_bundle_checks.py",
+      "to": "experiments/english_v1/run_release_exports.py"
+    },
+    {
+      "from": "research/english_v2_user_path_qa/offline_live_bundle_checks.py",
+      "to": "experiments/english_v1/fingerprints.py"
+    },
+    {
+      "from": "research/english_v2_user_path_qa/offline_live_bundle_checks.py",
+      "to": "research/english_v1_user_path_qa/offline_live_bundle_checks.py"
+    },
+    {
+      "from": "research/english_v2_user_path_qa/offline_live_bundle_checks.py",
+      "to": "experiments/english_v1/inference.py"
+    },
+    {
+      "from": "research/english_v2_user_path_qa/offline_live_bundle_checks.py",
+      "to": "experiments/english_v1/bundle_checks.py"
+    },
+    {
+      "from": "research/english_v2_user_path_qa/offline_live_bundle_checks.py",
+      "to": "experiments/english_v1/runtime.py"
+    },
+    {
+      "from": "research/english_v2_user_path_qa/offline_live_bundle_checks.py",
+      "to": "experiments/english_v1/catalog.py"
+    },
+    {
+      "from": "research/english_v1_user_path_qa/offline_live_bundle_checks.py",
+      "to": "experiments/english_v1/run_release_exports.py"
+    },
+    {
+      "from": "research/english_v1_user_path_qa/offline_live_bundle_checks.py",
+      "to": "experiments/english_v1/fingerprints.py"
+    },
+    {
+      "from": "research/english_v1_user_path_qa/offline_live_bundle_checks.py",
+      "to": "experiments/english_v1/inference.py"
+    },
+    {
+      "from": "research/english_v1_user_path_qa/offline_live_bundle_checks.py",
+      "to": "experiments/english_v1/export_component.py"
+    },
+    {
+      "from": "research/english_v1_user_path_qa/offline_live_bundle_checks.py",
+      "to": "experiments/english_v1/bundle_checks.py"
+    },
+    {
+      "from": "research/english_v1_user_path_qa/offline_live_bundle_checks.py",
+      "to": "experiments/english_v1/neural.py"
+    },
+    {
+      "from": "research/english_v1_user_path_qa/offline_live_bundle_checks.py",
+      "to": "experiments/english_v1/runtime.py"
+    },
+    {
+      "from": "research/english_v1_user_path_qa/offline_live_bundle_checks.py",
+      "to": "experiments/english_v1/catalog.py"
+    },
+    {
+      "from": "experiments/english_v1/run_release_exports.py",
+      "to": "experiments/english_v1/fingerprints.py"
+    },
+    {
+      "from": "experiments/english_v1/run_release_exports.py",
+      "to": "experiments/english_v1/language_guard.py"
+    },
+    {
+      "from": "experiments/english_v1/run_release_exports.py",
+      "to": "experiments/english_v1/export_component.py"
+    },
+    {
+      "from": "experiments/english_v1/run_release_exports.py",
+      "to": "experiments/english_v1/neural.py"
+    },
+    {
+      "from": "experiments/english_v1/run_release_exports.py",
+      "to": "experiments/english_v1/catalog.py"
+    },
+    {
+      "from": "experiments/english_v1/run_release_exports.py",
+      "to": "experiments/english_v1/statistical.py"
+    },
+    {
+      "from": "research/english_v2_data/audit/index_raid_metadata.py",
+      "to": "experiments/english_v1/language_guard.py"
+    },
+    {
+      "from": "research/english_v2_data/audit/index_raid_metadata.py",
+      "to": "research/english_v2_data/audit/index_maga_metadata.py"
+    },
+    {
+      "from": "research/english_v2_data/audit/index_maga_metadata.py",
+      "to": "experiments/english_v1/language_guard.py"
+    },
+    {
+      "from": "research/english_v2_user_path_qa/relocated_clean_synthetic_checks.py",
+      "to": "research/english_v2_user_path_qa/run_relocated_clean.py"
+    },
+    {
+      "from": "research/english_v2_data/modern_candidates/raid_paraphrase/acquire_parent_titles.py",
+      "to": "research/english_v2_data/modern_candidates/raid_paraphrase/audit_parquet_footers.py"
+    },
+    {
+      "from": "experiments/english_v2/run_development_checks.py",
+      "to": "experiments/english_v1/run_release_exports.py"
+    },
+    {
+      "from": "experiments/english_v2/run_development_checks.py",
+      "to": "experiments/english_v1/fingerprints.py"
+    },
+    {
+      "from": "experiments/english_v2/run_development_checks.py",
+      "to": "experiments/english_v1/language_guard.py"
+    },
+    {
+      "from": "experiments/english_v2/run_development_checks.py",
+      "to": "experiments/english_v1/export_component.py"
+    },
+    {
+      "from": "experiments/english_v2/run_development_checks.py",
+      "to": "experiments/english_v2/train_registered_checks.py"
+    },
+    {
+      "from": "experiments/english_v2/run_development_checks.py",
+      "to": "experiments/english_v1/runtime.py"
+    },
+    {
+      "from": "experiments/english_v2/run_development_checks.py",
+      "to": "experiments/english_v2/train_registered.py"
+    },
+    {
+      "from": "experiments/english_v2/run_development_checks.py",
+      "to": "experiments/english_v2/run_development.py"
+    },
+    {
+      "from": "experiments/english_v2/train_registered_checks.py",
+      "to": "experiments/english_v1/catalog.py"
+    },
+    {
+      "from": "experiments/english_v2/train_registered_checks.py",
+      "to": "experiments/english_v1/runtime.py"
+    },
+    {
+      "from": "experiments/english_v2/train_registered_checks.py",
+      "to": "experiments/english_v2/train_registered.py"
+    },
+    {
+      "from": "research/english_v2_data/audit/guard_raid_observed_reference.py",
+      "to": "research/english_v2_data/audit/build_full_lexical_near.py"
+    },
+    {
+      "from": "research/english_v2_data/audit/guard_raid_observed_reference.py",
+      "to": "research/english_v2_data/audit/lexical_signature.py"
+    },
+    {
+      "from": "research/english_v2_data/audit/lexical_signature.py",
+      "to": "experiments/english_v1/data_grouping.py"
+    },
+    {
+      "from": "research/english_v2_data/audit/build_full_lexical_near.py",
+      "to": "research/english_v2_data/audit/lexical_signature.py"
+    },
+    {
+      "from": "research/english_v2_data/audit/independent_prepared_data_qa.py",
+      "to": "experiments/english_v2/prepare_registered_data.py"
+    },
+    {
+      "from": "experiments/english_v2/select_binary_checks.py",
+      "to": "experiments/english_v2/select_binary.py"
+    },
+    {
+      "from": "research/english_v2_data/audit/index_beemo_metadata.py",
+      "to": "experiments/english_v1/language_guard.py"
+    },
+    {
+      "from": "research/english_v2_data/audit/build_joint_near_graph.py",
+      "to": "experiments/english_v1/data_grouping.py"
+    },
+    {
+      "from": "research/english_v2_data/audit/build_joint_near_graph.py",
+      "to": "research/english_v2_data/audit/index_maga_metadata.py"
+    },
+    {
+      "from": "research/english_v2_data/audit/build_joint_near_graph.py",
+      "to": "research/english_v2_data/audit/lexical_signature.py"
+    },
+    {
+      "from": "research/english_v2_data/audit/independent_full_near_qa.py",
+      "to": "experiments/english_v1/data_grouping.py"
+    },
+    {
+      "from": "research/english_v2_data/audit/independent_full_near_qa.py",
+      "to": "research/english_v2_data/audit/lexical_signature.py"
+    },
+    {
+      "from": "research/english_v2_data/modern_candidates/raid_paraphrase/acquire_books_news_pairs.py",
+      "to": "research/english_v2_data/modern_candidates/raid_paraphrase/audit_parquet_footers.py"
+    },
+    {
+      "from": "research/english_v2_resources/probe_modern_batch.py",
+      "to": "experiments/english_v1/neural.py"
+    },
+    {
+      "from": "research/english_v2_resources/probe_modern_batch.py",
+      "to": "experiments/english_v1/runtime.py"
+    },
+    {
+      "from": "research/english_v2_data/audit/build_lexical_cache.py",
+      "to": "experiments/english_v1/data_grouping.py"
+    },
+    {
+      "from": "research/english_v2_data/audit/build_lexical_cache.py",
+      "to": "research/english_v2_data/audit/lexical_signature.py"
+    },
+    {
+      "from": "research/english_v2_data/freeze_training_protocol.py",
+      "to": "experiments/english_v1/runtime.py"
+    },
+    {
+      "from": "experiments/english_v2/audit_training_weights.py",
+      "to": "experiments/english_v1/neural.py"
+    },
+    {
+      "from": "experiments/english_v2/audit_training_weights.py",
+      "to": "experiments/english_v1/runtime.py"
+    },
+    {
+      "from": "research/english_v2_data/modern_candidates/raid_paraphrase/project_rowgroup_metadata.py",
+      "to": "research/english_v2_data/modern_candidates/raid_paraphrase/audit_parquet_footers.py"
+    },
+    {
+      "from": "experiments/english_v2/registered_views_checks.py",
+      "to": "experiments/english_v2/binary_finalize.py"
+    },
+    {
+      "from": "experiments/english_v2/registered_views_checks.py",
+      "to": "experiments/english_v2/acceptance_checks_independent.py"
+    },
+    {
+      "from": "experiments/english_v2/registered_views_checks.py",
+      "to": "experiments/english_v1/runtime.py"
+    },
+    {
+      "from": "experiments/english_v2/registered_views_checks.py",
+      "to": "experiments/english_v2/acceptance.py"
+    },
+    {
+      "from": "research/english_v2_data/audit/audit_existing_capacity.py",
+      "to": "experiments/english_v1/neural.py"
+    },
+    {
+      "from": "research/english_v2_data/audit/audit_existing_capacity.py",
+      "to": "experiments/english_v1/statistical.py"
+    },
+    {
+      "from": "research/english_v2_user_path_qa/synthetic_checks.py",
+      "to": "experiments/english_v1/catalog.py"
+    },
+    {
+      "from": "research/english_v2_user_path_qa/synthetic_checks.py",
+      "to": "experiments/english_v1/bundle_checks.py"
+    },
+    {
+      "from": "research/english_v2_user_path_qa/synthetic_checks.py",
+      "to": "experiments/english_v1/runtime.py"
+    },
+    {
+      "from": "research/english_v2_user_path_qa/synthetic_checks.py",
+      "to": "research/english_v2_user_path_qa/offline_live_bundle_checks.py"
+    },
+    {
+      "from": "experiments/english_v2/binary_finalize_checks.py",
+      "to": "experiments/english_v1/evaluate.py"
+    },
+    {
+      "from": "experiments/english_v2/binary_finalize_checks.py",
+      "to": "experiments/english_v1/inference.py"
+    },
+    {
+      "from": "experiments/english_v2/binary_finalize_checks.py",
+      "to": "experiments/english_v1/catalog.py"
+    },
+    {
+      "from": "experiments/english_v2/binary_finalize_checks.py",
+      "to": "experiments/english_v1/runtime.py"
+    },
+    {
+      "from": "experiments/english_v2/binary_finalize_checks.py",
+      "to": "experiments/english_v1/calibration.py"
+    },
+    {
+      "from": "experiments/english_v2/binary_finalize_checks.py",
+      "to": "experiments/english_v1/version_refinement.py"
+    },
+    {
+      "from": "experiments/english_v2/binary_finalize_checks.py",
+      "to": "experiments/english_v2/binary_finalize.py"
+    },
+    {
+      "from": "experiments/english_v1/stat_style_refine.py",
+      "to": "experiments/english_v1/statistical.py"
+    },
+    {
+      "from": "experiments/english_v1/stat_style_refine.py",
+      "to": "experiments/english_v1/stat_train.py"
+    }
+  ],
+  "byte_identical_original_files": 76,
+  "adapted_English_files": 4,
+  "legacy_project_layout_preserves_ROOT_parents2": true,
+  "public_runtime_src_or_wheel_modified": false,
+  "corpus_weights_QA_seals_included": false,
+  "must_rebind_new_run_code_registry_and_protocol": true,
+  "not_a_claim_that_historical_exact_SHA_protocol_accepts_adapted_sources": true,
+  "serialized_project_module_dependencies": [
+    "experiments.english_v1.stat_style_refine",
+    "experiments.english_v1.statistical"
+  ]
+}
