@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "completed_at_utc": "2026-10-18T03:32:28.847071+00:00",
+  "scope": "Actual trusted four-component bundle load through installed public runtime on CPU. Integrity/calibration/protocol/schema checks only; no forward predictions, corpus, GPU, training or remote calls.",
+  "bundle_manifest_sha256": "e0ba21adeb0bdd39cff9c7375edfa0c651150bf7ae1584c61a859cd24fa11c65",
+  "archive_sha256": "8d040a57f38739ec10c8eec9b5930d94a6bcea303232a7b80a53fbf3a47877c4",
+  "packaging_receipt_sha256": "0bb6588f7ce049adae5bab9d84b298ffbc3bff6eba317dfddffc9bda86b60e8a",
+  "runtime_source": "publication/.qa/installed_core_v3/experiments/english_v1/inference.py",
+  "runtime_source_sha256": "c13a75461671d7e30dcef76f00f78e96a7d1eeef9109f7430af8df99afc4debf",
+  "model_id": "english-ai-detector-v2-practical",
+  "component_count": 4,
+  "AI_threshold": 0.7233173320180257,
+  "human_threshold": 0.9049688379295407,
+  "both_source_assertions_disabled": true,
+  "script_sha256": "6a5d02ec296768987d35a1610595b231c73de0aedc94070d8efefdfcd620ebee"
+}

@@ -16,14 +16,14 @@ source .venv/bin/activate
 pip install .
 ```
 
-`requirements.txt` records the exact versions used in the validated local environment. ZeroGPU uses a separately documented platform lock and requires its own deployment checks. No weights or corpus are downloaded by package installation.
+`requirements.txt` records the exact versions used in the validated local environment. No weights or corpus are downloaded by package installation.
 
 ## Download the model
 
 The Model Hub distributes one complete `english_ai_detector_v2_bundle.zip`, containing all four components under `bundle/`. The download example verifies the ZIP SHA256 before parsing, bounds and validates the exact inventory, checks every extracted file, and prints the verified local directory. It downloads publicly without a token. No `bundle/*` tree is assumed to exist separately on the Hub.
 
 ```bash
-BUNDLE_PATH="$(python examples/download_model.py --revision 4a98aa247f3cf227c81eec54596b9c0f8d7c358e)"
+BUNDLE_PATH="$(python examples/download_model.py --revision d54db158b99d4b408f950a99a37664f0c5f3d81b)"
 ```
 
 The command and example default pin the verified immutable Model Hub release. The example additionally pins the approved archive bytes, so a different archive fails closed. Only load the trusted project bundle: Python joblib serialization can execute code when loading untrusted files. The model card and `LICENSE-MODEL.md` define the separate model-use scope.
@@ -36,7 +36,7 @@ english-ai-detector serve --bundle "$BUNDLE_PATH" --device cpu
 
 Open <http://127.0.0.1:8765>. Paste English text or upload DOCX, DOC, or TXT. The included HTML can also be opened directly and connected to your local server. On compatible Apple Silicon, `--device mps` is available. HTTP defaults are 200,000 characters, 8 MiB, one simultaneous detection and six requests per minute; oversized requests fail explicitly rather than silently truncating the document. Legacy DOC needs `antiword` on Linux or `textutil` on macOS.
 
-The separate Hugging Face Space target is `ydh0822/english-ai-detector`. Its English ZeroGPU code is prepared for an independent Space repository, but this publication account currently has compute-Space creation disabled in the actual HF UI. No live Space, subscription purchase, paid fallback or CUDA equivalence is claimed. Deployment files with fixed source/model revisions are available in [deployment/space](deployment/space/README.md). See [publication status](docs/publication.md).
+The browser tool and HTTP API run locally on your computer. Hosted inference demos and their deployment plans are withdrawn; no online inference deployment is provided or planned. Hugging Face remains a download-only model distribution channel. See [local use and publication evidence](docs/publication.md).
 
 ## Python and command line
 
@@ -55,14 +55,14 @@ python -m english_ai_detector predict --bundle "$BUNDLE_PATH" --stdin < example.
 
 ## Frozen final evaluation
 
-| Cohort | Distinct text rows | AUROC | Online AI recall | Human-to-AI false positives | Decision coverage |
+| Cohort | Distinct text rows | AUROC | Applied-policy AI recall | Human-to-AI false positives | Decision coverage |
 |---|---:|---:|---:|---:|---:|
 | Main | 3,000 | 0.997829 | 97.60% | 1.40% | 97.77% |
 | Natural Questions source-pipeline holdout | 800 | 0.999388 | 99.50% | 3.50% | 95.38% |
 | Modern generators with human controls | 2,000 | 0.997897 | 97.80% | 0.70% | 97.45% |
 | Paraphrase stress with human controls | 1,800 | 0.995828 | 95.17% | 0.17% | 96.22% |
 
-These are 7,600 distinct held-out rows, with correlated parent groups handled jointly. Rejected inputs remain in online recall denominators. The preregistered point criteria passed; this is not a guarantee for arbitrary domains or future generators. The weakest disclosed news/human-original-to-AI-rewrite cell has 90.67% AI recall. Confidence intervals, both error directions, accuracy definitions and correlated rewrite views are in the [model card](docs/model_card.md) and [aggregate report](docs/reports/METRICS_FOR_MODEL_CARD.json). Forced binary accuracy is different from accuracy conditional on the system issuing a decision.
+These are 7,600 distinct held-out rows, with correlated parent groups handled jointly. Rejected inputs remain in applied-policy recall denominators. The preregistered point criteria passed; this is not a guarantee for arbitrary domains or future generators. The weakest disclosed news/human-original-to-AI-rewrite cell has 90.67% AI recall. Confidence intervals, both error directions, accuracy definitions and correlated rewrite views are in the [model card](docs/model_card.md) and [aggregate report](docs/reports/METRICS_FOR_MODEL_CARD.json). Forced binary accuracy is different from accuracy conditional on the system issuing a decision.
 
 ## Development and reproducibility
 

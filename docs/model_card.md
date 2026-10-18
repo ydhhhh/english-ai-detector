@@ -4,7 +4,7 @@ Model ID: `english-ai-detector-v2-practical`.
 
 This model estimates whether English prose is human-written or AI-generated/substantively AI-rewritten. It also returns **exploratory source-family and nominal-version rankings conditional on AI**. Both source assertion switches are disabled: `accepted_family` and `accepted_model` are always `null` in this release.
 
-The frozen binary system passed the preregistered point criteria on four necessary final cohorts and both required rewrite-origin views. This is evidence for those measured populations, not universal detection accuracy, a per-domain 1% false-positive guarantee, or authenticated model attribution. Engineering checks and hosted deployment status are recorded separately from these statistical results.
+The frozen binary system passed the preregistered point criteria on four necessary final cohorts and both required rewrite-origin views. This is evidence for those measured populations, not universal detection accuracy, a per-domain 1% false-positive guarantee, or authenticated model attribution. Local engineering checks are recorded separately from these statistical results.
 
 ## Supported use and decisions
 
@@ -20,7 +20,7 @@ The deployed rules use one fixed pair of thresholds across all cohorts:
 
 The gap between thresholds is intentional. A forced binary label at 0.5 is a separate diagnostic and is not the shipping decision policy. Probabilities depend on the calibration mixture and its class/domain distribution; they are not population-invariant authorship probabilities.
 
-Full token streams are processed with overlapping windows and new-token-weighted logit aggregation; the tail is not silently dropped. Runtime increases with length. The local HTTP entry defaults to 200,000 characters, 8 MiB per upload, six requests/minute and one concurrent detection; it rejects excess input. CLI/Python capacity remains limited by available memory and time. A hosted Space may impose additional platform queues and quotas.
+Full token streams are processed with overlapping windows and new-token-weighted logit aggregation; the tail is not silently dropped. Runtime increases with length. The local HTTP entry defaults to 200,000 characters, 8 MiB per upload, six requests/minute and one concurrent detection; it rejects excess input. CLI/Python capacity remains limited by available memory and time.
 
 ## Four inference components
 
@@ -58,7 +58,7 @@ All 7,600 final records meet the 128-word-like core threshold. The four cohorts 
 
 Values in brackets are 95% percentile whole-connected-group bootstrap intervals: 500 replicates, seed 42, with fixed predictions and thresholds. Paired/triplet rows move together. The intervals exclude retraining, model-selection and calibration uncertainty.
 
-| Final cohort | Human / AI; groups | AUROC [95% CI] | Online correct-AI recall [95% CI] | Human → AI [95% CI] |
+| Final cohort | Human / AI; groups | AUROC [95% CI] | Applied-policy correct-AI recall [95% CI] | Human → AI [95% CI] |
 |---|---|---|---|---|
 | Main: unused MAGE components | 1,500 / 1,500; 3,000 | 0.997829 [0.996428, 0.998788] | 97.60% [96.88%, 98.24%] | 1.40% [0.88%, 2.02%] |
 | Source pipeline: Natural Questions | 400 / 400; 400 | 0.999388 [0.998429, 0.999960] | 99.50% [98.75%, 100.00%] | 3.50% [1.75%, 5.38%] |
@@ -74,13 +74,13 @@ Values in brackets are 95% percentile whole-connected-group bootstrap intervals:
 
 Acceptance required all preregistered point checks on each necessary cohort and rewrite view. It did **not** require every confidence bound to meet the point target. For example, main FPR passes its 2% point criterion but its interval extends above 2%; NQ FPR passes its 5% point criterion but its interval extends above 5%. Zero observed errors with a degenerate bootstrap interval do not prove zero population risk.
 
-The modern cohort has five language-rejected records and NQ has two; they remain in the denominators. Modern forced-score AI recall at the AI cutoff is 98.00%, while actual online recall is **97.80%**. Reporting only the forced score would overstate deployment recall. At the separate forced 0.5 threshold, balanced accuracy is 98.13% / 97.38% / 98.75% / 97.83%; these point diagnostics have no separately computed bootstrap intervals in the original reports.
+The modern cohort has five language-rejected records and NQ has two; they remain in the denominators. Modern forced-score AI recall at the AI cutoff is 98.00%, while actual applied-policy recall is **97.80%**. Reporting only the forced score would overstate applied-policy recall. At the separate forced 0.5 threshold, balanced accuracy is 98.13% / 97.38% / 98.75% / 97.83%; these point diagnostics have no separately computed bootstrap intervals in the original reports.
 
 ## Two rewrite views and weaker slices
 
 The paraphrase cohort contains clean human originals, DIPPER rewrites of human originals, and DIPPER rewrites of AI originals. The two required views share the **same 600 human controls**, overlap their 1,800-row parent cohort, and are neither additive nor independent extra tests.
 
-| Required view | Human / AI | Online correct-AI recall [95% CI] | AI → human [95% CI] | Inconclusive [95% CI] |
+| Required view | Human / AI | Applied-policy correct-AI recall [95% CI] | AI → human [95% CI] | Inconclusive [95% CI] |
 |---|---|---|---|---|
 | Human-origin DIPPER rewrite | 600 / 600 | 92.33% [90.17%, 94.25%] | 2.83% [1.67%, 4.17%] | 4.83% [3.67%, 6.04%] |
 | AI-origin DIPPER rewrite | 600 / 600 | 98.00% [96.75%, 99.17%] | 0.33% [0.00%, 0.83%] | 3.25% [2.25%, 4.42%] |
@@ -122,4 +122,4 @@ Dynamic API history, unavailable original IDs and historical receipts prevent a 
 
 Before final metrics, an independent storage-compatibility amendment accepted only the pinned statistical component's nonnegative, exactly equal `int32` length versus `int64` scope-count representation. A validation-only proxy left raw arrays, probabilities, labels, calibration, thresholds and original producer files unchanged. Amendment SHA: `48a2e062c168dc115341796078032362a5a5f554196ab04421666ae43ed353d5`. This is disclosed engineering compatibility, not a statistical-method change.
 
-The public packaging revision replaces documentation and records new manifest hashes; the four artifact hashes, numerical calibration and algorithms above remain the reference. A documentation-only repack has a new bundle identity. Original macOS CPU/MPS checks do not automatically establish Linux/CUDA/ZeroGPU parity; use the public release's actual, revision-bound engineering reports.
+The public packaging revision replaces documentation and records new manifest hashes; the four artifact hashes, numerical calibration and algorithms above remain the reference. A documentation-only repack has a new bundle identity. Original macOS CPU/MPS checks do not automatically establish parity on other execution platforms; use the public release's actual, revision-bound engineering reports.

@@ -1,0 +1,386 @@
+{
+  "schema_version": 1,
+  "status": "LOCAL_USE_DOCUMENTATION_REPACK_COMPLETE_NO_UPLOAD",
+  "completed_at_utc": "2026-10-18T03:31:41.853398+00:00",
+  "scope": "New four-document local-use revision and integrity/ZIP metadata only; no retraining/calibration/algorithm changes",
+  "old_bundle": "publication/model/bundle",
+  "new_bundle": "publication/model_local_only/bundle",
+  "old_manifest_sha256": "f588dc69355cc96105ea627e0aa20bdcd9bed78709038884466abf008a4271cc",
+  "new_manifest_sha256": "e0ba21adeb0bdd39cff9c7375edfa0c651150bf7ae1584c61a859cd24fa11c65",
+  "old_archive_sha256": "da04e4314bdc4571e1dfff8414d203865ac03ad6d14aeff2a182ac070b5be164",
+  "new_archive": "publication/model_local_only/english_ai_detector_v2_bundle.zip",
+  "new_archive_sha256": "8d040a57f38739ec10c8eec9b5930d94a6bcea303232a7b80a53fbf3a47877c4",
+  "new_archive_bytes": 777567035,
+  "archive_members": 32,
+  "archive_root": "bundle/",
+  "payload_bytes": 842595177,
+  "model_id": "english-ai-detector-v2-practical",
+  "source_assertions": {
+    "valid": false,
+    "family_enabled": false,
+    "model_enabled": false
+  },
+  "changed_documents": [
+    {
+      "path": "API.md",
+      "old": {
+        "bytes": 2944,
+        "sha256": "b6ebd5ce77523dd0f20e098df77ec625bcc1e53264be76cc5c1a7ea0eb20e06e"
+      },
+      "new": {
+        "bytes": 2754,
+        "sha256": "844616e8cdd4aee4f6608aa4e1986f2026439160dde10be689e5101ca992673f"
+      }
+    },
+    {
+      "path": "MODEL_CARD.md",
+      "old": {
+        "bytes": 14067,
+        "sha256": "482cb85596535690ea63050b77f4710b228b4fc6346584548f26b7884c63208a"
+      },
+      "new": {
+        "bytes": 13992,
+        "sha256": "1c749ac708709522e806c22ce0503843d684cfdd60737b205e3fbb9802a75df2"
+      }
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "old": {
+        "bytes": 9617,
+        "sha256": "82bcea5d342e8ca6f35e916d1610dfab8ca04992dc198adf8b5ea6504e8c0c2c"
+      },
+      "new": {
+        "bytes": 9454,
+        "sha256": "3491c97c4f61e3fdd53c98fe545df665f428b87554f7421a462be7541e0259f0"
+      }
+    },
+    {
+      "path": "TRAINING.md",
+      "old": {
+        "bytes": 12360,
+        "sha256": "e2f83e9d769dd20f2876f4b2dfd33431440ccadd69803540e1376c822abf1c76"
+      },
+      "new": {
+        "bytes": 12365,
+        "sha256": "b262ecf89bf774b292f2e2ddbda6304cb8c819680cb0776cdba3bc6cde4b7969"
+      }
+    }
+  ],
+  "all_changed_members": [
+    "API.md",
+    "MODEL_CARD.md",
+    "THIRD_PARTY_NOTICES.md",
+    "TRAINING.md",
+    "bundle.json",
+    "bundle.sha256"
+  ],
+  "unchanged_numeric_members": [
+    {
+      "path": "binary_blend.json",
+      "bytes": 108701,
+      "sha256": "df0a837b1ce7016d56373d06f822fa48d36a9e969bd525051fd1ae83ceef4628",
+      "old_equals_new": true
+    },
+    {
+      "path": "calibration.json",
+      "bytes": 3282426,
+      "sha256": "31330e39f471587ad50156c041717b326b1cbfcd6e0230ef6ff32887c653d50c",
+      "old_equals_new": true
+    },
+    {
+      "path": "components/minilm4_epoch1/detector.json",
+      "bytes": 5783,
+      "sha256": "359897236e9516b3375d962d2fb4970f4aad46ab998da0d9b4a6e981086d2e54",
+      "old_equals_new": true
+    },
+    {
+      "path": "components/minilm4_epoch1/detector.safetensors",
+      "bytes": 91695488,
+      "sha256": "e1877e1665c31a6070cfe0f0f6a5b2cea051df9382c04ebe9fb98b2dddb465e0",
+      "old_equals_new": true
+    },
+    {
+      "path": "components/minilm4_epoch1/encoder_config/config.json",
+      "bytes": 745,
+      "sha256": "69a2d4427d31477f4e570c96959839faa9294298a7d4d04c7c274c24b99f87fe",
+      "old_equals_new": true
+    },
+    {
+      "path": "components/minilm4_epoch1/tokenizer/tokenizer.json",
+      "bytes": 711396,
+      "sha256": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66",
+      "old_equals_new": true
+    },
+    {
+      "path": "components/minilm4_epoch1/tokenizer/tokenizer_config.json",
+      "bytes": 592,
+      "sha256": "1128dd50ff3f913671a9405619c1bd8f9e9ddc28f62257cb94ed70683590b715",
+      "old_equals_new": true
+    },
+    {
+      "path": "components/minilm_v3_epoch2/detector.json",
+      "bytes": 5576,
+      "sha256": "39469e6d3dd4d61dd488129f6c15297faad5534768e6017a7af4f929c0d15242",
+      "old_equals_new": true
+    },
+    {
+      "path": "components/minilm_v3_epoch2/detector.safetensors",
+      "bytes": 91695488,
+      "sha256": "9d2ca9d251aeb2f2067478c12c564be863c478b91c579e4ea312f5170c04aabb",
+      "old_equals_new": true
+    },
+    {
+      "path": "components/minilm_v3_epoch2/encoder_config/config.json",
+      "bytes": 745,
+      "sha256": "69a2d4427d31477f4e570c96959839faa9294298a7d4d04c7c274c24b99f87fe",
+      "old_equals_new": true
+    },
+    {
+      "path": "components/minilm_v3_epoch2/tokenizer/tokenizer.json",
+      "bytes": 711396,
+      "sha256": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66",
+      "old_equals_new": true
+    },
+    {
+      "path": "components/minilm_v3_epoch2/tokenizer/tokenizer_config.json",
+      "bytes": 592,
+      "sha256": "1128dd50ff3f913671a9405619c1bd8f9e9ddc28f62257cb94ed70683590b715",
+      "old_equals_new": true
+    },
+    {
+      "path": "components/modern3_epoch2/detector.json",
+      "bytes": 5787,
+      "sha256": "6ebf0efe1ecac71b65b67a66f298e89bcc215577fc559734c927ca305a16a090",
+      "old_equals_new": true
+    },
+    {
+      "path": "components/modern3_epoch2/detector.safetensors",
+      "bytes": 597694304,
+      "sha256": "84bbb9e8efe59cbdc050940fa7f63bf4d5b493d27cea84fd7d6f68dbb7649f25",
+      "old_equals_new": true
+    },
+    {
+      "path": "components/modern3_epoch2/encoder_config/config.json",
+      "bytes": 1904,
+      "sha256": "8a991341efc1b6443b8d0c46061a9e8db2b577d92117e3bab19585a73eecb4bc",
+      "old_equals_new": true
+    },
+    {
+      "path": "components/modern3_epoch2/tokenizer/tokenizer.json",
+      "bytes": 3583228,
+      "sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+      "old_equals_new": true
+    },
+    {
+      "path": "components/modern3_epoch2/tokenizer/tokenizer_config.json",
+      "bytes": 378,
+      "sha256": "68acf857b869285d8c3ac2757ddd26e6f8030fb275d6800131521eb736084608",
+      "old_equals_new": true
+    },
+    {
+      "path": "components/statistical_v2/model.joblib",
+      "bytes": 51198043,
+      "sha256": "32a35bcfa2fc09a49d841bf2f2ad67f3d0d5fa926590c282f4dd14363c41fc45",
+      "old_equals_new": true
+    },
+    {
+      "path": "decision_protocol.json",
+      "bytes": 2235,
+      "sha256": "0e335238cb5b66c77ef633cc9c09494357e23c4cb986651f10887df2bfdaa0fb",
+      "old_equals_new": true
+    }
+  ],
+  "textual_member_scan": [
+    {
+      "path": "API.md",
+      "scan": "UTF8",
+      "related_keyword_occurrences": 0,
+      "classification": "no related keyword"
+    },
+    {
+      "path": "BUNDLE_GUIDE.md",
+      "scan": "UTF8",
+      "related_keyword_occurrences": 0,
+      "classification": "no related keyword"
+    },
+    {
+      "path": "DATA_CARD.md",
+      "scan": "UTF8",
+      "related_keyword_occurrences": 0,
+      "classification": "no related keyword"
+    },
+    {
+      "path": "LICENSE.txt",
+      "scan": "UTF8",
+      "related_keyword_occurrences": 0,
+      "classification": "no related keyword"
+    },
+    {
+      "path": "MODEL_CARD.md",
+      "scan": "UTF8",
+      "related_keyword_occurrences": 0,
+      "classification": "no related keyword"
+    },
+    {
+      "path": "README.md",
+      "scan": "UTF8",
+      "related_keyword_occurrences": 0,
+      "classification": "no related keyword"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "scan": "UTF8",
+      "related_keyword_occurrences": 0,
+      "classification": "no related keyword"
+    },
+    {
+      "path": "TRAINING.md",
+      "scan": "UTF8",
+      "related_keyword_occurrences": 0,
+      "classification": "no related keyword"
+    },
+    {
+      "path": "binary_blend.json",
+      "scan": "UTF8",
+      "related_keyword_occurrences": 0,
+      "classification": "no related keyword"
+    },
+    {
+      "path": "bundle.json",
+      "scan": "UTF8",
+      "related_keyword_occurrences": 0,
+      "classification": "no related keyword"
+    },
+    {
+      "path": "bundle.sha256",
+      "scan": "UTF8",
+      "related_keyword_occurrences": 0,
+      "classification": "no related keyword"
+    },
+    {
+      "path": "calibration.json",
+      "scan": "UTF8",
+      "related_keyword_occurrences": 0,
+      "classification": "no related keyword"
+    },
+    {
+      "path": "components/minilm4_epoch1/detector.json",
+      "scan": "UTF8",
+      "related_keyword_occurrences": 0,
+      "classification": "no related keyword"
+    },
+    {
+      "path": "components/minilm4_epoch1/detector.safetensors",
+      "scan": "binary; byte identity verified"
+    },
+    {
+      "path": "components/minilm4_epoch1/encoder_config/config.json",
+      "scan": "UTF8",
+      "related_keyword_occurrences": 0,
+      "classification": "no related keyword"
+    },
+    {
+      "path": "components/minilm4_epoch1/tokenizer/tokenizer.json",
+      "scan": "UTF8",
+      "related_keyword_occurrences": 3,
+      "classification": "unchanged tokenizer vocabulary/policy metadata"
+    },
+    {
+      "path": "components/minilm4_epoch1/tokenizer/tokenizer_config.json",
+      "scan": "UTF8",
+      "related_keyword_occurrences": 0,
+      "classification": "no related keyword"
+    },
+    {
+      "path": "components/minilm_v3_epoch2/detector.json",
+      "scan": "UTF8",
+      "related_keyword_occurrences": 0,
+      "classification": "no related keyword"
+    },
+    {
+      "path": "components/minilm_v3_epoch2/detector.safetensors",
+      "scan": "binary; byte identity verified"
+    },
+    {
+      "path": "components/minilm_v3_epoch2/encoder_config/config.json",
+      "scan": "UTF8",
+      "related_keyword_occurrences": 0,
+      "classification": "no related keyword"
+    },
+    {
+      "path": "components/minilm_v3_epoch2/tokenizer/tokenizer.json",
+      "scan": "UTF8",
+      "related_keyword_occurrences": 3,
+      "classification": "unchanged tokenizer vocabulary/policy metadata"
+    },
+    {
+      "path": "components/minilm_v3_epoch2/tokenizer/tokenizer_config.json",
+      "scan": "UTF8",
+      "related_keyword_occurrences": 0,
+      "classification": "no related keyword"
+    },
+    {
+      "path": "components/modern3_epoch2/detector.json",
+      "scan": "UTF8",
+      "related_keyword_occurrences": 0,
+      "classification": "no related keyword"
+    },
+    {
+      "path": "components/modern3_epoch2/detector.safetensors",
+      "scan": "binary; byte identity verified"
+    },
+    {
+      "path": "components/modern3_epoch2/encoder_config/config.json",
+      "scan": "UTF8",
+      "related_keyword_occurrences": 0,
+      "classification": "no related keyword"
+    },
+    {
+      "path": "components/modern3_epoch2/tokenizer/tokenizer.json",
+      "scan": "UTF8",
+      "related_keyword_occurrences": 5,
+      "classification": "unchanged tokenizer vocabulary/policy metadata"
+    },
+    {
+      "path": "components/modern3_epoch2/tokenizer/tokenizer_config.json",
+      "scan": "UTF8",
+      "related_keyword_occurrences": 0,
+      "classification": "no related keyword"
+    },
+    {
+      "path": "components/statistical_v2/model.joblib",
+      "scan": "binary; byte identity verified"
+    },
+    {
+      "path": "decision_protocol.json",
+      "scan": "UTF8",
+      "related_keyword_occurrences": 0,
+      "classification": "no related keyword"
+    },
+    {
+      "path": "third_party/licenses/Apache-2.0.txt",
+      "scan": "UTF8",
+      "related_keyword_occurrences": 0,
+      "classification": "no related keyword"
+    },
+    {
+      "path": "third_party/licenses/MIT-legacy.txt",
+      "scan": "UTF8",
+      "related_keyword_occurrences": 0,
+      "classification": "no related keyword"
+    },
+    {
+      "path": "validation_report.json",
+      "scan": "UTF8",
+      "related_keyword_occurrences": 0,
+      "classification": "no related keyword"
+    }
+  ],
+  "old_all_32_members_and_archive_reverified_unchanged": true,
+  "all_ZIP_member_bytes_verified_against_new_bundle": true,
+  "historical_metric_reports_unchanged": true,
+  "technical_online_metric_terms_retain_applied_policy_not_hosting_meaning": true,
+  "local_HTML_HTTP_API_preserved": true,
+  "actual_runtime_integrity_load": "pending separate receipt; no model forward in repack script",
+  "packager_source_sha256": "c06b5359c93a4cd3b836fa19dab589a3c74eb295f789f941003d79be412872d3"
+}

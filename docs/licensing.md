@@ -25,7 +25,7 @@ Runtime dependencies, including PyTorch, Transformers, Tokenizers, Safetensors, 
 
 The Model Hub repository uses `license: other`, named `research-use-model-notice`, linking to `LICENSE-MODEL.md`. The publishing owner grants only rights it controls for noncommercial research, teaching and evaluation, with attribution, notice retention and the stated conditions. This is a chosen project publication grant, **not an assertion that all data licenses legally attach to the numerical weights**.
 
-The model is not offered as an unrestricted Apache-2.0 weight release. Its notice does not supply unknown third-party permissions, determine whether every trained artifact is a copyright adaptation, or prove complete lawful redistribution in every jurisdiction. Publishing a free Space likewise does not erase applicable terms. The Space's application source may be Apache while the loaded model retains its separate notice.
+The model is not offered as an unrestricted Apache-2.0 weight release. Its notice does not supply unknown third-party permissions, determine whether every trained artifact is a copyright adaptation, or prove complete lawful redistribution in every jurisdiction.
 
 The full model contains three fine-tuned neural artifacts plus a statistical refinement artifact with its fitted vocabulary. Source heads retain older training histories even though their public outputs are rankings only. A public release is not a license to republish source corpora, historical prompts or raw API responses.
 
