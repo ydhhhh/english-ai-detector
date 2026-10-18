@@ -28,13 +28,17 @@ BUNDLE_PATH="$(python examples/download_model.py --revision d54db158b99d4b408f95
 
 The command and example default pin the verified immutable Model Hub release. The example additionally pins the approved archive bytes, so a different archive fails closed. Only load the trusted project bundle: Python joblib serialization can execute code when loading untrusted files. The model card and `LICENSE-MODEL.md` define the separate model-use scope.
 
-## Use the browser tool
+## Run the interface locally
+
+After installing the package and downloading the model as described above, run this command **on your own computer** and leave the terminal running:
 
 ```bash
 english-ai-detector serve --bundle "$BUNDLE_PATH" --device cpu
 ```
 
-Open <http://127.0.0.1:8765>. Paste English text or upload DOCX, DOC, or TXT. The included HTML can also be opened directly and connected to your local server. On compatible Apple Silicon, `--device mps` is available. HTTP defaults are 200,000 characters, 8 MiB, one simultaneous detection and six requests per minute; oversized requests fail explicitly rather than silently truncating the document. Legacy DOC needs `antiword` on Linux or `textutil` on macOS.
+Then enter `http://127.0.0.1:8765` in a browser **on the same computer**. `127.0.0.1` refers to your own machine; this address works only while your local detection server is running. Clicking a localhost address in this README does not start the server.
+
+Paste English text or upload DOCX, DOC, or TXT. The included HTML can also be opened directly and connected to your local server. On compatible Apple Silicon, `--device mps` is available. HTTP defaults are 200,000 characters, 8 MiB, one simultaneous detection and six requests per minute; oversized requests fail explicitly rather than silently truncating the document. Legacy DOC needs `antiword` on Linux or `textutil` on macOS.
 
 The browser tool and HTTP API run locally on your computer. Hosted inference demos and their deployment plans are withdrawn; no online inference deployment is provided or planned. Hugging Face remains a download-only model distribution channel. See [local use and publication evidence](docs/publication.md).
 
